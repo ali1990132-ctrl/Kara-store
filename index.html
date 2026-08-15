@@ -1,157 +1,94 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>كارة ستور | Kara Store</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>كارة ستور</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#070914;color:#fff}
-header{position:sticky;top:0;z-index:9;background:#080b18ee;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff14}
-.nav{max-width:1100px;margin:auto;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.logo{font-size:22px;font-weight:900}.logo b{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#7657ff,#00d7ff);margin-left:8px}
-nav{display:flex;gap:18px;color:#aeb7d0;font-size:14px}nav a{color:inherit;text-decoration:none}
-.music,.btn{border:1px solid #ffffff16;border-radius:12px;padding:11px 15px;background:#141b31;color:#fff;cursor:pointer;text-decoration:none;font-weight:800}
-.hero{padding:70px 16px 35px;text-align:center;background:radial-gradient(circle at top,#292252,#070914 60%)}
-.hero h1{font-size:clamp(40px,8vw,72px);margin:18px 0 8px}.grad{background:linear-gradient(90deg,#fff,#aa99ff,#5ce8ff);-webkit-background-clip:text;color:transparent}
-.hero p{max-width:720px;margin:auto;color:#aeb7d0;line-height:1.9;font-size:17px}.badge{display:inline-block;border:1px solid #7657ff66;background:#7657ff18;border-radius:30px;padding:8px 13px;color:#ddd5ff}
-.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:23px}.primary{background:linear-gradient(135deg,#7657ff,#5540df)}.wa{background:#20d77a;color:#06170d}
-section{max-width:1100px;margin:auto;padding:35px 16px}.title{text-align:center;margin-bottom:25px}.title h2{font-size:30px;margin:0 0 7px}.title p{color:#aeb7d0}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{background:linear-gradient(145deg,#11182b,#18213a);border:1px solid #ffffff10;border-radius:21px;padding:20px;box-shadow:0 15px 50px #0005}
-.top{display:flex;align-items:center;justify-content:space-between}.app{font-size:22px;font-weight:900}.emoji{font-size:34px}.desc{color:#aeb7d0;line-height:1.75}
-.prices{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:15px 0}.price{background:#080d1ccc;border:1px solid #ffffff0c;border-radius:11px;padding:10px}.price small{display:block;color:#aeb7d0;margin-bottom:4px}.price b{font-size:16px}
-.note{padding:10px;border-radius:10px;background:#7657ff16;color:#ddd5ff;font-size:13px}.devices{color:#cbd2e3;font-size:13px;line-height:1.8}
-.order{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.order a{flex:1;text-align:center;min-width:120px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:15px}.box{text-align:center;padding:25px;background:#ffffff06;border:1px solid #ffffff10;border-radius:20px}
-.float{position:fixed;left:15px;bottom:15px;z-index:8;background:#20d77a;color:#06170d;padding:13px 17px;border-radius:30px;text-decoration:none;font-weight:900}
-footer{text-align:center;color:#aeb7d0;border-top:1px solid #ffffff0c;padding:30px 15px}
-@media(max-width:700px){nav{display:none}.grid,.contact{grid-template-columns:1fr}.prices{grid-template-columns:1fr 1fr}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial;background:#070914;color:#fff}
+header{position:sticky;top:0;z-index:10;background:#090d1aee;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff12}
+.nav{max-width:1150px;margin:auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-size:22px;font-weight:900}.logo b{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#7657ff,#00d7ff);margin-left:8px}
+nav{display:flex;gap:14px;font-size:12px}nav a{color:#b8c0d5;text-decoration:none}.music,.btn{border:1px solid #ffffff18;border-radius:12px;padding:11px 14px;background:#151d34;color:#fff;text-decoration:none;font-weight:800;cursor:pointer}
+.hero{padding:70px 16px 40px;text-align:center;background:radial-gradient(circle at top,#292252,#070914 60%)}.badge{padding:8px 14px;border-radius:30px;background:#7657ff18;border:1px solid #7657ff55;color:#ddd6ff}h1{font-size:clamp(42px,8vw,72px);margin:18px 0 8px}.grad{background:linear-gradient(90deg,#fff,#aa99ff,#5ce8ff);-webkit-background-clip:text;color:transparent}.hero p{max-width:760px;margin:auto;color:#aeb7d0;line-height:1.9}.actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:22px}.primary{background:linear-gradient(135deg,#7657ff,#5540df)}.wa{background:#20d77a;color:#06170d}
+section{max-width:1150px;margin:auto;padding:34px 16px}.title{text-align:center;margin-bottom:24px}.title h2{font-size:29px;margin:0 0 7px}.title p{color:#aeb7d0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.card{background:linear-gradient(145deg,#11182b,#18213a);border:1px solid #ffffff10;border-radius:21px;padding:20px;box-shadow:0 15px 50px #0005}.top{display:flex;justify-content:space-between;align-items:center}.app{font-size:21px;font-weight:900}.emoji{font-size:30px}.desc{color:#aeb7d0;line-height:1.75}.prices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.price{background:#080d1c;border:1px solid #ffffff0d;border-radius:10px;padding:10px}.price small{display:block;color:#aeb7d0;margin-bottom:4px}.note{padding:10px;border-radius:10px;background:#7657ff16;color:#ddd6ff;font-size:13px}.devices{color:#cbd2e3;font-size:13px;line-height:1.8}.order{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.order a{flex:1;text-align:center;min-width:120px}.float{position:fixed;left:15px;bottom:15px;background:#20d77a;color:#06170d;padding:13px 17px;border-radius:30px;text-decoration:none;font-weight:900;z-index:9}.contact{display:grid;grid-template-columns:1fr 1fr;gap:15px}.box{text-align:center;padding:24px;background:#ffffff06;border:1px solid #ffffff10;border-radius:20px}footer{text-align:center;color:#aeb7d0;border-top:1px solid #ffffff0c;padding:30px}
+@media(max-width:750px){nav{display:none}.grid,.contact{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><div class="nav">
-<div class="logo"><b>ك</b> كارة ستور</div>
-<nav><a href="#apps">التطبيقات</a><a href="#services">الخدمات</a><a href="#contact">تواصل</a></nav>
-<button class="music" id="music">🎵 تشغيل الموسيقى</button>
-</div></header>
+<header><div class="nav"><div class="logo"><b>ك</b> كارة ستور</div>
+<nav><a href="#apps">التطبيقات</a><a href="#players">المشغلات</a><a href="#internet">الإنترنت</a><a href="#social">السوشيال</a><a href="#cards">البطاقات</a><a href="#entertainment">الترفيه</a><a href="#ai">AI</a></nav>
+<button class="music" id="music">🎵 تشغيل الموسيقى</button></div></header>
 
-<section class="hero">
-<span class="badge">✨ متجر كارة ستور الرسمي</span>
-<h1>كل خدماتك <span class="grad">بمكان واحد</span></h1>
-<p>اشتراكات ترفيهية ورياضية ومشغلات وشحن ألعاب وخدمات رقمية. اطلب خدمتك بسهولة عبر واتساب أو تليگرام.</p>
-<div class="actions">
-<a class="btn primary" href="#apps">🛍️ تصفح الاشتراكات</a>
-<a class="btn wa" href="https://wa.me/9647711608207?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20خدمات%20كارة%20ستور">💬 واتساب</a>
-<a class="btn" href="https://t.me/a_s_fr">✈️ تليگرام</a>
-</div>
-</section>
+<section class="hero"><span class="badge">✨ متجر كارة ستور</span><h1>كل خدماتك <span class="grad">بمكان واحد</span></h1>
+<p>اشتراكات ومشغلات وإنترنت وشحن ألعاب وخدمات سوشيال ميديا وبطاقات إلكترونية واشتراكات ترفيهية وذكاء اصطناعي.</p>
+<div class="actions"><a class="btn primary" href="#apps">🛍️ تصفح المتجر</a><a class="btn wa" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20الطلب%20من%20كارة%20ستور">💬 واتساب</a><a class="btn" href="https://t.me/a_s_fr">✈️ تليگرام</a></div></section>
 
-<section id="apps">
-<div class="title"><h2>📺 التطبيقات والاشتراكات</h2><p>كل تطبيق مع أسعاره الخاصة</p></div>
-<div class="grid">
+<section id="apps"><div class="title"><h2>📺 التطبيقات والاشتراكات</h2><p>الأسعار حسب آخر تحديث</p></div><div class="grid">
+<div class="card"><div class="top"><div class="app">🎬 MAX</div><div class="emoji">📺</div></div><p class="desc">أفلام ومسلسلات ومحتوى ترفيهي ورياضي.</p><div class="prices"><div class="price"><small>شهر</small><b>5,000 د.ع</b></div><div class="price"><small>3 أشهر</small><b>10,000 د.ع</b></div><div class="price"><small>6 أشهر</small><b>15,000 د.ع</b></div><div class="price"><small>سنة</small><b>25,000 د.ع</b></div></div><div class="note">🎁 تجربة 12 ساعة — 1,000 د.ع</div><p class="devices">Android • iPhone • iPad • Laptop • Samsung • LG • Google TV</p><div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20MAX">اطلب MAX</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div></div>
+<div class="card"><div class="top"><div class="app">✨ Best 4K</div><div class="emoji">🎞️</div></div><p class="desc">خدمة مشاهدة ومحتوى رقمي بجودة عالية.</p><div class="prices"><div class="price"><small>شهر</small><b>5,000 د.ع</b></div><div class="price"><small>3 أشهر</small><b>10,000 د.ع</b></div><div class="price"><small>6 أشهر</small><b>15,000 د.ع</b></div><div class="price"><small>سنة</small><b>25,000 د.ع</b></div></div><div class="note">🎁 تجربة 3 ساعات — 1,000 د.ع</div><p class="devices">Android • iPhone • iPad • Laptop • Samsung • LG • Google TV</p><div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Best%204K">اطلب Best 4K</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div></div>
+<div class="card"><div class="top"><div class="app">🐯 Tiger OTT Platinum</div><div class="emoji">🐯</div></div><p class="desc">مشغل وخدمة اشتراك رقمية.</p><div class="prices"><div class="price"><small>شهر</small><b>5,000 د.ع</b></div><div class="price"><small>3 أشهر</small><b>10,000 د.ع</b></div><div class="price"><small>6 أشهر</small><b>15,000 د.ع</b></div><div class="price"><small>سنة</small><b>25,000 د.ع</b></div></div><div class="note">🎁 تجربة 24 ساعة — 1,000 د.ع</div><p class="devices">Android • iPhone • iPad • Laptop • Samsung • LG • Google TV</p><div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Tiger%20OTT">اطلب Tiger</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div></div>
+<div class="card"><div class="top"><div class="app">⚽ TOD</div><div class="emoji">🏆</div></div><div class="prices"><div class="price"><small>موبايل</small><b>15,000 د.ع</b></div><div class="price"><small>شاشة</small><b>20,000 د.ع</b></div><div class="price"><small>شاشة + موبايل</small><b>25,000 د.ع</b></div></div><div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20TOD">اطلب TOD</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div></div>
+<div class="card"><div class="top"><div class="app">📡 القناة الرابعة</div><div class="emoji">⚽</div></div><div class="prices"><div class="price"><small>شهر</small><b>25,000 د.ع</b></div><div class="price"><small>3 أشهر</small><b>60,000 د.ع</b></div></div><div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20القناة%20الرابعة">اطلب الاشتراك</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div></div>
+</div></section>
 
-<div class="card">
-<div class="top"><div class="app">🎬 MAX</div><div class="emoji">📺</div></div>
-<p class="desc">أفلام ومسلسلات ومحتوى ترفيهي ورياضي.</p>
-<div class="prices">
-<div class="price"><small>شهر</small><b>5,000 د.ع</b></div>
-<div class="price"><small>3 أشهر</small><b>10,000 د.ع</b></div>
-<div class="price"><small>6 أشهر</small><b>15,000 د.ع</b></div>
-<div class="price"><small>سنة</small><b>25,000 د.ع</b></div>
-</div>
-<div class="note">🎁 تجربة 12 ساعة — 1,000 د.ع</div>
-<p class="devices">📱 Android • iPhone • iPad • 💻 Laptop • 📺 Samsung • LG • Google TV</p>
-<div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20MAX">اطلب MAX</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div>
-</div>
+<section id="players"><div class="title"><h2>🎛️ المشغلات</h2><p>اشتراك سنوي</p></div><div class="grid">
+<div class="card"><h3>📺 IBO</h3><div class="price"><small>سنوي</small><b>10,000 د.ع</b></div><div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20IBO">اطلب IBO</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div></div>
+<div class="card"><h3>📺 BOB</h3><div class="price"><small>سنوي</small><b>10,000 د.ع</b></div><div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20BOB">اطلب BOB</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div></div>
+<div class="card"><h3>📺 X</h3><div class="price"><small>سنوي</small><b>10,000 د.ع</b></div><div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20مشغل%20X">اطلب X</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div></div>
+</div></section>
 
-<div class="card">
-<div class="top"><div class="app">✨ Best 4K</div><div class="emoji">🎞️</div></div>
-<p class="desc">خدمة مشاهدة ومحتوى رقمي بجودة عالية.</p>
-<div class="prices">
-<div class="price"><small>شهر</small><b>5,000 د.ع</b></div>
-<div class="price"><small>3 أشهر</small><b>10,000 د.ع</b></div>
-<div class="price"><small>6 أشهر</small><b>15,000 د.ع</b></div>
-<div class="price"><small>سنة</small><b>25,000 د.ع</b></div>
-</div>
-<div class="note">🎁 تجربة مجانية — 3 ساعات</div>
-<div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Best%204K">اطلب Best 4K</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div>
-</div>
+<section id="internet"><div class="title"><h2>🌐 اشتراكات الإنترنت</h2><p>كل الاشتراكات 36,000 د.ع</p></div><div class="grid">
+<div class="card"><h3>📡 إنترنت الوطني</h3><div class="price"><b>36,000 د.ع</b></div></div>
+<div class="card"><h3>🚀 Supercell</h3><div class="price"><b>36,000 د.ع</b></div></div>
+<div class="card"><h3>🔌 فايبر</h3><div class="price"><b>36,000 د.ع</b></div></div>
+<div class="card"><h3>🌐 الجزيرة</h3><div class="price"><b>36,000 د.ع</b></div></div>
+<div class="card"><h3>📶 الرحمة</h3><div class="price"><b>36,000 د.ع</b></div></div>
+</div></section>
 
-<div class="card">
-<div class="top"><div class="app">🐯 Tiger OTT Platinum</div><div class="emoji">🐯</div></div>
-<p class="desc">مشغل وخدمة اشتراك رقمية لأجهزة متعددة.</p>
-<div class="prices">
-<div class="price"><small>شهر</small><b>3,000 د.ع</b></div>
-<div class="price"><small>سنة</small><b>17,500 د.ع</b></div>
-</div>
-<p class="devices">📱 Android • iPhone • iPad • 💻 Laptop • 📺 Samsung • LG • Google TV</p>
-<div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Tiger%20OTT%20Platinum">اطلب Tiger</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div>
-</div>
+<section id="social"><div class="title"><h2>📈 خدمات السوشيال ميديا</h2><p>رشق وخدمات زيادة التفاعل حسب المتاح</p></div><div class="grid">
+<div class="card"><h3>📸 Instagram</h3><p class="desc">متابعين • إعجابات • مشاهدات.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20خدمات%20Instagram">اطلب الخدمة</a></div>
+<div class="card"><h3>📘 Facebook</h3><p class="desc">خدمات تفاعل ومشاهدات.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20خدمات%20Facebook">اطلب الخدمة</a></div>
+<div class="card"><h3>▶️ YouTube</h3><p class="desc">مشاهدات وإعجابات وخدمات القنوات.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20خدمات%20YouTube">اطلب الخدمة</a></div>
+<div class="card"><h3>🎵 TikTok</h3><p class="desc">خدمات تفاعل ومشاهدات.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20خدمات%20TikTok">اطلب الخدمة</a></div>
+<div class="card"><h3>💬 WhatsApp</h3><p class="desc">خدمات متاحة حسب نوع الطلب.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20خدمات%20WhatsApp">اطلب الخدمة</a></div>
+<div class="card"><h3>👻 Snapchat</h3><p class="desc">خدمات متاحة حسب نوع الطلب.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20خدمات%20Snapchat">اطلب الخدمة</a></div>
+<div class="card"><h3>🌐 باقي المنصات</h3><p class="desc">استفسر عن خدمات بقية برامج التواصل.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20خدمة%20لمنصة%20تواصل">استفسر</a></div>
+</div></section>
 
-<div class="card">
-<div class="top"><div class="app">⚽ TOD</div><div class="emoji">🏆</div></div>
-<p class="desc">باقات حسب الجهاز المطلوب.</p>
-<div class="prices">
-<div class="price"><small>موبايل فقط / شهر</small><b>15,000 د.ع</b></div>
-<div class="price"><small>شاشة فقط / شهر</small><b>20,000 د.ع</b></div>
-<div class="price"><small>شاشة + موبايل / شهر</small><b>25,000 د.ع</b></div>
-</div>
-<div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20TOD">اطلب TOD</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div>
-</div>
+<section id="cards"><div class="title"><h2>💳 البطاقات الإلكترونية</h2><p>بطاقات وخدمات رقمية</p></div><div class="grid">
+<div class="card"><h3>🚕 تكسي بلي</h3><div class="prices"><div class="price"><small>فئة 10,000</small><b>السعر 11,000 د.ع</b></div><div class="price"><small>فئة 15,000</small><b>السعر 16,000 د.ع</b></div></div><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20تكسي%20بلي">اطلب البطاقة</a></div>
+<div class="card"><h3>🚕 تكسي كريم</h3><p class="desc">الفئات والأسعار حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20كريم">استفسر</a></div>
+<div class="card"><h3>🍎 iTunes</h3><p class="desc">الفئات والأسعار حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20iTunes">استفسر</a></div>
+<div class="card"><h3>💳 Rollex</h3><p class="desc">الفئات والأسعار حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20Rollex">استفسر</a></div>
+<div class="card"><h3>▶️ Google Play</h3><p class="desc">الفئات والأسعار حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20Google%20Play">استفسر</a></div>
+<div class="card"><h3>🎮 Xbox</h3><p class="desc">الفئات والأسعار حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20Xbox">استفسر</a></div>
+<div class="card"><h3>🎮 PlayStation</h3><p class="desc">الفئات والأسعار حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20PlayStation">استفسر</a></div>
+<div class="card"><h3>🪟 Microsoft</h3><p class="desc">الفئات والأسعار حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20Microsoft">استفسر</a></div>
+<div class="card"><h3>🛵 طلبات</h3><p class="desc">الفئات والأسعار حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20طلبات">استفسر</a></div>
+</div></section>
 
-<div class="card">
-<div class="top"><div class="app">📡 القناة الرابعة</div><div class="emoji">⚽</div></div>
-<p class="desc">اشتراكات القناة الرابعة.</p>
-<div class="prices">
-<div class="price"><small>شهر</small><b>25,000 د.ع</b></div>
-<div class="price"><small>3 أشهر</small><b>60,000 د.ع</b></div>
-</div>
-<div class="order"><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20القناة%20الرابعة">اطلب الاشتراك</a><a class="btn" href="https://t.me/a_s_fr">تليگرام</a></div>
-</div>
-</div>
-</section>
+<section id="entertainment"><div class="title"><h2>🎬 الاشتراكات الترفيهية</h2><p>منصات ترفيهية متنوعة</p></div><div class="grid">
+<div class="card"><h3>🎞️ المنصة</h3><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20المنصة">استفسر عن السعر</a></div>
+<div class="card"><h3>🎬 1001</h3><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%201001">استفسر عن السعر</a></div>
+<div class="card"><h3>⭐ Starzplay</h3><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Starzplay">استفسر عن السعر</a></div>
+<div class="card"><h3>📺 Hulu</h3><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Hulu">استفسر عن السعر</a></div>
+<div class="card"><h3>🎥 شاهد</h3><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20شاهد">استفسر عن السعر</a></div>
+<div class="card"><h3>🍿 Netflix</h3><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Netflix">استفسر عن السعر</a></div>
+</div></section>
 
-<section id="services">
-<div class="title"><h2>🎮 خدمات إضافية</h2><p>متوفر أيضًا داخل كارة ستور</p></div>
-<div class="grid">
-<div class="card"><div class="top"><div class="app">🎮 شحن الألعاب</div><div class="emoji">🕹️</div></div><p class="desc">PUBG • Free Fire • Ludo • PES وغيرها.</p><a class="btn wa" style="display:block;text-align:center" href="https://wa.me/9647711608207?text=أريد%20شحن%20لعبة">اطلب عبر واتساب</a></div>
-<div class="card"><div class="top"><div class="app">🪙 TikTok Coins</div><div class="emoji">📱</div></div><p class="desc">250 • 500 • 750 • 1000 • 2000 • 5000 • 10000.</p><a class="btn wa" style="display:block;text-align:center" href="https://wa.me/9647711608207?text=أريد%20شحن%20TikTok">اطلب عبر واتساب</a></div>
-<div class="card"><div class="top"><div class="app">💳 البطاقات والمحافظ</div><div class="emoji">💰</div></div><p class="desc">زين كاش • آسيا بي • فاست بي • ماستر الرافدين وغيرها حسب المتاح.</p><a class="btn wa" style="display:block;text-align:center" href="https://wa.me/9647711608207?text=أريد%20خدمة%20بطاقات%20أو%20محافظ">استفسر الآن</a></div>
-</div>
-</section>
+<section id="ai"><div class="title"><h2>🤖 اشتراكات الذكاء الاصطناعي</h2><p>خدمات الذكاء الاصطناعي</p></div><div class="grid">
+<div class="card"><h3>🤖 ChatGPT</h3><p class="desc">الباقة والسعر حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20ChatGPT">استفسر عن السعر</a></div>
+<div class="card"><h3>✨ Gemini</h3><p class="desc">الباقة والسعر حسب المتاح.</p><a class="btn wa" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Gemini">استفسر عن السعر</a></div>
+</div></section>
 
-<section id="contact">
-<div class="title"><h2>📞 تواصل معنا</h2><p>للطلب والاستفسار</p></div>
-<div class="contact">
-<div class="box"><h3>💬 واتساب</h3><p>07711608207</p><a class="btn wa" href="https://wa.me/9647711608207?text=السلام%20عليكم،%20أريد%20الطلب%20من%20كارة%20ستور">مراسلة واتساب</a></div>
+<section id="contact"><div class="title"><h2>📞 تواصل معنا</h2><p>للطلب والاستفسار</p></div><div class="contact">
+<div class="box"><h3>💬 واتساب</h3><p>07711608207</p><a class="btn wa" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20الطلب%20من%20كارة%20ستور">مراسلة واتساب</a></div>
 <div class="box"><h3>✈️ تليگرام</h3><p>@a_s_fr</p><a class="btn primary" href="https://t.me/a_s_fr">فتح التليگرام</a></div>
-</div>
-</section>
-
-<a class="float" href="https://wa.me/9647711608207?text=السلام%20عليكم،%20أريد%20الطلب%20من%20كارة%20ستور">💬 اطلب الآن</a>
+</div></section>
+<a class="float" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20الطلب%20من%20كارة%20ستور">💬 اطلب الآن</a>
 <footer>© 2026 كارة ستور — جميع الحقوق محفوظة</footer>
-
 <script>
-let ctx=null,gain=null,timer=null,on=false;
-const btn=document.getElementById('music');
-function startMusic(){
-ctx=new (window.AudioContext||window.webkitAudioContext)();
-gain=ctx.createGain();gain.gain.value=.035;gain.connect(ctx.destination);
-const notes=[261.63,329.63,392,523.25,392,329.63];let i=0;
-function note(){
-if(!on)return;
-let o=ctx.createOscillator(),g=ctx.createGain();
-o.type='sine';o.frequency.value=notes[i++%notes.length];
-g.gain.setValueAtTime(0,ctx.currentTime);
-g.gain.linearRampToValueAtTime(.2,ctx.currentTime+.08);
-g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1.5);
-o.connect(g);g.connect(gain);o.start();o.stop(ctx.currentTime+1.6)
-}
-note();timer=setInterval(note,850)
-}
-btn.onclick=()=>{
-if(!on){on=true;startMusic();btn.textContent='🔇 إيقاف الموسيقى'}
-else{on=false;clearInterval(timer);if(ctx)ctx.close();btn.textContent='🎵 تشغيل الموسيقى'}
-};
+let ctx=null,gain=null,timer=null,on=false;const btn=document.getElementById('music');
+function startMusic(){ctx=new(window.AudioContext||window.webkitAudioContext)();gain=ctx.createGain();gain.gain.value=.035;gain.connect(ctx.destination);const notes=[261.63,329.63,392,523.25,392,329.63];let i=0;function note(){if(!on)return;let o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=notes[i++%notes.length];g.gain.setValueAtTime(0,ctx.currentTime);g.gain.linearRampToValueAtTime(.2,ctx.currentTime+.08);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1.5);o.connect(g);g.connect(gain);o.start();o.stop(ctx.currentTime+1.6)}note();timer=setInterval(note,850)}
+btn.onclick=()=>{if(!on){on=true;startMusic();btn.textContent='🔇 إيقاف الموسيقى'}else{on=false;clearInterval(timer);if(ctx)ctx.close();btn.textContent='🎵 تشغيل الموسيقى'}};
 </script>
-</body>
-</html>
+</body></html>
