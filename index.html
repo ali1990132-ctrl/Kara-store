@@ -37,6 +37,15 @@ header{position:sticky;top:0;z-index:100;background:#080b14df;backdrop-filter:bl
 .device-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:18px auto 8px;max-width:900px}
 .device-chips span{background:#ffffff08;border:1px solid #ffffff14;border-radius:12px;padding:9px 12px;color:#d7dcef;font-size:12px}
 .intro-services{font-size:12px!important;margin-top:12px!important}
+.hero-video{position:relative;max-width:1050px;margin:30px auto 0;border:1px solid #ffffff18;border-radius:24px;overflow:hidden;background:#05070c;box-shadow:0 25px 80px #0009}
+.video-frame{position:relative;aspect-ratio:2.35/1;overflow:hidden}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;transform:scale(1.08);pointer-events:none}
+.video-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#05070cdd 0%,#05070c55 48%,#05070c33 100%);display:flex;align-items:center;justify-content:space-between;padding:30px;z-index:2}
+.video-copy{max-width:500px;text-align:right}
+.video-copy h2{font-size:clamp(34px,6vw,62px);margin:12px 0 8px}
+.video-copy p{color:#e1e5ef;line-height:1.9;font-size:14px}
+.video-tags{display:flex;gap:7px;flex-wrap:wrap}.video-tags span{background:#ffffff12;border:1px solid #ffffff1e;border-radius:20px;padding:7px 10px;font-size:11px}
+.sound-btn{align-self:flex-end;border:1px solid #ffffff2a;background:#080b14cc;color:#fff;border-radius:12px;padding:10px 13px;cursor:pointer;backdrop-filter:blur(8px)}
 .hero-slider{position:relative;max-width:1050px;margin:30px auto 0;border:1px solid #ffffff14;border-radius:24px;overflow:hidden;background:#0c101b;box-shadow:0 25px 80px #0008}
 .slides{position:relative;aspect-ratio:2.35/1}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease;pointer-events:none}
@@ -47,7 +56,16 @@ header{position:sticky;top:0;z-index:100;background:#080b14df;backdrop-filter:bl
 .slider-dots button.active{width:24px;border-radius:8px;background:#fff}
 .slide-caption{position:absolute;right:25px;bottom:22px;max-width:430px;text-align:right;background:#070910aa;backdrop-filter:blur(10px);padding:14px 17px;border:1px solid #ffffff18;border-radius:16px}
 .slide-caption b{display:block;font-size:20px;margin-bottom:5px}.slide-caption span{font-size:12px;color:#d5d9e5;line-height:1.7}
-@media(max-width:600px){.hero-slider{border-radius:16px;margin-top:22px}.slides{aspect-ratio:1.45/1}.slide-caption{right:10px;left:10px;bottom:10px;max-width:none;padding:9px 11px}.slide-caption b{font-size:14px}.slide-caption span{font-size:10px}}
+@media(max-width:600px){.hero-video{border-radius:16px;margin-top:22px}.video-frame{aspect-ratio:1.25/1}.video-overlay{padding:15px;align-items:flex-end}.video-copy{max-width:78%}.video-copy h2{font-size:30px}.video-copy p{font-size:10px;line-height:1.6;margin:5px 0}.video-tags span{font-size:9px;padding:5px 7px}.sound-btn{font-size:10px;padding:8px 9px}.hero-slider{border-radius:16px;margin-top:14px}.hero-video{position:relative;max-width:1050px;margin:30px auto 0;border:1px solid #ffffff18;border-radius:24px;overflow:hidden;background:#05070c;box-shadow:0 25px 80px #0009}
+.video-frame{position:relative;aspect-ratio:2.35/1;overflow:hidden}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;transform:scale(1.08);pointer-events:none}
+.video-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#05070cdd 0%,#05070c55 48%,#05070c33 100%);display:flex;align-items:center;justify-content:space-between;padding:30px;z-index:2}
+.video-copy{max-width:500px;text-align:right}
+.video-copy h2{font-size:clamp(34px,6vw,62px);margin:12px 0 8px}
+.video-copy p{color:#e1e5ef;line-height:1.9;font-size:14px}
+.video-tags{display:flex;gap:7px;flex-wrap:wrap}.video-tags span{background:#ffffff12;border:1px solid #ffffff1e;border-radius:20px;padding:7px 10px;font-size:11px}
+.sound-btn{align-self:flex-end;border:1px solid #ffffff2a;background:#080b14cc;color:#fff;border-radius:12px;padding:10px 13px;cursor:pointer;backdrop-filter:blur(8px)}
+.hero-slider{border-radius:16px;margin-top:22px}.slides{aspect-ratio:1.45/1}.slide-caption{right:10px;left:10px;bottom:10px;max-width:none;padding:9px 11px}.slide-caption b{font-size:14px}.slide-caption span{font-size:10px}}
 
 .hero-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:24px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:38px}
@@ -87,7 +105,7 @@ footer{padding:35px 0 75px;text-align:center;color:#7f899f;font-size:12px}
 .float{position:fixed;bottom:18px;left:18px;z-index:90;background:var(--green);color:#04160b;padding:13px 18px;border-radius:30px;font-weight:900;box-shadow:0 12px 35px #20d47744}
 .toast{position:fixed;bottom:75px;left:50%;transform:translateX(-50%) translateY(20px);background:#fff;color:#101522;padding:10px 15px;border-radius:10px;opacity:0;pointer-events:none;transition:.25s;z-index:200;font-size:12px}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.category-grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}}
-@media(max-width:600px){.container{width:min(100% - 20px,1120px)}.nav{height:62px}.nav-actions .music-text{display:none}.hero{padding:52px 0 30px}.stats{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.category-grid{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}.section-head{display:block}.search{width:100%;margin-top:12px}.card{padding:16px}.download-list{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.hero-video{border-radius:16px;margin-top:22px}.video-frame{aspect-ratio:1.25/1}.video-overlay{padding:15px;align-items:flex-end}.video-copy{max-width:78%}.video-copy h2{font-size:30px}.video-copy p{font-size:10px;line-height:1.6;margin:5px 0}.video-tags span{font-size:9px;padding:5px 7px}.sound-btn{font-size:10px;padding:8px 9px}.hero-slider{border-radius:16px;margin-top:14px}.container{width:min(100% - 20px,1120px)}.nav{height:62px}.nav-actions .music-text{display:none}.hero{padding:52px 0 30px}.stats{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.category-grid{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}.section-head{display:block}.search{width:100%;margin-top:12px}.card{padding:16px}.download-list{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -126,6 +144,26 @@ footer{padding:35px 0 75px;text-align:center;color:#7f899f;font-size:12px}
       <a class="btn btn-green" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20الطلب%20من%20كارة%20ستور">💬 واتساب</a>
       <a class="btn" href="https://t.me/a_s_fr">✈️ تليگرام</a>
     </div>
+    <div class="hero-video" aria-label="فيديو كارة ستور">
+      <div class="video-frame">
+        <iframe
+          id="karaVideo"
+          src="https://www.youtube.com/embed/RGpL55vU9lo?autoplay=1&mute=1&loop=1&playlist=RGpL55vU9lo&controls=0&rel=0&modestbranding=1&playsinline=1"
+          title="Kara Store Romantic Video"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="video-overlay">
+          <div class="video-copy">
+            <span class="hero-badge">🎬 متخصصون في IPTV</span>
+            <h2>كارة ستور</h2>
+            <p>أقوى السيرفرات والمحتويات الرياضية والترفيهية والأفلام والمسلسلات بجودة FULL HD و4K.</p>
+            <div class="video-tags"><span>⚡ بدون تقطيع</span><span>4K</span><span>FULL HD</span></div>
+          </div>
+          <button class="sound-btn" id="soundBtn" onclick="toggleVideoSound()">🔇 تشغيل الصوت</button>
+        </div>
+      </div>
+    </div>
+
     <div class="hero-slider" aria-label="عروض كارة ستور">
       <div class="slides">
         <div class="slide active">
@@ -341,6 +379,13 @@ function goSlide(n){
 }
 slideTimer=setInterval(()=>goSlide(currentSlide+1),5000);
 
+let videoMuted=true;
+function toggleVideoSound(){
+  const iframe=document.getElementById('karaVideo');
+  videoMuted=!videoMuted;
+  iframe.src="https://www.youtube.com/embed/RGpL55vU9lo?autoplay=1&mute="+(videoMuted?1:0)+"&loop=1&playlist=RGpL55vU9lo&controls=0&rel=0&modestbranding=1&playsinline=1";
+  document.getElementById('soundBtn').textContent=videoMuted?'🔇 تشغيل الصوت':'🔊 كتم الصوت';
+}
 function filterCards(){
   const q=document.getElementById('search').value.trim().toLowerCase();
   document.querySelectorAll('#appGrid .searchable').forEach(card=>{
