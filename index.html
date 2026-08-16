@@ -33,6 +33,22 @@ header{position:sticky;top:0;z-index:100;background:#080b14df;backdrop-filter:bl
 .hero h1{font-size:clamp(42px,8vw,76px);line-height:1.05;margin:18px 0 12px}
 .gradient{background:linear-gradient(90deg,#fff,#a99aff,#55e8ff);-webkit-background-clip:text;color:transparent}
 .hero p{max-width:720px;margin:auto;color:var(--muted);line-height:1.9}
+.intro-copy{font-size:15px;line-height:2!important;color:#dce2f0!important}
+.device-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:18px auto 8px;max-width:900px}
+.device-chips span{background:#ffffff08;border:1px solid #ffffff14;border-radius:12px;padding:9px 12px;color:#d7dcef;font-size:12px}
+.intro-services{font-size:12px!important;margin-top:12px!important}
+.hero-slider{position:relative;max-width:1050px;margin:30px auto 0;border:1px solid #ffffff14;border-radius:24px;overflow:hidden;background:#0c101b;box-shadow:0 25px 80px #0008}
+.slides{position:relative;aspect-ratio:2.35/1}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease;pointer-events:none}
+.slide.active{opacity:1;pointer-events:auto}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.slider-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:5}
+.slider-dots button{width:8px;height:8px;border:0;border-radius:50%;background:#ffffff66;padding:0;cursor:pointer}
+.slider-dots button.active{width:24px;border-radius:8px;background:#fff}
+.slide-caption{position:absolute;right:25px;bottom:22px;max-width:430px;text-align:right;background:#070910aa;backdrop-filter:blur(10px);padding:14px 17px;border:1px solid #ffffff18;border-radius:16px}
+.slide-caption b{display:block;font-size:20px;margin-bottom:5px}.slide-caption span{font-size:12px;color:#d5d9e5;line-height:1.7}
+@media(max-width:600px){.hero-slider{border-radius:16px;margin-top:22px}.slides{aspect-ratio:1.45/1}.slide-caption{right:10px;left:10px;bottom:10px;max-width:none;padding:9px 11px}.slide-caption b{font-size:14px}.slide-caption span{font-size:10px}}
+
 .hero-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:24px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:38px}
 .stat{background:#ffffff06;border:1px solid var(--line);border-radius:16px;padding:15px}
@@ -97,12 +113,41 @@ footer{padding:35px 0 75px;text-align:center;color:#7f899f;font-size:12px}
   <div class="container">
     <span class="hero-badge">✨ متجر كارة ستور الرقمي</span>
     <h1>كل خدماتك<br><span class="gradient">بمكان واحد</span></h1>
-    <p>اشتراكات التطبيقات، المشغلات، البطاقات الإلكترونية، خدمات الإنترنت، السوشيال ميديا وخدمات الذكاء الاصطناعي.</p>
+    <p class="intro-copy">متخصصون في بيع قنوات ومخدمات IPTV عالية الجودة في العراق. استمتع بأقوى السيرفرات العالمية المعروفة لمشاهدة القنوات الرياضية، الترفيهية، وأحدث الأفلام والمسلسلات بجودة <b>FULL HD</b> و <b>4K</b> بدون تقطيع.</p>
+<div class="device-chips">
+  <span>🍎 ايفون / ايباد / Apple TV</span>
+  <span>🤖 أندرويد هواتف وبوكس</span>
+  <span>📺 الشاشات الذكية (Smart TV)</span>
+  <span>💻 أجهزة الكمبيوتر</span>
+</div>
+<p class="intro-services">اشتراكات التطبيقات والمشغلات والبطاقات الإلكترونية وخدمات الإنترنت والسوشيال ميديا والذكاء الاصطناعي.</p>
     <div class="hero-buttons">
       <a class="btn btn-primary" href="#apps">🛍️ تصفح المتجر</a>
       <a class="btn btn-green" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20الطلب%20من%20كارة%20ستور">💬 واتساب</a>
       <a class="btn" href="https://t.me/a_s_fr">✈️ تليگرام</a>
     </div>
+    <div class="hero-slider" aria-label="عروض كارة ستور">
+      <div class="slides">
+        <div class="slide active">
+          <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=85" alt="أفلام وترفيه">
+          <div class="slide-caption"><b>🎬 ترفيه بلا حدود</b><span>قنوات رياضية وترفيهية وأحدث الأفلام والمسلسلات بجودة عالية.</span></div>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1600&q=85" alt="أجهزة المشاهدة">
+          <div class="slide-caption"><b>📺 شاهد على جهازك</b><span>iPhone / iPad / Apple TV • Android • Smart TV • أجهزة الكمبيوتر.</span></div>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=85" alt="رياضة و4K">
+          <div class="slide-caption"><b>⚽ رياضة + FULL HD و4K</b><span>استمتع بالمشاهدة بجودة عالية وتجربة مرتبة من كارة ستور.</span></div>
+        </div>
+      </div>
+      <div class="slider-dots">
+        <button class="active" onclick="goSlide(0)" aria-label="الصورة الأولى"></button>
+        <button onclick="goSlide(1)" aria-label="الصورة الثانية"></button>
+        <button onclick="goSlide(2)" aria-label="الصورة الثالثة"></button>
+      </div>
+    </div>
+
     <div class="stats">
       <div class="stat"><b>MAX</b><span>تحميل متعدد الأجهزة</span></div>
       <div class="stat"><b>Best 4K</b><span>تجربة 3 ساعات</span></div>
@@ -285,6 +330,17 @@ function copyCode(code){
   const toast=document.getElementById('toast');toast.textContent='تم نسخ كود Downloader: '+code;toast.classList.add('show');
   setTimeout(()=>toast.classList.remove('show'),1800);
 }
+let currentSlide=0,slideTimer=null;
+function goSlide(n){
+  const slides=document.querySelectorAll('.slide');
+  const dots=document.querySelectorAll('.slider-dots button');
+  currentSlide=(n+slides.length)%slides.length;
+  slides.forEach((s,i)=>s.classList.toggle('active',i===currentSlide));
+  dots.forEach((d,i)=>d.classList.toggle('active',i===currentSlide));
+  clearInterval(slideTimer); slideTimer=setInterval(()=>goSlide(currentSlide+1),5000);
+}
+slideTimer=setInterval(()=>goSlide(currentSlide+1),5000);
+
 function filterCards(){
   const q=document.getElementById('search').value.trim().toLowerCase();
   document.querySelectorAll('#appGrid .searchable').forEach(card=>{
