@@ -2,286 +2,2799 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090b14">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
 <title>كارة ستور | Kara Store</title>
+
 <style>
-:root{--bg:#070910;--panel:#101522;--panel2:#151b2b;--line:#ffffff12;--text:#fff;--muted:#aab2c5;--accent:#7c5cff;--accent2:#00d9ff;--green:#20d477;--gold:#ffca55}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#27204d 0,#070910 42%);color:var(--text);font-family:Tahoma,Arial,sans-serif}a{text-decoration:none;color:inherit}button{font:inherit}
-.container{width:min(1120px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:100;background:#080b14df;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px}.brand-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 10px 30px #7c5cff33}.navlinks{display:flex;gap:18px;color:#c8cede;font-size:13px}.navlinks a:hover{color:#fff}.nav-actions{display:flex;gap:8px}
-.icon-btn,.btn{border:1px solid var(--line);border-radius:12px;padding:10px 13px;background:var(--panel2);color:#fff;cursor:pointer}.btn{display:inline-flex;justify-content:center;align-items:center;gap:6px;font-weight:800}.btn-primary{background:linear-gradient(135deg,var(--accent),#5542dc);border:0}.btn-green{background:var(--green);color:#03170c;border:0}
-.hero{padding:72px 0 45px;text-align:center}.hero-badge{display:inline-block;border:1px solid #7c5cff55;background:#7c5cff15;color:#dcd5ff;padding:8px 14px;border-radius:30px;font-size:13px}.hero h1{font-size:clamp(42px,8vw,76px);line-height:1.05;margin:18px 0 12px}.gradient{background:linear-gradient(90deg,#fff,#a99aff,#55e8ff);-webkit-background-clip:text;color:transparent}.hero p{max-width:720px;margin:auto;color:var(--muted);line-height:1.9}.intro-copy{font-size:15px;line-height:2!important;color:#dce2f0!important}
-.device-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:18px auto 8px;max-width:900px}.device-chips span{background:#ffffff08;border:1px solid #ffffff14;border-radius:12px;padding:9px 12px;color:#d7dcef;font-size:12px}.intro-services{font-size:12px!important;margin-top:12px!important}
-.hero-video,.hero-slider{position:relative;max-width:1050px;margin:30px auto 0;border:1px solid #ffffff18;border-radius:24px;overflow:hidden;background:#05070c;box-shadow:0 25px 80px #0008}.video-frame{position:relative;aspect-ratio:2.35/1;overflow:hidden}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;transform:scale(1.08);pointer-events:none}.video-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#05070cdd 0%,#05070c55 48%,#05070c33 100%);display:flex;align-items:center;justify-content:space-between;padding:30px;z-index:2}.video-copy{max-width:500px;text-align:right}.video-copy h2{font-size:clamp(34px,6vw,62px);margin:12px 0 8px}.video-copy p{color:#e1e5ef;line-height:1.9;font-size:14px}.video-tags{display:flex;gap:7px;flex-wrap:wrap}.video-tags span{background:#ffffff12;border:1px solid #ffffff1e;border-radius:20px;padding:7px 10px;font-size:11px}.sound-btn{align-self:flex-end;border:1px solid #ffffff2a;background:#080b14cc;color:#fff;border-radius:12px;padding:10px 13px;cursor:pointer;backdrop-filter:blur(8px)}
-.slides{position:relative;aspect-ratio:2.35/1}.slide{position:absolute;inset:0;opacity:0;transition:opacity .7s;pointer-events:none}.slide.active{opacity:1;pointer-events:auto}.slide img{width:100%;height:100%;object-fit:cover;display:block}.slider-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:5}.slider-dots button{width:8px;height:8px;border:0;border-radius:50%;background:#ffffff66;padding:0;cursor:pointer}.slider-dots button.active{width:24px;border-radius:8px;background:#fff}.slide-caption{position:absolute;right:25px;bottom:22px;max-width:430px;text-align:right;background:#070910aa;backdrop-filter:blur(10px);padding:14px 17px;border:1px solid #ffffff18;border-radius:16px}.slide-caption b{display:block;font-size:20px;margin-bottom:5px}.slide-caption span{font-size:12px;color:#d5d9e5;line-height:1.7}
-.hero-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:24px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:38px}.stat{background:#ffffff06;border:1px solid var(--line);border-radius:16px;padding:15px}.stat b{display:block;font-size:20px}.stat span{color:var(--muted);font-size:12px}
-.section{padding:32px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:17px}.section-title{margin:0;font-size:28px}.section-sub{margin:5px 0 0;color:var(--muted);font-size:13px}.search{width:270px;max-width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#0c111e;color:#fff;outline:none}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(145deg,#111726,#0e1421);border:1px solid var(--line);border-radius:20px;padding:19px;box-shadow:0 14px 45px #0004}.card:hover{transform:translateY(-2px);border-color:#ffffff22;transition:.2s}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.app-title{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900}.app-icon{font-size:30px}.tag{font-size:11px;color:#ddd6ff;background:#7c5cff18;border:1px solid #7c5cff33;padding:6px 8px;border-radius:20px}.desc{color:var(--muted);font-size:13px;line-height:1.8;min-height:46px}
-.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.price{background:#090e19;border:1px solid #ffffff0a;border-radius:10px;padding:9px;text-align:center}.price small{display:block;color:var(--muted);font-size:11px;margin-bottom:4px}.price b{font-size:13px}.offer{background:linear-gradient(90deg,#7c5cff18,#00d9ff10);border:1px solid #7c5cff25;color:#e9e5ff;padding:9px;border-radius:10px;font-size:12px;margin:10px 0}.devices{color:#bfc7d9;font-size:11px;line-height:1.8}.card-actions{display:flex;gap:7px;margin-top:13px}.card-actions .btn{flex:1}
-.download-panel{display:none;margin-top:13px;border-top:1px solid var(--line);padding-top:13px}.download-panel.open{display:block}.download-title{font-size:13px;font-weight:900;margin:12px 0 7px}.download-list{display:grid;grid-template-columns:1fr 1fr;gap:7px}.download-list a,.download-list button{width:100%;padding:9px;border-radius:9px;background:#171e30;color:#fff;border:1px solid var(--line);font-size:11px;cursor:pointer;text-align:center}
-.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.category{background:#101624;border:1px solid var(--line);border-radius:17px;padding:18px;text-align:center}.category .big{font-size:30px}.category h3{margin:8px 0 5px}.category p{margin:0;color:var(--muted);font-size:12px}.list-card{background:#101624;border:1px solid var(--line);border-radius:18px;padding:17px}.list-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);gap:10px}.list-row:last-child{border-bottom:0}.list-row span{color:#d9deea;font-size:13px}.list-row b{color:#fff;font-size:13px}
-.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.media-card{position:relative;min-height:210px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#101624}.media-card img{width:100%;height:210px;object-fit:cover;display:block}.media-overlay{position:absolute;inset:auto 0 0;padding:35px 16px 15px;background:linear-gradient(transparent,#05070cee)}.media-overlay h3{margin:0 0 5px;font-size:20px}.media-overlay p{margin:0;color:#d7dcef;font-size:12px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:14px}.contact-box{padding:25px;border-radius:20px;background:linear-gradient(145deg,#111827,#0e1421);border:1px solid var(--line);text-align:center}.contact-box .big{font-size:34px}.contact-box h3{margin:10px 0 5px}.contact-box p{color:var(--muted)}footer{padding:35px 0 75px;text-align:center;color:#7f899f;font-size:12px}
-.float{position:fixed;bottom:18px;left:18px;z-index:90;background:var(--green);color:#04160b;padding:13px 18px;border-radius:30px;font-weight:900;box-shadow:0 12px 35px #20d47744}.wa-group{position:fixed;bottom:82px;left:18px;z-index:95;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:29px;box-shadow:0 8px 30px #25d36677;animation:pulse 1.7s infinite}.wa-group:after{content:"";position:absolute;inset:-7px;border:2px solid #25d36666;border-radius:50%;animation:ring 1.7s infinite}@keyframes pulse{50%{transform:scale(1.08)}}@keyframes ring{0%,100%{transform:scale(.85);opacity:.9}50%{transform:scale(1.15);opacity:0}}
-.toast{position:fixed;bottom:75px;left:50%;transform:translateX(-50%) translateY(20px);background:#fff;color:#101522;padding:10px 15px;border-radius:10px;opacity:0;pointer-events:none;transition:.25s;z-index:200;font-size:12px}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.category-grid{grid-template-columns:repeat(2,1fr)}.media-grid{grid-template-columns:1fr 1fr}.navlinks{display:none}}
-@media(max-width:600px){.container{width:min(100% - 20px,1120px)}.nav{height:62px}.nav-actions .music-text{display:none}.hero{padding:52px 0 30px}.stats{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.category-grid,.media-grid{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}.section-head{display:block}.search{width:100%;margin-top:12px}.card{padding:16px}.download-list{grid-template-columns:1fr 1fr}.hero-video{border-radius:16px;margin-top:22px}.video-frame{aspect-ratio:1.25/1}.video-overlay{padding:15px;align-items:flex-end}.video-copy{max-width:78%}.video-copy h2{font-size:30px}.video-copy p{font-size:10px;line-height:1.6;margin:5px 0}.video-tags span{font-size:9px;padding:5px 7px}.sound-btn{font-size:10px;padding:8px 9px}.hero-slider{border-radius:16px;margin-top:14px}.slides{aspect-ratio:1.45/1}.slide-caption{right:10px;left:10px;bottom:10px;max-width:none;padding:9px 11px}.slide-caption b{font-size:14px}.slide-caption span{font-size:10px}}
+:root{
+--bg:#060810;
+--panel:#101522;
+--panel2:#171d2b;
+--white:#fff;
+--muted:#9aa6ba;
+--pink:#ff2d88;
+--purple:#9147ff;
+--green:#16c784;
+--gold:#ffb020;
+--cyan:#06b6d4;
+--blue:#3b82f6;
+--red:#ef4444;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+-webkit-tap-highlight-color:transparent;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:
+radial-gradient(circle at top,#21133d 0,#080a12 42%,#05060b 100%);
+color:#fff;
+max-width:520px;
+margin:auto;
+min-height:100vh;
+padding-bottom:90px;
+overflow-x:hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+position:sticky;
+top:0;
+z-index:1000;
+height:68px;
+padding:9px 14px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:rgba(6,8,16,.88);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:44px;
+height:44px;
+border-radius:14px;
+display:grid;
+place-items:center;
+font-size:20px;
+font-weight:1000;
+background:linear-gradient(135deg,var(--purple),var(--pink));
+box-shadow:0 0 25px rgba(255,45,136,.35);
+}
+
+.brand h1{
+font-size:16px;
+font-weight:1000;
+}
+
+.brand p{
+font-size:9px;
+color:var(--muted);
+margin-top:2px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+position:relative;
+min-height:650px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.video-bg{
+position:absolute;
+inset:0;
+z-index:0;
+overflow:hidden;
+background:#000;
+}
+
+.video-bg iframe{
+position:absolute;
+top:50%;
+left:50%;
+width:100vw;
+height:56.25vw;
+min-width:177.77vh;
+min-height:100%;
+transform:translate(-50%,-50%);
+border:0;
+opacity:1;
+filter:none;
+pointer-events:none;
+}
+
+.video-overlay{
+position:absolute;
+inset:0;
+z-index:1;
+background:
+linear-gradient(
+180deg,
+rgba(5,6,11,.10) 0%,
+rgba(5,6,11,.10) 45%,
+rgba(5,6,11,.30) 100%
+);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:5;
+width:100%;
+padding:35px 15px 25px;
+}
+
+.hero h2{
+font-size:31px;
+line-height:1.25;
+font-weight:1000;
+margin:0 auto 12px;
+text-shadow:
+0 3px 12px rgba(0,0,0,.95),
+0 0 25px rgba(0,0,0,.7);
+}
+
+.hero h2 span{
+background:linear-gradient(90deg,#fff,#ff62a7,#a970ff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero-sub{
+font-size:12px;
+line-height:1.9;
+color:#fff;
+max-width:410px;
+margin:0 auto 20px;
+padding:8px 12px;
+border-radius:13px;
+background:rgba(0,0,0,.20);
+backdrop-filter:blur(3px);
+text-shadow:0 2px 7px #000;
+}
+
+/* =========================
+   TRIAL
+========================= */
+
+.trial-big{
+margin:18px auto;
+padding:15px;
+max-width:390px;
+border-radius:18px;
+background:rgba(12,10,15,.50);
+backdrop-filter:blur(7px);
+border:1px solid rgba(255,176,32,.55);
+box-shadow:0 10px 35px rgba(0,0,0,.35);
+}
+
+.trial-big strong{
+display:block;
+font-size:20px;
+color:#ffd166;
+}
+
+.trial-big span{
+font-size:10px;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons{
+display:flex;
+gap:9px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.hero-btn{
+text-decoration:none;
+padding:12px 17px;
+border-radius:14px;
+font-size:11px;
+font-weight:1000;
+}
+
+.whatsapp{
+background:linear-gradient(135deg,#20d879,#0ca85a);
+color:white;
+box-shadow:0 8px 25px rgba(16,185,129,.3);
+}
+
+.secondary{
+background:rgba(0,0,0,.45);
+border:1px solid rgba(255,255,255,.22);
+color:#fff;
+backdrop-filter:blur(8px);
+}
+
+/* =========================
+   SOUND
+========================= */
+
+.sound-btn{
+position:absolute;
+z-index:20;
+bottom:18px;
+right:15px;
+border:1px solid rgba(255,255,255,.3);
+background:rgba(0,0,0,.58);
+backdrop-filter:blur(10px);
+color:#fff;
+padding:11px 15px;
+border-radius:15px;
+font-size:11px;
+font-weight:1000;
+box-shadow:0 8px 25px rgba(0,0,0,.45);
+cursor:pointer;
+}
+
+/* =========================
+   FLOATING
+========================= */
+
+.float-btn{
+position:fixed;
+z-index:1500;
+width:55px;
+height:55px;
+border-radius:50%;
+display:grid;
+place-items:center;
+text-decoration:none;
+font-size:25px;
+box-shadow:0 8px 30px rgba(0,0,0,.4);
+border:2px solid rgba(255,255,255,.15);
+}
+
+.float-wa{
+right:12px;
+bottom:100px;
+background:#12c76f;
+}
+
+.float-group{
+left:12px;
+bottom:100px;
+background:#25d366;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-wrap{
+padding:12px 15px 5px;
+position:relative;
+z-index:10;
+}
+
+.search-box{
+width:100%;
+padding:14px 17px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,.1);
+background:#101522;
+color:#fff;
+outline:none;
+font-size:12px;
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.search-box::placeholder{
+color:#8994a8;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+padding:18px 15px 8px;
+}
+
+.section-head{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:12px;
+}
+
+.section-title{
+font-size:18px;
+font-weight:1000;
+}
+
+.section-note{
+font-size:9px;
+color:var(--muted);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+display:flex;
+gap:10px;
+overflow-x:auto;
+padding:5px 15px 20px;
+scrollbar-width:none;
+}
+
+.features::-webkit-scrollbar{
+display:none;
+}
+
+.feature{
+min-width:125px;
+height:105px;
+border-radius:18px;
+padding:14px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+background:linear-gradient(145deg,#171d2d,#0d111c);
+border:1px solid rgba(255,255,255,.08);
+animation:slide 4s ease-in-out infinite alternate;
+}
+
+@keyframes slide{
+from{transform:translateY(0)}
+to{transform:translateY(-7px)}
+}
+
+.feature-icon{
+font-size:30px;
+}
+
+.feature strong{
+font-size:11px;
+}
+
+/* =========================
+   OFFERS
+========================= */
+
+.offers{
+padding:18px 15px;
+background:linear-gradient(
+180deg,
+rgba(255,45,136,.12),
+transparent
+);
+}
+
+.offer-title{
+font-size:20px;
+font-weight:1000;
+margin-bottom:12px;
+}
+
+.offer-card{
+padding:17px;
+border-radius:20px;
+background:
+linear-gradient(135deg,rgba(145,71,255,.35),rgba(255,45,136,.2));
+border:1px solid rgba(255,255,255,.15);
+box-shadow:0 12px 35px rgba(0,0,0,.3);
+animation:offerPulse 3s ease-in-out infinite;
+}
+
+@keyframes offerPulse{
+50%{transform:scale(1.015)}
+}
+
+.offer-card h3{
+font-size:17px;
+}
+
+.offer-card p{
+font-size:10px;
+color:#ddd;
+margin-top:5px;
+line-height:1.7;
+}
+
+.offer-price{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:12px;
+}
+
+.offer-price strong{
+font-size:22px;
+color:#ffd166;
+}
+
+/* =====================================================
+   IPTV - HORIZONTAL PREMIUM CARDS
+===================================================== */
+
+.iptv-section{
+background:linear-gradient(
+180deg,
+rgba(145,71,255,.12),
+transparent
+);
+}
+
+.iptv-grid{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+/* البطاقة الأفقية */
+
+.iptv-card{
+position:relative;
+overflow:hidden;
+width:100%;
+min-height:235px;
+padding:16px;
+border-radius:23px;
+background:
+linear-gradient(
+135deg,
+rgba(28,20,48,.98),
+rgba(10,13,23,.98)
+);
+border:1px solid rgba(145,71,255,.38);
+box-shadow:
+0 15px 40px rgba(0,0,0,.35),
+inset 0 1px rgba(255,255,255,.06);
+transition:
+transform .3s ease,
+box-shadow .3s ease,
+border-color .3s ease;
+}
+
+.iptv-card:hover{
+transform:translateY(-4px);
+border-color:rgba(255,45,136,.6);
+box-shadow:
+0 18px 45px rgba(0,0,0,.45),
+0 0 25px rgba(145,71,255,.12);
+}
+
+/* لمعان */
+
+.iptv-card::before{
+content:"";
+position:absolute;
+width:160px;
+height:160px;
+border-radius:50%;
+background:rgba(145,71,255,.12);
+filter:blur(30px);
+top:-60px;
+left:-40px;
+pointer-events:none;
+}
+
+/* داخل البطاقة */
+
+.iptv-main{
+position:relative;
+z-index:2;
+display:flex;
+align-items:center;
+gap:16px;
+}
+
+/* الصورة */
+
+.iptv-icon{
+flex:0 0 105px;
+width:105px;
+height:105px;
+border-radius:25px;
+display:grid;
+place-items:center;
+font-size:55px;
+background:
+linear-gradient(135deg,#9147ff,#ff2d88);
+box-shadow:
+0 10px 30px rgba(145,71,255,.35),
+inset 0 1px rgba(255,255,255,.25);
+border:1px solid rgba(255,255,255,.12);
+}
+
+/* معلومات المنتج */
+
+.iptv-info{
+flex:1;
+min-width:0;
+}
+
+.iptv-card h3{
+font-size:24px;
+font-weight:1000;
+line-height:1.2;
+margin-bottom:7px;
+}
+
+.iptv-card p.description{
+font-size:10px;
+color:var(--muted);
+line-height:1.7;
+margin:0;
+}
+
+/* الأسعار */
+
+.price-list{
+position:relative;
+z-index:2;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+margin-top:15px;
+}
+
+.price-box{
+min-height:53px;
+padding:7px 8px;
+border-radius:13px;
+background:rgba(255,255,255,.045);
+border:1px solid rgba(255,255,255,.07);
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:6px;
+}
+
+.price-info{
+display:flex;
+flex-direction:column;
+gap:2px;
+}
+
+.price-duration{
+font-size:9px;
+color:#aab5c7;
+}
+
+.iptv-price{
+font-size:15px;
+font-weight:1000;
+color:#6ee7b7;
+white-space:nowrap;
+}
+
+.order-small{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:#fff;
+background:linear-gradient(135deg,#10b981,#059669);
+padding:9px 12px;
+border-radius:10px;
+font-size:10px;
+font-weight:1000;
+cursor:pointer;
+border:0;
+white-space:nowrap;
+box-shadow:0 5px 15px rgba(16,185,129,.18);
+transition:.25s;
+}
+
+.order-small:hover{
+transform:scale(1.04);
+}
+
+/* ألوان خاصة للمنتجات */
+
+.iptv-card.max-card{
+border-color:rgba(145,71,255,.45);
+}
+
+.iptv-card.tiger-card{
+border-color:rgba(245,158,11,.40);
+}
+
+.iptv-card.best-card{
+border-color:rgba(255,45,136,.40);
+}
+
+.iptv-card.tod-card{
+border-color:rgba(6,182,212,.40);
+}
+
+.iptv-card.fourth-horizontal{
+border-color:rgba(245,158,11,.40);
+}
+
+/* =========================
+   PLAYERS
+========================= */
+
+.players{
+background:linear-gradient(
+180deg,
+rgba(6,182,212,.08),
+transparent
+);
+}
+
+.player-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:9px;
+}
+
+.player{
+padding:14px 7px;
+text-align:center;
+border-radius:17px;
+background:linear-gradient(145deg,#101c27,#0c1018);
+border:1px solid rgba(6,182,212,.22);
+}
+
+.player-icon{
+font-size:34px;
+margin-bottom:7px;
+}
+
+.player h3{
+font-size:13px;
+font-weight:1000;
+}
+
+.player p{
+font-size:9px;
+color:var(--muted);
+margin:4px 0;
+}
+
+.player-price{
+font-size:14px;
+font-weight:1000;
+color:#22d3ee;
+}
+
+/* =========================
+   FOURTH
+========================= */
+
+.fourth{
+background:linear-gradient(
+180deg,
+rgba(245,158,11,.08),
+transparent
+);
+}
+
+.fourth-card{
+padding:18px;
+border-radius:20px;
+background:linear-gradient(135deg,#211b10,#121016);
+border:1px solid rgba(245,158,11,.3);
+}
+
+.fourth-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.fourth h3{
+font-size:20px;
+color:#fbbf24;
+}
+
+.fourth p{
+font-size:10px;
+color:var(--muted);
+margin-top:5px;
+}
+
+.fourth-prices{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+margin-top:14px;
+}
+
+.fourth-price{
+padding:12px;
+border-radius:13px;
+background:rgba(255,255,255,.05);
+text-align:center;
+}
+
+.fourth-price strong{
+display:block;
+font-size:17px;
+color:#6ee7b7;
+}
+
+.fourth-price span{
+font-size:9px;
+color:var(--muted);
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.category{
+margin:10px 15px;
+padding:18px;
+border-radius:22px;
+border:1px solid rgba(255,255,255,.08);
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.055),
+rgba(255,255,255,.018)
+);
+}
+
+.category.games{
+border-color:rgba(239,68,68,.25);
+}
+
+.category.internet{
+border-color:rgba(6,182,212,.25);
+}
+
+.category.cards{
+border-color:rgba(59,130,246,.3);
+}
+
+.category.money{
+border-color:rgba(16,185,129,.3);
+}
+
+.category.social{
+border-color:rgba(236,72,153,.3);
+}
+
+.category.entertainment{
+border-color:rgba(168,85,247,.3);
+}
+
+.category.sports{
+border-color:rgba(34,197,94,.3);
+}
+
+.cat-head{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:14px;
+}
+
+.cat-icon{
+width:55px;
+height:55px;
+border-radius:16px;
+display:grid;
+place-items:center;
+font-size:28px;
+background:rgba(255,255,255,.07);
+}
+
+.cat-head h2{
+font-size:18px;
+}
+
+.cat-head p{
+font-size:9px;
+color:var(--muted);
+margin-top:3px;
+}
+
+.items{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+}
+
+.item{
+padding:13px;
+border-radius:14px;
+background:rgba(255,255,255,.045);
+border:1px solid rgba(255,255,255,.06);
+transition:.25s;
+}
+
+.item:hover{
+transform:translateY(-3px);
+background:rgba(255,255,255,.08);
+}
+
+.item strong{
+display:block;
+font-size:13px;
+font-weight:1000;
+}
+
+.item span{
+display:block;
+font-size:9px;
+line-height:1.7;
+color:#9eabc0;
+margin-top:4px;
+}
+
+.item a{
+display:inline-block;
+margin-top:8px;
+padding:8px 11px;
+border-radius:10px;
+background:rgba(16,185,129,.16);
+border:1px solid rgba(16,185,129,.3);
+color:#6ee7b7;
+text-decoration:none;
+font-size:9px;
+font-weight:1000;
+cursor:pointer;
+}
+
+/* =========================
+   MEDIA
+========================= */
+
+.media{
+padding:8px 15px 18px;
+}
+
+.media-box{
+margin-bottom:15px;
+padding:15px;
+border-radius:20px;
+background:linear-gradient(145deg,#111827,#0d111a);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.media-head{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+}
+
+.media-head h3{
+font-size:15px;
+}
+
+.media-head span{
+font-size:9px;
+color:var(--muted);
+}
+
+.media-list{
+display:flex;
+gap:9px;
+overflow-x:auto;
+scrollbar-width:none;
+}
+
+.media-list::-webkit-scrollbar{
+display:none;
+}
+
+.media-card{
+min-width:125px;
+height:170px;
+border-radius:15px;
+overflow:hidden;
+position:relative;
+background:
+linear-gradient(
+160deg,
+#492d73,
+#10121c
+);
+display:flex;
+align-items:flex-end;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.media-card:before{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(
+circle at 50% 30%,
+rgba(255,255,255,.2),
+transparent 20%
+),
+linear-gradient(
+180deg,
+transparent 30%,
+rgba(0,0,0,.85)
+);
+}
+
+.media-card-content{
+position:relative;
+padding:10px;
+z-index:2;
+}
+
+.media-card strong{
+font-size:11px;
+}
+
+.media-card small{
+font-size:8px;
+color:#cbd5e1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+margin:20px 15px;
+padding:22px;
+text-align:center;
+border-radius:22px;
+background:#0e131f;
+border:1px solid rgba(255,255,255,.07);
+}
+
+.footer h2{
+font-size:19px;
+}
+
+.footer p{
+font-size:10px;
+color:var(--muted);
+line-height:1.8;
+margin-top:7px;
+}
+
+.footer strong{
+display:block;
+margin-top:10px;
+font-size:12px;
+color:#c084fc;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.bottom{
+position:fixed;
+bottom:0;
+left:50%;
+transform:translateX(-50%);
+width:100%;
+max-width:520px;
+z-index:1200;
+display:flex;
+justify-content:space-around;
+padding:10px 0 14px;
+background:rgba(12,16,26,.94);
+backdrop-filter:blur(20px);
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.bottom a{
+text-decoration:none;
+color:#9aa6ba;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:4px;
+font-size:9px;
+font-weight:800;
+}
+
+.bottom-icon{
+font-size:19px;
+}
+
+.bottom .active{
+color:#c084fc;
+}
+
+/* =========================
+   NO RESULTS
+========================= */
+
+.no-results{
+display:none;
+text-align:center;
+padding:25px;
+color:#aaa;
+font-size:12px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:420px){
+
+.iptv-card{
+padding:13px;
+min-height:225px;
+}
+
+.iptv-main{
+gap:12px;
+}
+
+.iptv-icon{
+flex-basis:82px;
+width:82px;
+height:82px;
+border-radius:21px;
+font-size:43px;
+}
+
+.iptv-card h3{
+font-size:21px;
+}
+
+.iptv-card p.description{
+font-size:9px;
+}
+
+.price-list{
+grid-template-columns:1fr 1fr;
+gap:6px;
+}
+
+.price-box{
+padding:7px 6px;
+}
+
+.iptv-price{
+font-size:13px;
+}
+
+.order-small{
+padding:8px 9px;
+font-size:9px;
+}
+
+}
+
+@media(max-width:360px){
+
+.hero{
+min-height:610px;
+}
+
+.hero h2{
+font-size:27px;
+}
+
+.iptv-card{
+min-height:220px;
+}
+
+.iptv-icon{
+flex-basis:72px;
+width:72px;
+height:72px;
+font-size:37px;
+}
+
+.iptv-card h3{
+font-size:19px;
+}
+
+.price-list{
+grid-template-columns:1fr;
+}
+
+.player h3{
+font-size:11px;
+}
+
+.items{
+gap:6px;
+}
+
+.item{
+padding:10px;
+}
+
+.item strong{
+font-size:12px;
+}
+
+}
+
+/* =========================
+   HIGHLIGHT
+========================= */
+
+@keyframes premiumGlow{
+0%,100%{
+box-shadow:
+0 15px 40px rgba(0,0,0,.35),
+0 0 0 rgba(145,71,255,0);
+}
+50%{
+box-shadow:
+0 15px 40px rgba(0,0,0,.35),
+0 0 25px rgba(145,71,255,.12);
+}
+}
+
+.iptv-card{
+animation:premiumGlow 4s ease-in-out infinite;
+}
+
 </style>
-
-<style id="whatsapp-group-style">
-.whatsapp-group{
-  position:fixed;right:18px;bottom:18px;z-index:999;
-  display:flex;align-items:center;gap:8px;
-  background:#25d366;color:#062b14;
-  padding:10px 14px 10px 10px;border-radius:30px;
-  font-weight:900;font-size:13px;
-  box-shadow:0 10px 30px #25d36655;
-  animation:waPulse 1.8s infinite;
-}
-.whatsapp-group .wa-icon{
-  width:38px;height:38px;border-radius:50%;
-  display:grid;place-items:center;background:#fff;font-size:21px;
-}
-@keyframes waPulse{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.06)}
-}
-@media(max-width:600px){
-  .whatsapp-group{right:12px;bottom:14px;font-size:11px;padding:8px 11px 8px 8px}
-  .whatsapp-group .wa-icon{width:34px;height:34px;font-size:19px}
-}
-</style>
-
-
-<style id="section-colors">
-/* ألوان احترافية مميزة لكل قسم */
-#apps{--section-accent:#7c5cff;--section-glow:#7c5cff33}
-#players{--section-accent:#00c2ff;--section-glow:#00c2ff33}
-#internet{--section-accent:#20d477;--section-glow:#20d47733}
-#social{--section-accent:#ff3b8d;--section-glow:#ff3b8d33}
-#cards{--section-accent:#ffb52e;--section-glow:#ffb52e33}
-#entertainment{--section-accent:#9b6cff;--section-glow:#9b6cff33}
-#ai{--section-accent:#00e5ff;--section-glow:#00e5ff33}
-
-#apps .section-title,#players .section-title,#internet .section-title,#social .section-title,
-#cards .section-title,#entertainment .section-title,#ai .section-title{
-  color:var(--section-accent);
-  text-shadow:0 0 22px var(--section-glow);
-}
-#apps .section-head,#players .section-head,#internet .section-head,#social .section-head,
-#cards .section-head,#entertainment .section-head,#ai .section-head{
-  border-right:4px solid var(--section-accent);
-  padding-right:12px;
-}
-#players .category,#internet .category,#social .category,#cards .category,#entertainment .category{
-  border-color:color-mix(in srgb,var(--section-accent) 28%,transparent);
-  box-shadow:0 10px 35px var(--section-glow);
-}
-#players .category:hover,#internet .category:hover,#social .category:hover,#cards .category:hover,#entertainment .category:hover{
-  border-color:var(--section-accent);
-  box-shadow:0 15px 45px var(--section-glow);
-}
-#internet .internet-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-#internet .internet-card{
-  background:linear-gradient(145deg,#101c20,#0e1620);
-  border:1px solid #20d47738;
-  border-radius:20px;
-  padding:18px;
-  box-shadow:0 12px 38px #20d47718;
-}
-#internet .internet-card .big{font-size:30px}
-#internet .internet-card h3{margin:8px 0 5px}
-#internet .internet-card p{margin:0 0 12px;color:#aab2c5;font-size:12px}
-#internet .internet-price{
-  display:block;text-align:center;
-  background:#20d47712;border:1px solid #20d4772b;
-  border-radius:10px;padding:9px;margin-bottom:10px;
-  color:#7ff0b1;font-weight:900;font-size:13px;
-}
-@media(max-width:900px){#internet .internet-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){#internet .internet-grid{grid-template-columns:1fr}}
-</style>
-
-
-<style id="sports-red">
-#players{--section-accent:#ff3b30;--section-glow:#ff3b3033}
-</style>
-
-
-<style id="requested-section-colors">
-#apps{--section-accent:#ff3b30;--section-glow:#ff3b3033}
-#players{--section-accent:#2196ff;--section-glow:#2196ff33}
-</style>
-
 </head>
+
 <body>
-<header><div class="container nav"><a class="brand" href="#"><span class="brand-icon">ك</span><span>كارة ستور</span></a><nav class="navlinks"><a href="#apps">التطبيقات</a><a href="#players">المشغلات</a><a href="#internet">الإنترنت</a><a href="#cards">البطاقات</a><a href="#entertainment">الترفيه</a><a href="#ai">AI</a></nav><div class="nav-actions"><button class="icon-btn" onclick="toggleMusic()">🎵 <span class="music-text">موسيقى</span></button></div></div></header>
 
-<section class="hero"><div class="container">
-<span class="hero-badge">✨ متجر كارة ستور الرقمي</span><h1>كل خدماتك<br><span class="gradient">بمكان واحد</span></h1>
-<p class="intro-copy">متخصصون في بيع قنوات ومخدمات IPTV عالية الجودة في العراق. استمتع بأقوى السيرفرات العالمية المعروفة لمشاهدة القنوات الرياضية، الترفيهية، وأحدث الأفلام والمسلسلات بجودة <b>FULL HD</b> و <b>4K</b> بدون تقطيع.</p>
-<div class="device-chips"><span>🍎 ايفون / ايباد / Apple TV</span><span>🤖 أندرويد هواتف وبوكس</span><span>📺 الشاشات الذكية (Smart TV)</span><span>💻 أجهزة الكمبيوتر</span></div><p class="intro-services">اشتراكات التطبيقات والمشغلات والبطاقات الإلكترونية وخدمات الإنترنت والسوشيال ميديا والذكاء الاصطناعي.</p>
-<div class="hero-buttons"><a class="btn btn-primary" href="#apps">🛍️ تصفح المتجر</a><a class="btn btn-green" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20الطلب%20من%20كارة%20ستور">💬 واتساب</a><a class="btn" href="https://t.me/a_s_fr">✈️ تليگرام</a></div>
-<div class="hero-video"><div class="video-frame"><iframe id="karaVideo" src="https://www.youtube.com/embed/RGpL55vU9lo?autoplay=1&mute=1&loop=1&playlist=RGpL55vU9lo&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture"></iframe><div class="video-overlay"><div class="video-copy"><span class="hero-badge">🎬 متخصصون في IPTV</span><h2>كارة ستور</h2><p>أقوى السيرفرات والمحتويات الرياضية والترفيهية والأفلام والمسلسلات بجودة FULL HD و4K.</p><div class="video-tags"><span>⚡ بدون تقطيع</span><span>4K</span><span>FULL HD</span></div></div><button class="sound-btn" id="soundBtn" onclick="toggleVideoSound()">🔇 تشغيل الصوت</button></div></div></div>
-<div class="hero-slider"><div class="slides"><div class="slide active"><img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=85" alt="أفلام وترفيه"><div class="slide-caption"><b>🎬 ترفيه بلا حدود</b><span>قنوات رياضية وترفيهية وأحدث الأفلام والمسلسلات بجودة عالية.</span></div></div><div class="slide"><img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1600&q=85" alt="أجهزة المشاهدة"><div class="slide-caption"><b>📺 شاهد على جهازك</b><span>iPhone / iPad / Apple TV • Android • Smart TV • أجهزة الكمبيوتر.</span></div></div><div class="slide"><img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=85" alt="رياضة"><div class="slide-caption"><b>⚽ رياضة + FULL HD و4K</b><span>استمتع بالمشاهدة بجودة عالية وتجربة مرتبة من كارة ستور.</span></div></div></div><div class="slider-dots"><button class="active" onclick="goSlide(0)"></button><button onclick="goSlide(1)"></button><button onclick="goSlide(2)"></button></div></div>
-<div class="stats"><div class="stat"><b>MAX</b><span>تحميل متعدد الأجهزة</span></div><div class="stat"><b>Best 4K</b><span>تجربة 3 ساعات</span></div><div class="stat"><b>Tiger</b><span>تجربة 24 ساعة</span></div><div class="stat"><b>24/7</b><span>للطلب والاستفسار</span></div></div>
-</div></section>
+<!-- =========================
+     HEADER
+========================= -->
 
-<main class="container">
-<section class="section" id="apps"><div class="section-head"><div><h2 class="section-title">📺 التطبيقات</h2><p class="section-sub">الأسعار مربعات منفصلة، والتحميل والطلب لكل منتج.</p></div><input id="search" class="search" placeholder="🔎 ابحث عن تطبيق..." oninput="filterCards()"></div><div class="grid" id="appGrid">
+<header class="header">
 
-<article class="card searchable" data-name="max ماكس"><div class="card-top"><div class="app-title"><span class="app-icon">🎬</span>MAX</div><span class="tag">الأكثر طلباً</span></div><p class="desc">مكتبة ترفيهية وقنوات ومحتوى رياضي، مع دعم عدة أجهزة.</p><div class="price-grid"><div class="price"><small>شهر</small><b>5,000 د.ع</b></div><div class="price"><small>3 أشهر</small><b>10,000 د.ع</b></div><div class="price"><small>6 أشهر</small><b>15,000 د.ع</b></div><div class="price"><small>سنة</small><b>25,000 د.ع</b></div></div><div class="offer">🎁 تجربة 12 ساعة — 1,000 د.ع</div><div class="devices">📱 Android • iPhone • iPad • 💻 Laptop • Samsung • LG • Google TV</div><div class="card-actions"><button class="btn btn-primary" onclick="togglePanel('maxPanel')">📥 التحميل</button><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20MAX">💬 أطلب الآن</a></div>
-<div class="download-panel" id="maxPanel"><div class="download-title">🤖 Android — روابط التحميل</div><div class="download-list"><a href="https://aftv.news/1158972" target="_blank">📥 تحميل 1</a><a href="https://aftv.news/9750443" target="_blank">📥 تحميل 2</a><a href="https://aftv.news/1607169" target="_blank">📥 تحميل 3</a><a href="https://aftv.news/8477190" target="_blank">📥 تحميل 4</a><a href="https://aftv.news/9983074" target="_blank">📥 تحميل 5</a><a href="https://aftv.news/8179852" target="_blank">📥 تحميل 6</a></div><div class="download-title">📺 Downloader للشاشات</div><div class="download-list"><button onclick="copyCode('1158972')">كود 1: 1158972</button><button onclick="copyCode('9750443')">كود 2: 9750443</button><button onclick="copyCode('1607169')">كود 3: 1607169</button><button onclick="copyCode('8477190')">كود 4: 8477190</button><button onclick="copyCode('9983074')">كود 5: 9983074</button><button onclick="copyCode('8179852')">كود 6: 8179852</button></div><div class="download-title">🍎 iPhone / iPad</div><div class="download-list"><a href="https://apps.apple.com/app/id1661811116" target="_blank">📥 App Store</a></div></div></article>
+<div class="brand">
 
-<article class="card searchable" data-name="best 4k بيست"><div class="card-top"><div class="app-title"><span class="app-icon">✨</span>Best 4K</div><span class="tag">جديد</span></div><p class="desc">خدمة مشاهدة رقمية ودعم الأجهزة نفسها.</p><div class="price-grid"><div class="price"><small>شهر</small><b>5,000 د.ع</b></div><div class="price"><small>3 أشهر</small><b>10,000 د.ع</b></div><div class="price"><small>6 أشهر</small><b>15,000 د.ع</b></div><div class="price"><small>سنة</small><b>25,000 د.ع</b></div></div><div class="offer">🎁 تجربة 3 ساعات — 1,000 د.ع</div><div class="devices">📱 Android • iPhone • iPad • 💻 Laptop • Samsung • LG • Google TV</div><div class="card-actions"><button class="btn btn-primary" onclick="togglePanel('bestPanel')">📥 التحميل</button><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Best%204K">💬 أطلب الآن</a></div><div class="download-panel" id="bestPanel"><div class="download-title">🤖 Android</div><div class="download-list"><a href="https://sh-apps.cyou/apk/BEST4K.apk" target="_blank">📥 تحميل Best 4K</a></div><div class="download-title">📺 Downloader</div><div class="download-list"><button onclick="copyCode('4056700')">كود: 4056700</button></div><div class="download-title">🍎 iPhone / iPad</div><div class="download-list"><a href="https://apps.apple.com/app/id6502774600" target="_blank">📥 App Store</a></div></div></article>
+<div class="logo">ك</div>
 
-<article class="card searchable" data-name="tiger تايكر ott platinum"><div class="card-top"><div class="app-title"><span class="app-icon">🐯</span>Tiger OTT Platinum</div><span class="tag">مميز</span></div><p class="desc">اشتراك ومشغل رقمي مع تجربة خاصة.</p><div class="price-grid"><div class="price"><small>شهر</small><b>5,000 د.ع</b></div><div class="price"><small>3 أشهر</small><b>10,000 د.ع</b></div><div class="price"><small>6 أشهر</small><b>15,000 د.ع</b></div><div class="price"><small>سنة</small><b>25,000 د.ع</b></div></div><div class="offer">🎁 تجربة 24 ساعة — 1,000 د.ع</div><div class="devices">📱 Android • iPhone • iPad • 💻 Laptop • Samsung • LG • Google TV</div><div class="card-actions"><button class="btn btn-primary" onclick="togglePanel('tigerPanel')">📥 التحميل</button><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Tiger%20OTT%20Platinum">💬 أطلب الآن</a></div><div class="download-panel" id="tigerPanel"><div class="download-title">🤖 Android</div><div class="download-list"><a href="https://bit.ly/tiger4v" target="_blank">📥 تحميل Tiger</a></div><div class="download-title">📺 Downloader</div><div class="download-list"><button onclick="copyCode('5182869')">كود: 5182869</button></div><div class="download-title">🍎 iPhone / iPad</div><div class="download-list"><a href="https://apps.apple.com/app/id6502774600" target="_blank">📥 App Store</a></div></div></article>
+<div>
+<h1>كارة ستور</h1>
+<p>كل خدماتك الإلكترونية بمكان واحد</p>
+</div>
 
-<article class="card searchable" data-name="tod تود"><div class="card-top"><div class="app-title">⚽ TOD</div><span class="tag">رياضة</span></div><p class="desc">اشتراكات موبايل وشاشة.</p><div class="price-grid"><div class="price"><small>موبايل</small><b>15,000 د.ع</b></div><div class="price"><small>شاشة</small><b>20,000 د.ع</b></div><div class="price"><small>شاشة + موبايل</small><b>25,000 د.ع</b></div></div><div class="card-actions"><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20TOD">💬 أطلب الآن</a></div></article>
+</div>
 
-<article class="card searchable" data-name="القناة الرابعة"><div class="card-top"><div class="app-title">📡 القناة الرابعة</div><span class="tag">رياضة</span></div><p class="desc">اشتراك القناة الرابعة.</p><div class="price-grid"><div class="price"><small>شهر</small><b>25,000 د.ع</b></div><div class="price"><small>3 أشهر</small><b>60,000 د.ع</b></div></div><div class="card-actions"><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20القناة%20الرابعة">💬 أطلب الآن</a></div></article>
-</div></section>
-
-<section class="section" id="players"><div class="section-head"><div><h2 class="section-title">🎛️ المشغلات</h2><p class="section-sub">اشتراكات سنوية</p></div></div><div class="category-grid"><div class="category"><div class="big">📺</div><h3>IBO</h3><p>سنوي: 10,000 د.ع</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20IBO">💬 أطلب الآن</a></div><div class="category"><div class="big">📺</div><h3>BOB</h3><p>سنوي: 10,000 د.ع</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20BOB">💬 أطلب الآن</a></div><div class="category"><div class="big">✕</div><h3>X</h3><p>سنوي: 10,000 د.ع</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20X">💬 أطلب الآن</a></div></div></section>
+</header>
 
 
-<section class="section" id="internet">
-  <div class="section-head">
-    <div><h2 class="section-title">🌐 اشتراكات الإنترنت</h2>
-    <p class="section-sub">اختر خدمة الإنترنت واطلبها مباشرة عبر واتساب</p></div>
-  </div>
-  <div class="internet-grid">
-    <div class="internet-card">
-      <div class="big">📡</div><h3>الإنترنت الوطني</h3>
-      <p>اشتراك الإنترنت الوطني</p>
-      <span class="internet-price">36,000 د.ع</span>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20الإنترنت%20الوطني">أطلب الآن</a>
-    </div>
-    <div class="internet-card">
-      <div class="big">🚀</div><h3>Supercell</h3>
-      <p>اشتراك Supercell</p>
-      <span class="internet-price">36,000 د.ع</span>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Supercell">أطلب الآن</a>
-    </div>
-    <div class="internet-card">
-      <div class="big">🔌</div><h3>فايبر</h3>
-      <p>اشتراك فايبر</p>
-      <span class="internet-price">36,000 د.ع</span>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20فايبر">أطلب الآن</a>
-    </div>
-    <div class="internet-card">
-      <div class="big">🌐</div><h3>الجزيرة</h3>
-      <p>اشتراك الجزيرة</p>
-      <span class="internet-price">36,000 د.ع</span>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20الجزيرة">أطلب الآن</a>
-    </div>
-    <div class="internet-card">
-      <div class="big">📶</div><h3>الرحمة</h3>
-      <p>اشتراك الرحمة</p>
-      <span class="internet-price">36,000 د.ع</span>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20الرحمة">أطلب الآن</a>
-    </div>
-  </div>
-</section>
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="video-bg">
+
+<iframe
+id="storeVideo"
+src="https://www.youtube.com/embed/LrhHPRJCJL4?autoplay=1&mute=1&loop=1&playlist=LrhHPRJCJL4&controls=0&playsinline=1&rel=0&modestbranding=1"
+title="Kara Store"
+frameborder="0"
+allow="autoplay; encrypted-media; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+<div class="video-overlay"></div>
+
+<button
+id="soundBtn"
+class="sound-btn"
+onclick="toggleSound()">
+🔇 تشغيل الصوت
+</button>
+
+</div>
 
 
-<section class="section" id="social"><div class="section-head"><div><h2 class="section-title">📈 خدمات السوشيال ميديا</h2><p class="section-sub">استفسر عن الخدمة المطلوبة والسعر</p></div></div><div class="category-grid">
-<div class="category"><div class="big">📸</div><h3>Instagram</h3><p>متابعين • إعجابات • مشاهدات</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20خدمة%20Instagram">💬 أطلب الآن</a></div>
-<div class="category"><div class="big">📘</div><h3>Facebook</h3><p>خدمات تفاعل</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20خدمة%20Facebook">💬 أطلب الآن</a></div>
-<div class="category"><div class="big">▶️</div><h3>YouTube</h3><p>مشاهدات • إعجابات</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20خدمة%20YouTube">💬 أطلب الآن</a></div>
-<div class="category"><div class="big">🎵</div><h3>TikTok</h3><p>خدمات تفاعل</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20خدمة%20TikTok">💬 أطلب الآن</a></div>
-<div class="category"><div class="big">💬</div><h3>WhatsApp</h3><p>حسب الطلب</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20خدمة%20WhatsApp">💬 أطلب الآن</a></div>
-<div class="category"><div class="big">👻</div><h3>Snapchat</h3><p>حسب الطلب</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20خدمة%20Snapchat">💬 أطلب الآن</a></div>
-</div></section>
+<div class="hero-content">
+
+<h2>
+أهلاً بكم في
+<span>كارة ستور</span>
+</h2>
+
+<p class="hero-sub">
+متجر رقمي متكامل للاشتراكات والخدمات الإلكترونية،
+شحن الألعاب، البطاقات، الإنترنت، السوشيال ميديا
+والمزيد من الخدمات في مكان واحد.
+</p>
 
 
-<section class="section" id="cards">
-  <div class="section-head">
-    <div><h2 class="section-title">💳 البطاقات الإلكترونية</h2>
-    <p class="section-sub">بطاقات وخدمات رقمية — استفسر عن السعر عبر واتساب</p></div>
-  </div>
-  <div class="category-grid">
-    <div class="category">
-      <div class="big">🚕</div><h3>تكسي بلي</h3><p>بطاقات وخدمات بلي</p>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20تكسي%20بلي">أطلب الآن</a>
-    </div>
-    <div class="category">
-      <div class="big">🚕</div><h3>تكسي كريم</h3><p>استفسر عن الفئات المتوفرة</p>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20تكسي%20كريم">أطلب الآن</a>
-    </div>
-    <div class="category">
-      <div class="big">🍎</div><h3>iTunes</h3><p>بطاقات iTunes</p>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20iTunes">أطلب الآن</a>
-    </div>
-    <div class="category">
-      <div class="big">💳</div><h3>Rollex</h3><p>بطاقات Rollex</p>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20Rollex">أطلب الآن</a>
-    </div>
-    <div class="category">
-      <div class="big">▶️</div><h3>Google Play</h3><p>بطاقات Google Play</p>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20Google%20Play">أطلب الآن</a>
-    </div>
-    <div class="category">
-      <div class="big">🎮</div><h3>Xbox</h3><p>بطاقات Xbox</p>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20Xbox">أطلب الآن</a>
-    </div>
-    <div class="category">
-      <div class="big">🎮</div><h3>PlayStation</h3><p>بطاقات PlayStation</p>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20PlayStation">أطلب الآن</a>
-    </div>
-    <div class="category">
-      <div class="big">🪟</div><h3>Microsoft</h3><p>بطاقات وخدمات Microsoft</p>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20Microsoft">أطلب الآن</a>
-    </div>
-    <div class="category">
-      <div class="big">🛵</div><h3>طلبات</h3><p>بطاقات وخدمات طلبات</p>
-      <a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20بطاقة%20طلبات">أطلب الآن</a>
-    </div>
-  </div>
-</section>
+<div class="trial-big">
+
+<strong>🎁 تجربة الخدمة بـ 1000 د.ع</strong>
+
+<span>
+جرّب الخدمة وتأكد من الجودة قبل الاشتراك
+</span>
+
+</div>
 
 
-<section class="section" id="entertainment"><div class="section-head"><div><h2 class="section-title">🎬 الاشتراكات الترفيهية</h2><p class="section-sub">المنصة • 1001 • Starzplay • Hulu • شاهد • Netflix</p></div></div><div class="category-grid"><div class="category"><div class="big">🎞️</div><h3>المنصة</h3><p>استفسر عن السعر</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20المنصة">💬 أطلب الآن</a></div><div class="category"><div class="big">🎬</div><h3>1001</h3><p>استفسر عن السعر</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%201001">💬 أطلب الآن</a></div><div class="category"><div class="big">⭐</div><h3>Starzplay</h3><p>استفسر عن السعر</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Starzplay">💬 أطلب الآن</a></div><div class="category"><div class="big">📺</div><h3>Hulu</h3><p>استفسر عن السعر</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Hulu">💬 أطلب الآن</a></div><div class="category"><div class="big">🎥</div><h3>شاهد</h3><p>استفسر عن السعر</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20شاهد">💬 أطلب الآن</a></div><div class="category"><div class="big">🍿</div><h3>Netflix</h3><p>استفسر عن السعر</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Netflix">💬 أطلب الآن</a></div></div></section>
+<div class="hero-buttons">
 
-<section class="section"><div class="section-head"><div><h2 class="section-title">🎞️ الأفلام الحديثة</h2><p class="section-sub">أحدث الأفلام والترفيه</p></div></div><div class="media-grid"><div class="media-card"><img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=85"><div class="media-overlay"><h3>🎬 أفلام حديثة</h3><p>مشاهدة بجودة عالية</p></div></div><div class="media-card"><img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=900&q=85"><div class="media-overlay"><h3>🍿 سينما وترفيه</h3><p>محتوى متجدد</p></div></div><div class="media-card"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=900&q=85"><div class="media-overlay"><h3>⭐ عروض وأفلام</h3><p>استفسر عن المتاح</p></div></div></div></section>
-
-<section class="section"><div class="section-head"><div><h2 class="section-title">📺 المسلسلات</h2><p class="section-sub">مسلسلات عربية وأجنبية وترفيهية</p></div></div><div class="media-grid"><div class="media-card"><img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=900&q=85"><div class="media-overlay"><h3>📺 مسلسلات حديثة</h3><p>حلقات ومحتوى متجدد</p></div></div><div class="media-card"><img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=900&q=85"><div class="media-overlay"><h3>🎭 مسلسلات متنوعة</h3><p>جودة عالية</p></div></div><div class="media-card"><img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=85"><div class="media-overlay"><h3>🍿 ترفيه مستمر</h3><p>استفسر عن المتاح</p></div></div></div></section>
-
-<section class="section"><div class="section-head"><div><h2 class="section-title">⚽ الرياضة</h2><p class="section-sub">رياضة ومباريات مباشرة</p></div></div><div class="media-grid"><div class="media-card"><img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=900&q=85"><div class="media-overlay"><h3>⚽ مباريات</h3><p>أقوى البطولات الرياضية</p></div></div><div class="media-card"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85"><div class="media-overlay"><h3>🏃 رياضات متنوعة</h3><p>متابعة بجودة عالية</p></div></div><div class="media-card"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=85"><div class="media-overlay"><h3>🏆 البطولات</h3><p>استفسر عن الاشتراكات</p></div></div></div></section>
-
-<section class="section" id="ai"><div class="section-head"><div><h2 class="section-title">🤖 الذكاء الاصطناعي</h2><p class="section-sub">اشتراكات AI</p></div></div><div class="grid"><div class="card"><div class="app-title">🤖 ChatGPT</div><p class="desc">استفسر عن الباقة والسعر المتوفر.</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20ChatGPT">💬 أطلب الآن</a></div><div class="card"><div class="app-title">✨ Gemini</div><p class="desc">استفسر عن الباقة والسعر المتوفر.</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=أريد%20اشتراك%20Gemini">💬 أطلب الآن</a></div></div></section>
-
-<section class="section"><div class="section-head"><div><h2 class="section-title">📞 تواصل معنا</h2><p class="section-sub">للطلب والاستفسار</p></div></div><div class="contact"><div class="contact-box"><div class="big">💬</div><h3>واتساب</h3><p>07711608207</p><a class="btn btn-green" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20الطلب%20من%20كارة%20ستور">مراسلة واتساب</a></div><div class="contact-box"><div class="big">✈️</div><h3>تليگرام</h3><p>@a_s_fr</p><a class="btn btn-primary" href="https://t.me/a_s_fr">فتح التليگرام</a></div></div></section>
-</main>
-
-<a class="wa-group" href="https://chat.whatsapp.com/E6Os9QbQTrUJR9MGCCsr6K?s=cl&p=a&ilr=1" target="_blank" aria-label="كروب الواتساب" title="كروب الواتساب">💬</a>
-<a class="float" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20الطلب%20من%20كارة%20ستور">💬 أطلب الآن</a>
-
-<a class="whatsapp-group" href="https://chat.whatsapp.com/E6Os9QbQTrUJR9MGCCsr6K?s=cl&p=a&ilr=1" target="_blank" rel="noopener">
-  <span class="wa-icon">💬</span><span>كروب واتساب</span>
+<a
+class="hero-btn whatsapp"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20تجربة%20الخدمة%20بـ1000">
+💬 أطلب الآن عبر الواتساب
 </a>
 
-<div class="toast" id="toast">تم النسخ</div><footer>
-  <div class="container">
-    © 2026 كارة ستور — جميع الحقوق محفوظة
-    <br>
-    <span style="display:inline-block;margin-top:8px;color:#bfc7d9;font-weight:800;">
-      تصميم وتطوير: علي جمال — 07711608207
-    </span>
-  </div>
+<a
+class="hero-btn secondary"
+href="#iptv">
+📺 مشاهدة الاشتراكات
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SEARCH
+========================= -->
+
+<div class="search-wrap">
+
+<input
+id="searchInput"
+class="search-box"
+type="search"
+placeholder="🔎 ابحث عن منتج أو خدمة داخل المتجر...">
+
+</div>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="section">
+
+<div class="section-head">
+
+<div class="section-title">
+✨ لماذا كارة ستور؟
+</div>
+
+<div class="section-note">
+خدمة • سرعة • ثقة
+</div>
+
+</div>
+
+</section>
+
+
+<div class="features">
+
+<div class="feature">
+<div class="feature-icon">⚡</div>
+<strong>تسليم سريع</strong>
+</div>
+
+<div class="feature">
+<div class="feature-icon">🛡️</div>
+<strong>خدمة موثوقة</strong>
+</div>
+
+<div class="feature">
+<div class="feature-icon">📱</div>
+<strong>جميع الأجهزة</strong>
+</div>
+
+<div class="feature">
+<div class="feature-icon">🎁</div>
+<strong>تجربة قبل الاشتراك</strong>
+</div>
+
+<div class="feature">
+<div class="feature-icon">💬</div>
+<strong>دعم واتساب</strong>
+</div>
+
+</div>
+
+
+<!-- =========================
+     OFFERS
+========================= -->
+
+<section class="offers">
+
+<div class="offer-title">
+🔥 عروض خاصة
+</div>
+
+<div class="offer-card">
+
+<h3>🎁 جرّب قبل الاشتراك</h3>
+
+<p>
+تجربة الخدمة متوفرة مقابل 1000 د.ع
+حتى تتأكد من الجودة قبل الاشتراك.
+</p>
+
+<div class="offer-price">
+
+<strong>1000 د.ع</strong>
+
+<a
+class="order-small"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20تجربة%20الخدمة%20بـ1000">
+اطلب التجربة
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     IPTV
+===================================================== -->
+
+<section class="section iptv-section" id="iptv">
+
+<div class="section-head">
+
+<div class="section-title">
+📺 الاشتراكات الرئيسية
+</div>
+
+<div class="section-note">
+الأسعار بالدينار العراقي
+</div>
+
+</div>
+
+
+<div class="iptv-grid">
+
+
+<!-- =====================================================
+     MAX
+===================================================== -->
+
+<div class="iptv-card max-card">
+
+<div class="iptv-main">
+
+<div class="iptv-icon">
+📺
+</div>
+
+<div class="iptv-info">
+
+<h3>MAX TV</h3>
+
+<p class="description">
+قنوات رياضية وترفيهية وأفلام ومسلسلات
+بجودة عالية.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="price-list">
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">الشهر</span>
+<strong class="iptv-price">5,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%20الشهر"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">3 أشهر</span>
+<strong class="iptv-price">10,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%203%20أشهر"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">6 أشهر</span>
+<strong class="iptv-price">15,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%206%20أشهر"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">سنة</span>
+<strong class="iptv-price">25,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%20سنة"
+target="_blank">
+واتساب
+</a>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     TIGER
+===================================================== -->
+
+<div class="iptv-card tiger-card">
+
+<div class="iptv-main">
+
+<div class="iptv-icon">
+🐯
+</div>
+
+<div class="iptv-info">
+
+<h3>TIGER IPTV</h3>
+
+<p class="description">
+قنوات وأفلام ومسلسلات ومحتوى متنوع
+بجودة ممتازة.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="price-list">
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">الشهر</span>
+<strong class="iptv-price">3,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%20الشهر"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">3 أشهر</span>
+<strong class="iptv-price">7,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%203%20أشهر"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">6 أشهر</span>
+<strong class="iptv-price">13,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%206%20أشهر"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">سنة</span>
+<strong class="iptv-price">18,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%20سنة"
+target="_blank">
+واتساب
+</a>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     BEST 4K
+===================================================== -->
+
+<div class="iptv-card best-card">
+
+<div class="iptv-main">
+
+<div class="iptv-icon">
+🔥
+</div>
+
+<div class="iptv-info">
+
+<h3>BEST 4K</h3>
+
+<p class="description">
+مكتبة ضخمة وجودة 4K وقنوات متنوعة
+ومحتوى ترفيهي ورياضي.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="price-list">
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">الشهر</span>
+<strong class="iptv-price">4,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%20الشهر"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">3 أشهر</span>
+<strong class="iptv-price">9,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%203%20أشهر"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">6 أشهر</span>
+<strong class="iptv-price">13,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%206%20أشهر"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">سنة</span>
+<strong class="iptv-price">20,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%20سنة"
+target="_blank">
+واتساب
+</a>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     TOD
+===================================================== -->
+
+<div class="iptv-card tod-card">
+
+<div class="iptv-main">
+
+<div class="iptv-icon">
+⚽
+</div>
+
+<div class="iptv-info">
+
+<h3>TOD</h3>
+
+<p class="description">
+رياضة وبث مباشر ومحتوى رياضي،
+مع خيارات للموبايل والشاشة.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="price-list">
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">موبايل</span>
+<strong class="iptv-price">15,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD%20موبايل"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+<div class="price-info">
+<span class="price-duration">شاشة</span>
+<strong class="iptv-price">20,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD%20شاشة"
+target="_blank">
+واتساب
+</a>
+</div>
+
+
+<div class="price-box">
+
+<div class="price-info">
+<span class="price-duration">موبايل + شاشة</span>
+<strong class="iptv-price">25,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD%20موبايل%20وشاشة"
+target="_blank">
+واتساب
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     القناة الرابعة بعد TOD
+===================================================== -->
+
+<div class="iptv-card fourth-horizontal">
+
+<div class="iptv-main">
+
+<div class="iptv-icon">
+📡
+</div>
+
+<div class="iptv-info">
+
+<h3>القناة الرابعة</h3>
+
+<p class="description">
+اشتراك لمتابعة المحتوى الرياضي
+والبرامج والقنوات المتوفرة.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="price-list">
+
+<div class="price-box">
+
+<div class="price-info">
+<span class="price-duration">الشهر</span>
+<strong class="iptv-price">25,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20القناة%20الرابعة%20الشهر"
+target="_blank">
+واتساب
+</a>
+
+</div>
+
+
+<div class="price-box">
+
+<div class="price-info">
+<span class="price-duration">3 أشهر</span>
+<strong class="iptv-price">60,000 د.ع</strong>
+</div>
+
+<a
+class="order-small"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20القناة%20الرابعة%203%20أشهر"
+target="_blank">
+واتساب
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PLAYERS
+========================= -->
+
+<section class="section players">
+
+<div class="section-head">
+
+<div class="section-title">
+🎬 قسم المشغلات
+</div>
+
+<div class="section-note">
+اشتراك سنوي
+</div>
+
+</div>
+
+<div class="player-grid">
+
+<div class="player">
+
+<div class="player-icon">
+📺
+</div>
+
+<h3>IBO PLAYER</h3>
+
+<p>تفعيل المشغل</p>
+
+<div class="player-price">
+10,000 د.ع
+</div>
+
+<p>سنوي</p>
+
+<a
+class="order-small"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20IBO%20سنوي">
+أطلب
+</a>
+
+</div>
+
+
+<div class="player">
+
+<div class="player-icon">
+▶️
+</div>
+
+<h3>BOB PLAYER</h3>
+
+<p>تفعيل المشغل</p>
+
+<div class="player-price">
+10,000 د.ع
+</div>
+
+<p>سنوي</p>
+
+<a
+class="order-small"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20BOB%20سنوي">
+أطلب
+</a>
+
+</div>
+
+
+<div class="player">
+
+<div class="player-icon">
+❌
+</div>
+
+<h3>X PLAYER</h3>
+
+<p>تفعيل المشغل</p>
+
+<div class="player-price">
+10,000 د.ع
+</div>
+
+<p>سنوي</p>
+
+<a
+class="order-small"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20X%20PLAYER%20سنوي">
+أطلب
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GAMES
+========================= -->
+
+<section class="category games">
+
+<div class="cat-head">
+
+<div class="cat-icon">🎮</div>
+
+<div>
+<h2>الألعاب</h2>
+<p>شحن جميع الألعاب والفئات المتوفرة</p>
+</div>
+
+</div>
+
+<div class="items">
+
+<div class="item">
+<strong>🎯 PUBG Mobile</strong>
+<span>UC — جميع الفئات</span>
+<a onclick="order('شحن PUBG Mobile')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>💎 Free Fire</strong>
+<span>Diamonds — جميع الفئات</span>
+<a onclick="order('شحن Free Fire')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎲 Yalla Ludo</strong>
+<span>Diamonds — جميع الفئات</span>
+<a onclick="order('شحن يلا لودو')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>⚽ eFootball</strong>
+<span>Coins — جميع الفئات</span>
+<a onclick="order('شحن eFootball')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🧱 Roblox</strong>
+<span>Robux — جميع الفئات</span>
+<a onclick="order('Roblox Robux')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>⛏️ Minecraft</strong>
+<span>Minecoins — جميع الفئات</span>
+<a onclick="order('Minecraft')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎮 PlayStation</strong>
+<span>PSN — جميع الفئات</span>
+<a onclick="order('PlayStation')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎮 Xbox</strong>
+<span>Gift Cards — جميع الفئات</span>
+<a onclick="order('Xbox')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎮 Steam</strong>
+<span>Steam Wallet — جميع الفئات</span>
+<a onclick="order('Steam')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🏎️ FC Mobile</strong>
+<span>Points — جميع الفئات</span>
+<a onclick="order('FC Mobile')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🔥 Call of Duty</strong>
+<span>CP — جميع الفئات</span>
+<a onclick="order('Call of Duty')">💬 طلب عبر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🛡️ League of Legends</strong>
+<span>Riot Points — جميع الفئات</span>
+<a onclick="order('League of Legends')">💬 طلب عبر واتساب</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     INTERNET
+========================= -->
+
+<section class="category internet">
+
+<div class="cat-head">
+
+<div class="cat-icon">🌐</div>
+
+<div>
+<h2>الإنترنت</h2>
+<p>تجديد وشحن الخدمات المتوفرة</p>
+</div>
+
+</div>
+
+<div class="items">
+
+<div class="item">
+<strong>🌐 الوطني FTTH</strong>
+<span>تجديد الاشتراك</span>
+<a onclick="order('الوطني FTTH')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>⚡ سوبر سيل</strong>
+<span>تجديد الاشتراك</span>
+<a onclick="order('سوبر سيل')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>📡 الجزيرة</strong>
+<span>تجديد وشحن</span>
+<a onclick="order('الجزيرة')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>📶 الرحمة</strong>
+<span>تجديد الاشتراك</span>
+<a onclick="order('الرحمة')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>🚀 هرنز</strong>
+<span>تجديد سريع</span>
+<a onclick="order('هرنز')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>📱 آسياسيل</strong>
+<span>كروت وشحن</span>
+<a onclick="order('آسياسيل')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>📲 زين</strong>
+<span>كروت وشحن</span>
+<a onclick="order('زين')">💬 طلب</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CARDS
+========================= -->
+
+<section class="category cards">
+
+<div class="cat-head">
+
+<div class="cat-icon">💳</div>
+
+<div>
+<h2>البطاقات الإلكترونية</h2>
+<p>البطاقات والفئات المتوفرة</p>
+</div>
+
+</div>
+
+<div class="items">
+
+<div class="item">
+<strong>🍎 Apple Gift Card</strong>
+<span>1$ — 2$ — 5$ — 10$ — 15$ — 25$ — 50$ — 100$</span>
+<a onclick="order('Apple Gift Card')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>▶️ Google Play</strong>
+<span>5$ — 10$ — 15$ — 25$ — 50$ — 100$</span>
+<a onclick="order('Google Play')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎮 PlayStation</strong>
+<span>10$ — 20$ — 25$ — 50$ — 75$ — 100$</span>
+<a onclick="order('PlayStation Gift Card')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎮 Steam</strong>
+<span>5$ — 10$ — 20$ — 25$ — 50$ — 100$</span>
+<a onclick="order('Steam Gift Card')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎮 Xbox</strong>
+<span>10$ — 15$ — 20$ — 25$ — 50$ — 100$</span>
+<a onclick="order('Xbox Gift Card')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🚗 كريم</strong>
+<span>فئات متعددة حسب الطلب</span>
+<a onclick="order('بطاقات كريم')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>💳 بلي</strong>
+<span>فئات متعددة حسب الخدمة</span>
+<a onclick="order('بطاقات بلي')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎵 Spotify</strong>
+<span>1 شهر — 3 أشهر — 6 أشهر — سنة</span>
+<a onclick="order('Spotify')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎬 Netflix</strong>
+<span>باقات متعددة حسب الحساب</span>
+<a onclick="order('Netflix')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎵 iTunes</strong>
+<span>فئات متعددة</span>
+<a onclick="order('iTunes')">السعر واتساب</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FINANCE
+========================= -->
+
+<section class="category money">
+
+<div class="cat-head">
+
+<div class="cat-icon">💸</div>
+
+<div>
+<h2>الخدمات المالية</h2>
+<p>الخدمات المتوفرة في العراق</p>
+</div>
+
+</div>
+
+<div class="items">
+
+<div class="item">
+<strong>💚 زين كاش</strong>
+<span>تحويل — إيداع — سحب — دفع</span>
+<a onclick="order('زين كاش')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>💙 آسيا حوالة</strong>
+<span>تحويل وشحن وخدمات مالية</span>
+<a onclick="order('آسيا حوالة')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>⚡ فاست بي</strong>
+<span>تحويل وشحن</span>
+<a onclick="order('فاست بي')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>💳 ماستر كارد</strong>
+<span>خدمات وشحن البطاقات</span>
+<a onclick="order('ماستر كارد')">💬 طلب</a>
+</div>
+
+<div class="item">
+<strong>🚕 بلي</strong>
+<span>خدمات تكسي بلي</span>
+<a onclick="order('تكسي بلي')">💬 طلب</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SOCIAL
+========================= -->
+
+<section class="category social">
+
+<div class="cat-head">
+
+<div class="cat-icon">📣</div>
+
+<div>
+<h2>السوشيال ميديا</h2>
+<p>جميع المنصات والخدمات</p>
+</div>
+
+</div>
+
+<div class="items">
+
+<div class="item">
+<strong>📘 Facebook</strong>
+<span>متابعين — إعجابات — مشاهدات — تفاعل</span>
+<a onclick="order('خدمات Facebook')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>📸 Instagram</strong>
+<span>متابعين — لايكات — مشاهدات — ريلز</span>
+<a onclick="order('خدمات Instagram')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🎵 TikTok</strong>
+<span>متابعين — إعجابات — مشاهدات</span>
+<a onclick="order('خدمات TikTok')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>✈️ Telegram</strong>
+<span>أعضاء — مشاهدات — تفاعل</span>
+<a onclick="order('خدمات Telegram')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>▶️ YouTube</strong>
+<span>مشتركين — مشاهدات — إعجابات</span>
+<a onclick="order('خدمات YouTube')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>👻 Snapchat</strong>
+<span>مشاهدات — تفاعل</span>
+<a onclick="order('خدمات Snapchat')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>🧵 Threads</strong>
+<span>متابعين وتفاعل</span>
+<a onclick="order('خدمات Threads')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>💬 WhatsApp</strong>
+<span>خدمات وتسويق حسب الطلب</span>
+<a onclick="order('خدمات WhatsApp')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>💼 LinkedIn</strong>
+<span>متابعين وتفاعل</span>
+<a onclick="order('خدمات LinkedIn')">السعر واتساب</a>
+</div>
+
+<div class="item">
+<strong>📌 Pinterest</strong>
+<span>مشاهدات وتفاعل</span>
+<a onclick="order('خدمات Pinterest')">السعر واتساب</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ENTERTAINMENT
+========================= -->
+
+<section class="category entertainment">
+
+<div class="cat-head">
+
+<div class="cat-icon">🎬</div>
+
+<div>
+<h2>الترفيه</h2>
+<p>أفلام ومسلسلات ومحتوى ترفيهي</p>
+</div>
+
+</div>
+
+<div class="items">
+
+<div class="item">
+<strong>🎬 أفلام عربية</strong>
+<span>أحدث الأفلام العربية</span>
+<a onclick="order('أفلام عربية')">استفسار</a>
+</div>
+
+<div class="item">
+<strong>🎬 أفلام أجنبية</strong>
+<span>أحدث الأفلام العالمية</span>
+<a onclick="order('أفلام أجنبية')">استفسار</a>
+</div>
+
+<div class="item">
+<strong>🍿 مسلسلات عربية</strong>
+<span>أحدث المسلسلات العربية</span>
+<a onclick="order('مسلسلات عربية')">استفسار</a>
+</div>
+
+<div class="item">
+<strong>🍿 مسلسلات تركية</strong>
+<span>أحدث المسلسلات التركية</span>
+<a onclick="order('مسلسلات تركية')">استفسار</a>
+</div>
+
+<div class="item">
+<strong>🌎 مسلسلات أجنبية</strong>
+<span>أحدث المسلسلات الأجنبية</span>
+<a onclick="order('مسلسلات أجنبية')">استفسار</a>
+</div>
+
+<div class="item">
+<strong>🎞️ محتوى 4K</strong>
+<span>محتوى عالي الجودة</span>
+<a onclick="order('محتوى 4K')">استفسار</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SPORTS
+========================= -->
+
+<section class="category sports">
+
+<div class="cat-head">
+
+<div class="cat-icon">⚽</div>
+
+<div>
+<h2>الرياضة</h2>
+<p>القنوات والبطولات والمباريات</p>
+</div>
+
+</div>
+
+<div class="items">
+
+<div class="item">
+<strong>⚽ كرة القدم</strong>
+<span>أهم المباريات والبطولات</span>
+<a onclick="order('خدمات كرة القدم')">استفسار</a>
+</div>
+
+<div class="item">
+<strong>🏆 البطولات العالمية</strong>
+<span>بطولات ومنافسات عالمية</span>
+<a onclick="order('البطولات العالمية')">استفسار</a>
+</div>
+
+<div class="item">
+<strong>📺 القنوات الرياضية</strong>
+<span>قنوات رياضية متنوعة</span>
+<a onclick="order('القنوات الرياضية')">استفسار</a>
+</div>
+
+<div class="item">
+<strong>🏎️ الفورمولا</strong>
+<span>سباقات ومحتوى رياضي</span>
+<a onclick="order('الفورمولا')">استفسار</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MEDIA
+========================= -->
+
+<section class="media">
+
+<div class="media-box">
+
+<div class="media-head">
+<h3>🎬 أحدث الأفلام</h3>
+<span>محتوى متجدد</span>
+</div>
+
+<div class="media-list">
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>🎬 فيلم جديد</strong>
+<small>أحدث الأفلام</small>
+</div>
+</div>
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>🔥 أفلام 4K</strong>
+<small>جودة عالية</small>
+</div>
+</div>
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>🍿 Cinema</strong>
+<small>ترفيه متواصل</small>
+</div>
+</div>
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>⭐ Movies</strong>
+<small>اختيارات متنوعة</small>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="media-box">
+
+<div class="media-head">
+<h3>🍿 أحدث المسلسلات</h3>
+<span>محتوى متجدد</span>
+</div>
+
+<div class="media-list">
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>🇹🇷 مسلسلات تركية</strong>
+<small>الأحدث</small>
+</div>
+</div>
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>🌎 مسلسلات أجنبية</strong>
+<small>الأحدث</small>
+</div>
+</div>
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>🇦🇪 مسلسلات عربية</strong>
+<small>الأحدث</small>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="media-box">
+
+<div class="media-head">
+<h3>⚽ أشهر اللاعبين</h3>
+<span>عالم الرياضة</span>
+</div>
+
+<div class="media-list">
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>⭐ نجوم كرة القدم</strong>
+<small>أبرز اللاعبين</small>
+</div>
+</div>
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>🏆 أبطال العالم</strong>
+<small>نجوم البطولات</small>
+</div>
+</div>
+
+<div class="media-card">
+<div class="media-card-content">
+<strong>⚽ Football</strong>
+<small>أخبار ومباريات</small>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+<h2>📲 كارة ستور</h2>
+
+<p>
+جميع الخدمات الرقمية التي تحتاجها بمكان واحد.
+للاستفسار عن الأسعار والتوفر اطلب مباشرة عبر واتساب.
+</p>
+
+<a
+class="hero-btn whatsapp"
+style="display:inline-block;margin-top:12px"
+href="https://wa.me/9647711608207"
+target="_blank">
+💬 أطلب الآن عبر الواتساب
+</a>
+
+<strong>
+التطوير والتصميم: علي جمال
+</strong>
+
+<p>
+07711608207
+</p>
+
 </footer>
 
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+class="float-btn float-wa"
+href="https://wa.me/9647711608207"
+target="_blank"
+title="واتساب">
+💬
+</a>
+
+
+<!-- =========================
+     WHATSAPP GROUP
+========================= -->
+
+<a
+class="float-btn float-group"
+href="https://chat.whatsapp.com/E6Os9QbQTrUJR9MGCCsr6K?s=cl&p=a&ilr=1"
+target="_blank"
+title="كروب متجر كارة ستور">
+👥
+</a>
+
+
+<!-- =========================
+     BOTTOM NAV
+========================= -->
+
+<nav class="bottom">
+
+<a
+class="active"
+href="#">
+<span class="bottom-icon">🏠</span>
+<span>الرئيسية</span>
+</a>
+
+<a href="#iptv">
+<span class="bottom-icon">📺</span>
+<span>IPTV</span>
+</a>
+
+<a
+href="https://wa.me/9647711608207"
+target="_blank">
+<span class="bottom-icon">💬</span>
+<span>واتساب</span>
+</a>
+
+<a
+href="https://chat.whatsapp.com/E6Os9QbQTrUJR9MGCCsr6K?s=cl&p=a&ilr=1"
+target="_blank">
+<span class="bottom-icon">👥</span>
+<span>الكروب</span>
+</a>
+
+</nav>
+
+
 <script>
-function togglePanel(id){const el=document.getElementById(id);document.querySelectorAll('.download-panel').forEach(x=>{if(x!==el)x.classList.remove('open')});el.classList.toggle('open')}
-function copyCode(code){if(navigator.clipboard)navigator.clipboard.writeText(code);else{const t=document.createElement('textarea');t.value=code;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}const toast=document.getElementById('toast');toast.textContent='تم نسخ كود Downloader: '+code;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}
-let currentSlide=0,slideTimer=null;function goSlide(n){const slides=document.querySelectorAll('.slide'),dots=document.querySelectorAll('.slider-dots button');currentSlide=(n+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('active',i===currentSlide));dots.forEach((d,i)=>d.classList.toggle('active',i===currentSlide));clearInterval(slideTimer);slideTimer=setInterval(()=>goSlide(currentSlide+1),5000)}slideTimer=setInterval(()=>goSlide(currentSlide+1),5000)
-let videoMuted=true;function toggleVideoSound(){const iframe=document.getElementById('karaVideo');videoMuted=!videoMuted;iframe.src="https://www.youtube.com/embed/RGpL55vU9lo?autoplay=1&mute="+(videoMuted?1:0)+"&loop=1&playlist=RGpL55vU9lo&controls=0&rel=0&modestbranding=1&playsinline=1";document.getElementById('soundBtn').textContent=videoMuted?'🔇 تشغيل الصوت':'🔊 كتم الصوت'}
-function filterCards(){const q=document.getElementById('search').value.trim().toLowerCase();document.querySelectorAll('#appGrid .searchable').forEach(card=>card.style.display=(!q||card.dataset.name.toLowerCase().includes(q))?'block':'none')}
-let audioCtx=null,musicTimer=null,musicOn=false;function toggleMusic(){if(musicOn){clearInterval(musicTimer);audioCtx?.close();musicOn=false;return}audioCtx=new(window.AudioContext||window.webkitAudioContext)();const notes=[261.63,329.63,392,523.25,392,329.63];let i=0;const play=()=>{const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=notes[i++%notes.length];g.gain.setValueAtTime(.035,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+1.2);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+1.25)};play();musicTimer=setInterval(play,900);musicOn=true}
+
+/* =========================
+   واتساب
+========================= */
+
+const PHONE="9647711608207";
+
+function order(product){
+
+const message =
+"السلام عليكم 👋\n\n"+
+"أريد الطلب/الاستفسار من كارة ستور:\n"+
+product+
+"\n\nيرجى إرسال السعر والتفاصيل.";
+
+window.open(
+"https://wa.me/"+PHONE+"?text="+encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+
+/* =========================
+   YouTube Video
+========================= */
+
+let soundOn=false;
+
+function toggleSound(){
+
+const iframe=document.getElementById("storeVideo");
+const button=document.getElementById("soundBtn");
+
+if(!soundOn){
+
+iframe.src=
+"https://www.youtube.com/embed/LrhHPRJCJL4?autoplay=1&mute=0&loop=1&playlist=LrhHPRJCJL4&controls=0&playsinline=1&rel=0&modestbranding=1";
+
+button.innerHTML="🔊 الصوت يعمل";
+
+soundOn=true;
+
+}else{
+
+iframe.src=
+"https://www.youtube.com/embed/LrhHPRJCJL4?autoplay=1&mute=1&loop=1&playlist=LrhHPRJCJL4&controls=0&playsinline=1&rel=0&modestbranding=1";
+
+button.innerHTML="🔇 تشغيل الصوت";
+
+soundOn=false;
+
+}
+
+}
+
+
+/* =========================
+   البحث
+========================= */
+
+const searchInput=
+document.getElementById("searchInput");
+
+searchInput.addEventListener(
+"input",
+function(){
+
+const value=
+this.value.trim().toLowerCase();
+
+const products=
+document.querySelectorAll(
+".item,.iptv-card,.player,.fourth-card,.offer-card"
+);
+
+products.forEach(product=>{
+
+const text=
+product.innerText.toLowerCase();
+
+if(!value || text.includes(value)){
+
+product.style.display="";
+
+}else{
+
+product.style.display="none";
+
+}
+
+});
+
+}
+);
+
+
+/* =========================
+   دخول سلس
+========================= */
+
+document.querySelectorAll(
+'a[href^="#"]'
+).forEach(link=>{
+
+link.addEventListener(
+"click",
+function(e){
+
+const id=
+this.getAttribute("href");
+
+if(id && id!=="#"){
+
+const element=
+document.querySelector(id);
+
+if(element){
+
+e.preventDefault();
+
+element.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+}
+
+});
+
+});
+
+
+/* =========================
+   ظهور العناصر
+========================= */
+
+const observer=
+new IntersectionObserver(
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},
+{
+threshold:.06
+}
+);
+
+
+document.querySelectorAll(
+".category,.media-box,.fourth-card,.iptv-card,.player,.offer-card"
+).forEach(el=>{
+
+el.style.opacity="0";
+
+el.style.transform=
+"translateY(18px)";
+
+el.style.transition=
+"opacity .55s ease,transform .55s ease";
+
+observer.observe(el);
+
+});
+
+
 </script>
-</body></html>
+
+</body>
+</html>
