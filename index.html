@@ -292,7 +292,7 @@ background:#25d366;
 ========================= */
 
 .search-wrap{
-padding:12px 15px 5px;
+padding:12px 15px 8px;
 position:relative;
 z-index:10;
 }
@@ -311,6 +311,138 @@ box-shadow:0 8px 25px rgba(0,0,0,.2);
 
 .search-box::placeholder{
 color:#8994a8;
+}
+
+/* =====================================================
+   🔥 شريط العروض المتحرك
+===================================================== */
+
+.offer-ticker{
+position:relative;
+margin:7px 12px 5px;
+height:76px;
+overflow:hidden;
+border-radius:20px;
+background:
+linear-gradient(
+135deg,
+rgba(145,71,255,.25),
+rgba(255,45,136,.20),
+rgba(255,176,32,.12)
+);
+border:1px solid rgba(255,255,255,.12);
+box-shadow:
+0 10px 30px rgba(0,0,0,.30),
+0 0 25px rgba(145,71,255,.10);
+direction:ltr;
+}
+
+.offer-ticker::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+90deg,
+rgba(145,71,255,.16),
+transparent 35%,
+rgba(255,45,136,.12)
+);
+pointer-events:none;
+z-index:1;
+}
+
+.offer-track{
+height:100%;
+display:flex;
+align-items:center;
+width:max-content;
+animation:offerMove 24s linear infinite;
+position:relative;
+z-index:2;
+}
+
+.offer-ticker:hover .offer-track{
+animation-play-state:paused;
+}
+
+.offer-slide{
+width:310px;
+min-width:310px;
+height:62px;
+margin:0 7px;
+padding:8px 12px;
+border-radius:15px;
+display:flex;
+align-items:center;
+gap:10px;
+direction:rtl;
+background:rgba(5,8,18,.60);
+border:1px solid rgba(255,255,255,.09);
+box-shadow:0 5px 18px rgba(0,0,0,.25);
+cursor:pointer;
+text-decoration:none;
+color:#fff;
+}
+
+.offer-slide-icon{
+width:45px;
+height:45px;
+min-width:45px;
+border-radius:13px;
+display:grid;
+place-items:center;
+font-size:25px;
+background:linear-gradient(135deg,#9147ff,#ff2d88);
+box-shadow:0 0 18px rgba(145,71,255,.25);
+}
+
+.offer-slide:nth-child(2n) .offer-slide-icon{
+background:linear-gradient(135deg,#ff9f1c,#ff2d55);
+}
+
+.offer-slide:nth-child(3n) .offer-slide-icon{
+background:linear-gradient(135deg,#06b6d4,#2563eb);
+}
+
+.offer-slide-content{
+flex:1;
+min-width:0;
+}
+
+.offer-slide-content strong{
+display:block;
+font-size:12px;
+font-weight:1000;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.offer-slide-content span{
+display:block;
+font-size:9px;
+color:#b8c1d1;
+margin-top:3px;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.offer-slide-price{
+font-size:12px;
+font-weight:1000;
+color:#ffd166;
+white-space:nowrap;
+}
+
+@keyframes offerMove{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-50%);
+}
 }
 
 /* =========================
@@ -437,7 +569,7 @@ color:#ffd166;
 }
 
 /* =====================================================
-   IPTV - HORIZONTAL PREMIUM CARDS
+   IPTV
 ===================================================== */
 
 .iptv-section{
@@ -453,8 +585,6 @@ display:flex;
 flex-direction:column;
 gap:14px;
 }
-
-/* البطاقة الأفقية */
 
 .iptv-card{
 position:relative;
@@ -487,8 +617,6 @@ box-shadow:
 0 0 25px rgba(145,71,255,.12);
 }
 
-/* لمعان */
-
 .iptv-card::before{
 content:"";
 position:absolute;
@@ -502,8 +630,6 @@ left:-40px;
 pointer-events:none;
 }
 
-/* داخل البطاقة */
-
 .iptv-main{
 position:relative;
 z-index:2;
@@ -511,8 +637,6 @@ display:flex;
 align-items:center;
 gap:16px;
 }
-
-/* الصورة */
 
 .iptv-icon{
 flex:0 0 105px;
@@ -529,8 +653,6 @@ box-shadow:
 inset 0 1px rgba(255,255,255,.25);
 border:1px solid rgba(255,255,255,.12);
 }
-
-/* معلومات المنتج */
 
 .iptv-info{
 flex:1;
@@ -550,8 +672,6 @@ color:var(--muted);
 line-height:1.7;
 margin:0;
 }
-
-/* الأسعار */
 
 .price-list{
 position:relative;
@@ -613,8 +733,6 @@ transition:.25s;
 .order-small:hover{
 transform:scale(1.04);
 }
-
-/* ألوان خاصة للمنتجات */
 
 .iptv-card.max-card{
 border-color:rgba(145,71,255,.45);
@@ -682,67 +800,6 @@ margin:4px 0;
 font-size:14px;
 font-weight:1000;
 color:#22d3ee;
-}
-
-/* =========================
-   FOURTH
-========================= */
-
-.fourth{
-background:linear-gradient(
-180deg,
-rgba(245,158,11,.08),
-transparent
-);
-}
-
-.fourth-card{
-padding:18px;
-border-radius:20px;
-background:linear-gradient(135deg,#211b10,#121016);
-border:1px solid rgba(245,158,11,.3);
-}
-
-.fourth-top{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.fourth h3{
-font-size:20px;
-color:#fbbf24;
-}
-
-.fourth p{
-font-size:10px;
-color:var(--muted);
-margin-top:5px;
-}
-
-.fourth-prices{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:8px;
-margin-top:14px;
-}
-
-.fourth-price{
-padding:12px;
-border-radius:13px;
-background:rgba(255,255,255,.05);
-text-align:center;
-}
-
-.fourth-price strong{
-display:block;
-font-size:17px;
-color:#6ee7b7;
-}
-
-.fourth-price span{
-font-size:9px;
-color:var(--muted);
 }
 
 /* =========================
@@ -1044,6 +1101,37 @@ font-size:12px;
 
 @media(max-width:420px){
 
+.offer-ticker{
+margin-left:10px;
+margin-right:10px;
+height:72px;
+}
+
+.offer-slide{
+width:285px;
+min-width:285px;
+height:59px;
+}
+
+.offer-slide-icon{
+width:42px;
+height:42px;
+min-width:42px;
+font-size:23px;
+}
+
+.offer-slide-content strong{
+font-size:11px;
+}
+
+.offer-slide-content span{
+font-size:8px;
+}
+
+.offer-slide-price{
+font-size:11px;
+}
+
 .iptv-card{
 padding:13px;
 min-height:225px;
@@ -1097,6 +1185,15 @@ min-height:610px;
 
 .hero h2{
 font-size:27px;
+}
+
+.offer-slide{
+width:265px;
+min-width:265px;
+}
+
+.offer-slide-price{
+font-size:10px;
 }
 
 .iptv-card{
@@ -1273,6 +1370,176 @@ placeholder="🔎 ابحث عن منتج أو خدمة داخل المتجر..."
 </div>
 
 
+<!-- =====================================================
+     🔥 شريط العروض المتحرك
+===================================================== -->
+
+<section class="offer-ticker" aria-label="العروض">
+
+<div class="offer-track">
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20تجربة%20الخدمة%20بـ1000">
+<div class="offer-slide-icon">🎁</div>
+<div class="offer-slide-content">
+<strong>تجربة الخدمة</strong>
+<span>جرّب قبل الاشتراك وتأكد من الجودة</span>
+</div>
+<div class="offer-slide-price">1000 د.ع</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%20سنة">
+<div class="offer-slide-icon">🔥</div>
+<div class="offer-slide-content">
+<strong>BEST 4K</strong>
+<span>اشتراك سنة بجودة ومحتوى مميز</span>
+</div>
+<div class="offer-slide-price">20,000</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%20سنة">
+<div class="offer-slide-icon">🐯</div>
+<div class="offer-slide-content">
+<strong>TIGER IPTV</strong>
+<span>اشترك سنة واستمتع بالمحتوى</span>
+</div>
+<div class="offer-slide-price">18,000</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%20سنة">
+<div class="offer-slide-icon">📺</div>
+<div class="offer-slide-content">
+<strong>MAX TV</strong>
+<span>قنوات رياضية وترفيهية وأفلام</span>
+</div>
+<div class="offer-slide-price">25,000</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20IBO%20سنوي">
+<div class="offer-slide-icon">▶️</div>
+<div class="offer-slide-content">
+<strong>IBO PLAYER</strong>
+<span>تفعيل المشغل لمدة سنة</span>
+</div>
+<div class="offer-slide-price">10,000</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD">
+<div class="offer-slide-icon">⚽</div>
+<div class="offer-slide-content">
+<strong>TOD</strong>
+<span>محتوى رياضي وبث مباشر</span>
+</div>
+<div class="offer-slide-price">ابتداءً من 15,000</div>
+</a>
+
+
+<!-- نسخة ثانية لضمان استمرار الحركة -->
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20تجربة%20الخدمة%20بـ1000">
+<div class="offer-slide-icon">🎁</div>
+<div class="offer-slide-content">
+<strong>تجربة الخدمة</strong>
+<span>جرّب قبل الاشتراك وتأكد من الجودة</span>
+</div>
+<div class="offer-slide-price">1000 د.ع</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%20سنة">
+<div class="offer-slide-icon">🔥</div>
+<div class="offer-slide-content">
+<strong>BEST 4K</strong>
+<span>اشتراك سنة بجودة ومحتوى مميز</span>
+</div>
+<div class="offer-slide-price">20,000</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%20سنة">
+<div class="offer-slide-icon">🐯</div>
+<div class="offer-slide-content">
+<strong>TIGER IPTV</strong>
+<span>اشترك سنة واستمتع بالمحتوى</span>
+</div>
+<div class="offer-slide-price">18,000</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%20سنة">
+<div class="offer-slide-icon">📺</div>
+<div class="offer-slide-content">
+<strong>MAX TV</strong>
+<span>قنوات رياضية وترفيهية وأفلام</span>
+</div>
+<div class="offer-slide-price">25,000</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20IBO%20سنوي">
+<div class="offer-slide-icon">▶️</div>
+<div class="offer-slide-content">
+<strong>IBO PLAYER</strong>
+<span>تفعيل المشغل لمدة سنة</span>
+</div>
+<div class="offer-slide-price">10,000</div>
+</a>
+
+
+<a
+class="offer-slide"
+target="_blank"
+href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD">
+<div class="offer-slide-icon">⚽</div>
+<div class="offer-slide-content">
+<strong>TOD</strong>
+<span>محتوى رياضي وبث مباشر</span>
+</div>
+<div class="offer-slide-price">ابتداءً من 15,000</div>
+</a>
+
+</div>
+
+</section>
+
+
 <!-- =========================
      FEATURES
 ========================= -->
@@ -1331,7 +1598,7 @@ placeholder="🔎 ابحث عن منتج أو خدمة داخل المتجر..."
 <section class="offers">
 
 <div class="offer-title">
-🔥 عروض خاصة
+🔥 عرض التجربة
 </div>
 
 <div class="offer-card">
@@ -1383,17 +1650,13 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ت
 <div class="iptv-grid">
 
 
-<!-- =====================================================
-     MAX
-===================================================== -->
+<!-- MAX -->
 
 <div class="iptv-card max-card">
 
 <div class="iptv-main">
 
-<div class="iptv-icon">
-📺
-</div>
+<div class="iptv-icon">📺</div>
 
 <div class="iptv-info">
 
@@ -1408,7 +1671,6 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ت
 
 </div>
 
-
 <div class="price-list">
 
 <div class="price-box">
@@ -1416,58 +1678,31 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ت
 <span class="price-duration">الشهر</span>
 <strong class="iptv-price">5,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%20الشهر"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%20الشهر" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">3 أشهر</span>
 <strong class="iptv-price">10,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%203%20أشهر"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%203%20أشهر" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">6 أشهر</span>
 <strong class="iptv-price">15,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%206%20أشهر"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%206%20أشهر" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">سنة</span>
 <strong class="iptv-price">25,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%20سنة"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20MAX%20TV%20سنة" target="_blank">واتساب</a>
 </div>
 
 </div>
@@ -1475,17 +1710,13 @@ target="_blank">
 </div>
 
 
-<!-- =====================================================
-     TIGER
-===================================================== -->
+<!-- TIGER -->
 
 <div class="iptv-card tiger-card">
 
 <div class="iptv-main">
 
-<div class="iptv-icon">
-🐯
-</div>
+<div class="iptv-icon">🐯</div>
 
 <div class="iptv-info">
 
@@ -1500,7 +1731,6 @@ target="_blank">
 
 </div>
 
-
 <div class="price-list">
 
 <div class="price-box">
@@ -1508,58 +1738,31 @@ target="_blank">
 <span class="price-duration">الشهر</span>
 <strong class="iptv-price">3,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%20الشهر"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%20الشهر" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">3 أشهر</span>
 <strong class="iptv-price">7,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%203%20أشهر"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%203%20أشهر" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">6 أشهر</span>
 <strong class="iptv-price">13,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%206%20أشهر"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%206%20أشهر" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">سنة</span>
 <strong class="iptv-price">18,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%20سنة"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TIGER%20سنة" target="_blank">واتساب</a>
 </div>
 
 </div>
@@ -1567,17 +1770,13 @@ target="_blank">
 </div>
 
 
-<!-- =====================================================
-     BEST 4K
-===================================================== -->
+<!-- BEST 4K -->
 
 <div class="iptv-card best-card">
 
 <div class="iptv-main">
 
-<div class="iptv-icon">
-🔥
-</div>
+<div class="iptv-icon">🔥</div>
 
 <div class="iptv-info">
 
@@ -1592,7 +1791,6 @@ target="_blank">
 
 </div>
 
-
 <div class="price-list">
 
 <div class="price-box">
@@ -1600,58 +1798,31 @@ target="_blank">
 <span class="price-duration">الشهر</span>
 <strong class="iptv-price">4,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%20الشهر"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%20الشهر" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">3 أشهر</span>
 <strong class="iptv-price">9,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%203%20أشهر"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%203%20أشهر" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">6 أشهر</span>
 <strong class="iptv-price">13,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%206%20أشهر"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%206%20أشهر" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">سنة</span>
 <strong class="iptv-price">20,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%20سنة"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20BEST%204K%20سنة" target="_blank">واتساب</a>
 </div>
 
 </div>
@@ -1659,17 +1830,13 @@ target="_blank">
 </div>
 
 
-<!-- =====================================================
-     TOD
-===================================================== -->
+<!-- TOD -->
 
 <div class="iptv-card tod-card">
 
 <div class="iptv-main">
 
-<div class="iptv-icon">
-⚽
-</div>
+<div class="iptv-icon">⚽</div>
 
 <div class="iptv-info">
 
@@ -1684,7 +1851,6 @@ target="_blank">
 
 </div>
 
-
 <div class="price-list">
 
 <div class="price-box">
@@ -1692,45 +1858,23 @@ target="_blank">
 <span class="price-duration">موبايل</span>
 <strong class="iptv-price">15,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD%20موبايل"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD%20موبايل" target="_blank">واتساب</a>
 </div>
-
 
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">شاشة</span>
 <strong class="iptv-price">20,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD%20شاشة"
-target="_blank">
-واتساب
-</a>
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD%20شاشة" target="_blank">واتساب</a>
 </div>
 
-
 <div class="price-box">
-
 <div class="price-info">
 <span class="price-duration">موبايل + شاشة</span>
 <strong class="iptv-price">25,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD%20موبايل%20وشاشة"
-target="_blank">
-واتساب
-</a>
-
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20TOD%20موبايل%20وشاشة" target="_blank">واتساب</a>
 </div>
 
 </div>
@@ -1738,17 +1882,13 @@ target="_blank">
 </div>
 
 
-<!-- =====================================================
-     القناة الرابعة بعد TOD
-===================================================== -->
+<!-- القناة الرابعة -->
 
 <div class="iptv-card fourth-horizontal">
 
 <div class="iptv-main">
 
-<div class="iptv-icon">
-📡
-</div>
+<div class="iptv-icon">📡</div>
 
 <div class="iptv-info">
 
@@ -1763,40 +1903,22 @@ target="_blank">
 
 </div>
 
-
 <div class="price-list">
 
 <div class="price-box">
-
 <div class="price-info">
 <span class="price-duration">الشهر</span>
 <strong class="iptv-price">25,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20القناة%20الرابعة%20الشهر"
-target="_blank">
-واتساب
-</a>
-
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20القناة%20الرابعة%20الشهر" target="_blank">واتساب</a>
 </div>
 
-
 <div class="price-box">
-
 <div class="price-info">
 <span class="price-duration">3 أشهر</span>
 <strong class="iptv-price">60,000 د.ع</strong>
 </div>
-
-<a
-class="order-small"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20القناة%20الرابعة%203%20أشهر"
-target="_blank">
-واتساب
-</a>
-
+<a class="order-small" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20القناة%20الرابعة%203%20أشهر" target="_blank">واتساب</a>
 </div>
 
 </div>
@@ -1829,80 +1951,30 @@ target="_blank">
 <div class="player-grid">
 
 <div class="player">
-
-<div class="player-icon">
-📺
-</div>
-
+<div class="player-icon">📺</div>
 <h3>IBO PLAYER</h3>
-
 <p>تفعيل المشغل</p>
-
-<div class="player-price">
-10,000 د.ع
-</div>
-
+<div class="player-price">10,000 د.ع</div>
 <p>سنوي</p>
-
-<a
-class="order-small"
-target="_blank"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20IBO%20سنوي">
-أطلب
-</a>
-
+<a class="order-small" target="_blank" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20IBO%20سنوي">أطلب</a>
 </div>
-
 
 <div class="player">
-
-<div class="player-icon">
-▶️
-</div>
-
+<div class="player-icon">▶️</div>
 <h3>BOB PLAYER</h3>
-
 <p>تفعيل المشغل</p>
-
-<div class="player-price">
-10,000 د.ع
-</div>
-
+<div class="player-price">10,000 د.ع</div>
 <p>سنوي</p>
-
-<a
-class="order-small"
-target="_blank"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20BOB%20سنوي">
-أطلب
-</a>
-
+<a class="order-small" target="_blank" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20BOB%20سنوي">أطلب</a>
 </div>
-
 
 <div class="player">
-
-<div class="player-icon">
-❌
-</div>
-
+<div class="player-icon">❌</div>
 <h3>X PLAYER</h3>
-
 <p>تفعيل المشغل</p>
-
-<div class="player-price">
-10,000 د.ع
-</div>
-
+<div class="player-price">10,000 د.ع</div>
 <p>سنوي</p>
-
-<a
-class="order-small"
-target="_blank"
-href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20X%20PLAYER%20سنوي">
-أطلب
-</a>
-
+<a class="order-small" target="_blank" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20اشتراك%20X%20PLAYER%20سنوي">أطلب</a>
 </div>
 
 </div>
@@ -1917,14 +1989,11 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ا
 <section class="category games">
 
 <div class="cat-head">
-
 <div class="cat-icon">🎮</div>
-
 <div>
 <h2>الألعاب</h2>
 <p>شحن جميع الألعاب والفئات المتوفرة</p>
 </div>
-
 </div>
 
 <div class="items">
@@ -2013,14 +2082,11 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ا
 <section class="category internet">
 
 <div class="cat-head">
-
 <div class="cat-icon">🌐</div>
-
 <div>
 <h2>الإنترنت</h2>
 <p>تجديد وشحن الخدمات المتوفرة</p>
 </div>
-
 </div>
 
 <div class="items">
@@ -2079,14 +2145,11 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ا
 <section class="category cards">
 
 <div class="cat-head">
-
 <div class="cat-icon">💳</div>
-
 <div>
 <h2>البطاقات الإلكترونية</h2>
 <p>البطاقات والفئات المتوفرة</p>
 </div>
-
 </div>
 
 <div class="items">
@@ -2163,14 +2226,11 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ا
 <section class="category money">
 
 <div class="cat-head">
-
 <div class="cat-icon">💸</div>
-
 <div>
 <h2>الخدمات المالية</h2>
 <p>الخدمات المتوفرة في العراق</p>
 </div>
-
 </div>
 
 <div class="items">
@@ -2217,14 +2277,11 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ا
 <section class="category social">
 
 <div class="cat-head">
-
 <div class="cat-icon">📣</div>
-
 <div>
 <h2>السوشيال ميديا</h2>
 <p>جميع المنصات والخدمات</p>
 </div>
-
 </div>
 
 <div class="items">
@@ -2301,14 +2358,11 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ا
 <section class="category entertainment">
 
 <div class="cat-head">
-
 <div class="cat-icon">🎬</div>
-
 <div>
 <h2>الترفيه</h2>
 <p>أفلام ومسلسلات ومحتوى ترفيهي</p>
 </div>
-
 </div>
 
 <div class="items">
@@ -2361,14 +2415,11 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ا
 <section class="category sports">
 
 <div class="cat-head">
-
 <div class="cat-icon">⚽</div>
-
 <div>
 <h2>الرياضة</h2>
 <p>القنوات والبطولات والمباريات</p>
 </div>
-
 </div>
 
 <div class="items">
@@ -2586,9 +2637,7 @@ title="كروب متجر كارة ستور">
 
 <nav class="bottom">
 
-<a
-class="active"
-href="#">
+<a class="active" href="#">
 <span class="bottom-icon">🏠</span>
 <span>الرئيسية</span>
 </a>
@@ -2598,16 +2647,12 @@ href="#">
 <span>IPTV</span>
 </a>
 
-<a
-href="https://wa.me/9647711608207"
-target="_blank">
+<a href="https://wa.me/9647711608207" target="_blank">
 <span class="bottom-icon">💬</span>
 <span>واتساب</span>
 </a>
 
-<a
-href="https://chat.whatsapp.com/E6Os9QbQTrUJR9MGCCsr6K?s=cl&p=a&ilr=1"
-target="_blank">
+<a href="https://chat.whatsapp.com/E6Os9QbQTrUJR9MGCCsr6K?s=cl&p=a&ilr=1" target="_blank">
 <span class="bottom-icon">👥</span>
 <span>الكروب</span>
 </a>
@@ -2794,7 +2839,29 @@ observer.observe(el);
 });
 
 
+/* =====================================================
+   إيقاف شريط العروض عند لمس الشاشة
+===================================================== */
+
+const offerTicker =
+document.querySelector(".offer-ticker");
+
+const offerTrack =
+document.querySelector(".offer-track");
+
+if(offerTicker && offerTrack){
+
+offerTicker.addEventListener("touchstart",function(){
+offerTrack.style.animationPlayState="paused";
+},{passive:true});
+
+offerTicker.addEventListener("touchend",function(){
+offerTrack.style.animationPlayState="running";
+},{passive:true});
+
+}
+
 </script>
 
 </body>
-     </html>
+   </html>
