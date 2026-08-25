@@ -265,7 +265,11 @@ scrollbar-width:none
 }
 
 .features::-webkit-scrollbar,
-.scroll::-webkit-scrollbar{
+.scroll::-webkit-scrollbar,
+.player-scroll::-webkit-scrollbar,
+.ai-grid::-webkit-scrollbar,
+.ent-grid::-webkit-scrollbar,
+.design-grid::-webkit-scrollbar{
 display:none
 }
 
@@ -323,19 +327,19 @@ box-shadow:0 12px 35px #0006
 }
 
 .offer-card:nth-child(2){
-background:linear-gradient(135deg,#3a2607,#17110a)
+background:linear-gradient(135deg,#0d3948,#101827)
 }
 
 .offer-card:nth-child(3){
-background:linear-gradient(135deg,#45122c,#1a0d18)
+background:linear-gradient(135deg,#3a2607,#17110a)
 }
 
 .offer-card:nth-child(4){
-background:linear-gradient(135deg,#123e31,#0d1714)
+background:linear-gradient(135deg,#45122c,#1a0d18)
 }
 
 .offer-card:nth-child(5){
-background:linear-gradient(135deg,#12345a,#0d101c)
+background:linear-gradient(135deg,#123e31,#0d1714)
 }
 
 .offer-icon,
@@ -400,6 +404,65 @@ border:0;
 white-space:nowrap
 }
 
+/* DOWNLOAD */
+.download-area{
+margin-top:14px;
+padding-top:12px;
+border-top:1px solid #ffffff10
+}
+
+.download-buttons{
+display:flex;
+gap:7px;
+flex-wrap:wrap
+}
+
+.download-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:9px 11px;
+border-radius:11px;
+background:linear-gradient(135deg,#9147ff,#6d28d9);
+font-size:9px;
+font-weight:1000;
+border:1px solid #ffffff18
+}
+
+.code-box{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:7px;
+margin-top:8px;
+padding:8px 10px;
+border-radius:11px;
+background:#0005;
+border:1px solid #ffffff10
+}
+
+.code-box span{
+font-size:9px;
+color:#aeb9ca
+}
+
+.code-box strong{
+font-size:14px;
+letter-spacing:1px;
+color:#ffd166;
+direction:ltr
+}
+
+.copy-btn{
+border:0;
+background:#ffffff12;
+color:#fff;
+border-radius:8px;
+padding:6px 8px;
+font-size:8px;
+cursor:pointer
+}
+
 /* IPTV */
 .iptv-section{
 background:linear-gradient(180deg,#9147ff1f,transparent)
@@ -456,12 +519,6 @@ background:linear-gradient(135deg,#9147ff,#ff2d88);
 box-shadow:0 10px 30px #9147ff55;
 border:1px solid #fff2;
 overflow:hidden
-}
-
-.iptv-icon img{
-width:100%;
-height:100%;
-object-fit:cover
 }
 
 .iptv-info{
@@ -552,12 +609,6 @@ background:#ffffff0b;
 overflow:hidden
 }
 
-.player-icon img{
-width:100%;
-height:100%;
-object-fit:cover
-}
-
 .player-card h3{
 font-size:15px;
 font-weight:1000
@@ -614,14 +665,6 @@ font-size:42px;
 background:#9147ff24;
 margin-bottom:11px;
 overflow:hidden
-}
-
-.ai-icon img,
-.ent-icon img,
-.design-icon img{
-width:100%;
-height:100%;
-object-fit:cover
 }
 
 .ai-card h3,
@@ -683,81 +726,6 @@ display:block;
 font-size:9px;
 color:var(--muted);
 margin:5px 0 12px
-}
-
-/* INTERNET / FINANCIAL */
-.category{
-margin:10px 15px;
-padding:18px;
-border-radius:22px;
-border:1px solid #ffffff12;
-background:linear-gradient(145deg,#ffffff0d,#ffffff03)
-}
-
-.cat-head{
-display:flex;
-align-items:center;
-gap:10px;
-margin-bottom:14px
-}
-
-.cat-icon{
-width:55px;
-height:55px;
-border-radius:16px;
-display:grid;
-place-items:center;
-font-size:28px;
-background:#ffffff0b
-}
-
-.cat-head h2{
-font-size:18px
-}
-
-.cat-head p{
-font-size:9px;
-color:var(--muted);
-margin-top:3px
-}
-
-.items{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:8px
-}
-
-.item{
-padding:13px;
-border-radius:14px;
-background:#ffffff08;
-border:1px solid #ffffff0f
-}
-
-.item strong{
-display:block;
-font-size:13px;
-font-weight:1000
-}
-
-.item span{
-display:block;
-font-size:9px;
-line-height:1.7;
-color:#9eabc0;
-margin-top:4px
-}
-
-.item a{
-display:inline-block;
-margin-top:8px;
-padding:8px 11px;
-border-radius:10px;
-background:#10b98129;
-border:1px solid #10b9814d;
-color:#6ee7b7;
-font-size:9px;
-font-weight:1000
 }
 
 /* FOOTER */
@@ -850,34 +818,66 @@ bottom:100px;
 background:#25d366
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media(max-width:420px){
-.iptv-main{gap:12px}
+.iptv-main{
+gap:12px
+}
+
 .iptv-icon{
 flex-basis:82px;
 width:82px;
 height:82px;
 border-radius:21px
 }
-.iptv-card h3{font-size:20px}
-.price-list{gap:6px}
-.iptv-price{font-size:13px}
-.items{gap:6px}
-.item{padding:10px}
+
+.iptv-card h3{
+font-size:20px
+}
+
+.price-list{
+gap:6px
+}
+
+.iptv-price{
+font-size:13px
+}
+
+.items{
+gap:6px
+}
+
+.item{
+padding:10px
+}
 }
 
 @media(max-width:360px){
-.hero{min-height:610px}
-.hero h2{font-size:27px}
-.offer-card{flex-basis:260px}
-.big-card{flex-basis:230px}
+.hero{
+min-height:610px
+}
+
+.hero h2{
+font-size:27px
+}
+
+.offer-card{
+flex-basis:260px
+}
+
+.big-card{
+flex-basis:230px
+}
+
 .iptv-icon{
 flex-basis:72px;
 width:72px;
 height:72px
 }
-.price-list{grid-template-columns:1fr}
-.items{grid-template-columns:1fr}
+
+.price-list{
+grid-template-columns:1fr
+}
 }
 </style>
 </head>
@@ -942,6 +942,7 @@ href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20ت
 </a>
 
 </div>
+
 </div>
 </section>
 
@@ -1027,9 +1028,10 @@ onclick="order('تجربة الخدمة بـ1000 د.ع')">
 </a>
 
 </div>
+
 </div>
 
-<!-- YALLA LUDO -->
+<!-- يلا لودو -->
 <div class="offer-card">
 
 <div class="offer-icon">🎲</div>
@@ -1053,32 +1055,7 @@ onclick="order('يلا لودو 5150 ماسة بـ15000 د.ع')">
 </a>
 
 </div>
-</div>
 
-<!-- BEST -->
-<div class="offer-card">
-
-<div class="offer-icon">🔥</div>
-
-<h3>عرض BEST</h3>
-
-<p>
-اشتراك سنة كاملة بسعر مميز.
-</p>
-
-<div class="offer-bottom">
-
-<strong class="offer-price">
-20,000 د.ع
-</strong>
-
-<a
-class="order-small"
-onclick="order('عرض BEST سنة كاملة بـ20000 د.ع')">
-اطلب
-</a>
-
-</div>
 </div>
 
 <!-- MAX -->
@@ -1089,7 +1066,7 @@ onclick="order('عرض BEST سنة كاملة بـ20000 د.ع')">
 <h3>عرض MAX TV</h3>
 
 <p>
-اشتراك سنة كاملة بسعر خاص.
+اشتراك MAX TV لمدة سنة كاملة.
 </p>
 
 <div class="offer-bottom">
@@ -1105,6 +1082,7 @@ onclick="order('عرض MAX TV سنة كاملة بـ20000 د.ع')">
 </a>
 
 </div>
+
 </div>
 
 <!-- DREAM -->
@@ -1115,7 +1093,7 @@ onclick="order('عرض MAX TV سنة كاملة بـ20000 د.ع')">
 <h3>عرض Dream OTT</h3>
 
 <p>
-اشتراك سنة كاملة بسعر مميز.
+اشتراك Dream OTT سنة كاملة.
 </p>
 
 <div class="offer-bottom">
@@ -1131,6 +1109,7 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 </a>
 
 </div>
+
 </div>
 
 </div>
@@ -1140,8 +1119,15 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <section class="section iptv-section" id="iptv">
 
 <div class="section-head">
-<div class="section-title">📺 الاشتراكات الرئيسية</div>
-<div class="section-note">بالدينار العراقي</div>
+
+<div class="section-title">
+📺 الاشتراكات الرئيسية
+</div>
+
+<div class="section-note">
+بالدينار العراقي
+</div>
+
 </div>
 
 <div class="iptv-grid">
@@ -1193,12 +1179,42 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <div class="price-box">
 <div class="price-info">
 <span class="price-duration">سنة</span>
-<strong class="iptv-price">25,000</strong>
+<strong class="iptv-price">20,000</strong>
 </div>
 <a class="order-small" onclick="order('MAX TV سنة')">واتساب</a>
 </div>
 
 </div>
+
+<div class="download-area">
+
+<div class="download-buttons">
+
+<a
+class="download-btn"
+href="https://aftv.news/9750443"
+target="_blank">
+⬇️ تحميل MAX TV
+</a>
+
+</div>
+
+<div class="code-box">
+
+<span>🔑 Downloader</span>
+
+<strong id="code-max">9750443</strong>
+
+<button
+class="copy-btn"
+onclick="copyCode('9750443')">
+نسخ
+</button>
+
+</div>
+
+</div>
+
 </div>
 
 <!-- TIGER -->
@@ -1226,7 +1242,7 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <span class="price-duration">الشهر</span>
 <strong class="iptv-price">5,000</strong>
 </div>
-<a class="order-small" onclick="order('TIGER الشهر بـ5000 د.ع')">واتساب</a>
+<a class="order-small" onclick="order('TIGER الشهر')">واتساب</a>
 </div>
 
 <div class="price-box">
@@ -1234,7 +1250,7 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <span class="price-duration">3 أشهر</span>
 <strong class="iptv-price">10,000</strong>
 </div>
-<a class="order-small" onclick="order('TIGER 3 أشهر بـ10000 د.ع')">واتساب</a>
+<a class="order-small" onclick="order('TIGER 3 أشهر')">واتساب</a>
 </div>
 
 <div class="price-box">
@@ -1242,7 +1258,7 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <span class="price-duration">6 أشهر</span>
 <strong class="iptv-price">15,000</strong>
 </div>
-<a class="order-small" onclick="order('TIGER 6 أشهر بـ15000 د.ع')">واتساب</a>
+<a class="order-small" onclick="order('TIGER 6 أشهر')">واتساب</a>
 </div>
 
 <div class="price-box">
@@ -1250,10 +1266,40 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <span class="price-duration">سنة</span>
 <strong class="iptv-price">20,000</strong>
 </div>
-<a class="order-small" onclick="order('TIGER سنة بـ20000 د.ع')">واتساب</a>
+<a class="order-small" onclick="order('TIGER سنة')">واتساب</a>
 </div>
 
 </div>
+
+<div class="download-area">
+
+<div class="download-buttons">
+
+<a
+class="download-btn"
+href="http://bit.ly/tiger4v"
+target="_blank">
+⬇️ تحميل TIGER
+</a>
+
+</div>
+
+<div class="code-box">
+
+<span>🔑 Downloader</span>
+
+<strong>5182869</strong>
+
+<button
+class="copy-btn"
+onclick="copyCode('5182869')">
+نسخ
+</button>
+
+</div>
+
+</div>
+
 </div>
 
 <!-- BEST -->
@@ -1281,7 +1327,7 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <span class="price-duration">الشهر</span>
 <strong class="iptv-price">5,000</strong>
 </div>
-<a class="order-small" onclick="order('BEST 4K الشهر بـ5000 د.ع')">واتساب</a>
+<a class="order-small" onclick="order('BEST 4K الشهر')">واتساب</a>
 </div>
 
 <div class="price-box">
@@ -1289,7 +1335,7 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <span class="price-duration">3 أشهر</span>
 <strong class="iptv-price">10,000</strong>
 </div>
-<a class="order-small" onclick="order('BEST 4K 3 أشهر بـ10000 د.ع')">واتساب</a>
+<a class="order-small" onclick="order('BEST 4K 3 أشهر')">واتساب</a>
 </div>
 
 <div class="price-box">
@@ -1297,7 +1343,7 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <span class="price-duration">6 أشهر</span>
 <strong class="iptv-price">15,000</strong>
 </div>
-<a class="order-small" onclick="order('BEST 4K 6 أشهر بـ15000 د.ع')">واتساب</a>
+<a class="order-small" onclick="order('BEST 4K 6 أشهر')">واتساب</a>
 </div>
 
 <div class="price-box">
@@ -1305,10 +1351,40 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <span class="price-duration">سنة</span>
 <strong class="iptv-price">20,000</strong>
 </div>
-<a class="order-small" onclick="order('BEST 4K سنة بـ20000 د.ع')">واتساب</a>
+<a class="order-small" onclick="order('BEST 4K سنة')">واتساب</a>
 </div>
 
 </div>
+
+<div class="download-area">
+
+<div class="download-buttons">
+
+<a
+class="download-btn"
+href="https://sh-apps.cyou/apk/BEST4K.apk"
+target="_blank">
+⬇️ تحميل BEST 4K
+</a>
+
+</div>
+
+<div class="code-box">
+
+<span>🔑 Downloader</span>
+
+<strong>4056700</strong>
+
+<button
+class="copy-btn"
+onclick="copyCode('4056700')">
+نسخ
+</button>
+
+</div>
+
+</div>
+
 </div>
 
 <!-- TOD -->
@@ -1356,6 +1432,7 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 </div>
 
 </div>
+
 </div>
 
 <!-- DREAM -->
@@ -1379,30 +1456,81 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <div class="price-list">
 
 <div class="price-box">
+
 <div class="price-info">
 <span class="price-duration">الشهر</span>
 <strong class="iptv-price">5,000</strong>
 </div>
-<a class="order-small" onclick="order('Dream OTT الشهر بـ5000 د.ع')">واتساب</a>
+
+<a
+class="order-small"
+onclick="order('Dream OTT الشهر بـ5000 د.ع')">
+واتساب
+</a>
+
 </div>
 
 <div class="price-box">
+
 <div class="price-info">
 <span class="price-duration">6 أشهر</span>
 <strong class="iptv-price">15,000</strong>
 </div>
-<a class="order-small" onclick="order('Dream OTT 6 أشهر بـ15000 د.ع')">واتساب</a>
+
+<a
+class="order-small"
+onclick="order('Dream OTT 6 أشهر بـ15000 د.ع')">
+واتساب
+</a>
+
 </div>
 
 <div class="price-box">
+
 <div class="price-info">
 <span class="price-duration">سنة</span>
 <strong class="iptv-price">20,000</strong>
 </div>
-<a class="order-small" onclick="order('Dream OTT سنة بـ20000 د.ع')">واتساب</a>
+
+<a
+class="order-small"
+onclick="order('Dream OTT سنة بـ20000 د.ع')">
+واتساب
+</a>
+
 </div>
 
 </div>
+
+<div class="download-area">
+
+<div class="download-buttons">
+
+<a
+class="download-btn"
+href="https://bit.ly/dreamott38"
+target="_blank">
+⬇️ تحميل Dream OTT
+</a>
+
+</div>
+
+<div class="code-box">
+
+<span>🔑 Downloader</span>
+
+<strong>2792643</strong>
+
+<button
+class="copy-btn"
+onclick="copyCode('2792643')">
+نسخ
+</button>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -1412,8 +1540,15 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <section class="section players" id="players">
 
 <div class="section-head">
-<div class="section-title">🎬 قسم المشغلات</div>
-<div class="section-note">تمرير يدوي</div>
+
+<div class="section-title">
+🎬 قسم المشغلات
+</div>
+
+<div class="section-note">
+تمرير يدوي
+</div>
+
 </div>
 
 <div class="player-scroll">
@@ -1424,7 +1559,9 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <p>تفعيل سنوي</p>
 <div class="player-price">10,000 د.ع</div>
 <br>
-<a class="order-small" onclick="order('IBO PLAYER سنوي')">أطلب</a>
+<a class="order-small" onclick="order('IBO PLAYER سنوي')">
+أطلب
+</a>
 </div>
 
 <div class="player-card">
@@ -1433,7 +1570,9 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <p>تفعيل سنوي</p>
 <div class="player-price">10,000 د.ع</div>
 <br>
-<a class="order-small" onclick="order('BOB PLAYER سنوي')">أطلب</a>
+<a class="order-small" onclick="order('BOB PLAYER سنوي')">
+أطلب
+</a>
 </div>
 
 <div class="player-card">
@@ -1442,7 +1581,9 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <p>تفعيل سنوي</p>
 <div class="player-price">10,000 د.ع</div>
 <br>
-<a class="order-small" onclick="order('X PLAYER سنوي')">أطلب</a>
+<a class="order-small" onclick="order('X PLAYER سنوي')">
+أطلب
+</a>
 </div>
 
 <div class="player-card">
@@ -1451,7 +1592,9 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <p>اشتراك سنوي</p>
 <div class="player-price">10,000 د.ع</div>
 <br>
-<a class="order-small" onclick="order('مشغل Hot اشتراك سنوي بـ10000 د.ع')">أطلب</a>
+<a class="order-small" onclick="order('مشغل Hot اشتراك سنوي بـ10000 د.ع')">
+أطلب
+</a>
 </div>
 
 </div>
@@ -1468,21 +1611,47 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <div class="ai-grid">
 
 <div class="ai-card">
+
 <div class="ai-icon">✨</div>
+
 <h3>Gemini</h3>
+
 <p>اشتراك 18 شهر.</p>
-<div class="ai-price">20,000 د.ع</div>
+
+<div class="ai-price">
+20,000 د.ع
+</div>
+
 <br>
-<a class="order-small" onclick="order('Gemini 18 شهر بـ20000 د.ع')">أطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('Gemini 18 شهر بـ20000 د.ع')">
+أطلب الآن
+</a>
+
 </div>
 
 <div class="ai-card">
+
 <div class="ai-icon">🤖</div>
+
 <h3>ChatGPT</h3>
+
 <p>اشتراك شهر.</p>
-<div class="ai-price">15,000 د.ع</div>
+
+<div class="ai-price">
+15,000 د.ع
+</div>
+
 <br>
-<a class="order-small" onclick="order('ChatGPT الشهر بـ15000 د.ع')">أطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('ChatGPT الشهر بـ15000 د.ع')">
+أطلب الآن
+</a>
+
 </div>
 
 </div>
@@ -1572,55 +1741,137 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <section class="big-section" id="games">
 
 <div class="section-head">
-<div class="section-title">🎮 الألعاب</div>
-<span>اسحب يميناً ويساراً</span>
+
+<div class="section-title">
+🎮 الألعاب
+</div>
+
+<span>
+اسحب يميناً ويساراً
+</span>
+
 </div>
 
 <div class="scroll">
 
 <div class="big-card">
+
 <div class="big-icon">⚽</div>
+
 <h3>eFootball / PES</h3>
-<p>شحن وطلبات اللعبة.</p>
-<strong>السعر عبر واتساب</strong>
+
+<p>
+شحن وطلبات اللعبة.
+</p>
+
+<strong>
+السعر عبر واتساب
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('شحن eFootball PES')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('شحن eFootball PES')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">🎯</div>
+
 <h3>PUBG Mobile</h3>
-<p>شحن UC لجميع الفئات.</p>
-<strong>660 شدة: 14,000 د.ع</strong>
+
+<p>
+12800 كوينز
+</p>
+
+<strong>
+150,000 د.ع
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('PUBG Mobile 660 شدة بـ14000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('PUBG Mobile 12800 كوينز بـ150000 د.ع')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">💎</div>
+
 <h3>Free Fire</h3>
-<p>شحن Diamonds.</p>
-<strong>1080 ماسة: 15,000 د.ع</strong>
+
+<p>
+1080 ماسة
+</p>
+
+<strong>
+15,000 د.ع
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('Free Fire 1080 ماسة بـ15000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('Free Fire 1080 ماسة بـ15000 د.ع')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">🎲</div>
+
 <h3>Yalla Ludo</h3>
-<p>شحن الماسات والذهب.</p>
-<strong>5150 ماسة: 15,000 د.ع</strong>
+
+<p>
+5150 ماسة
+</p>
+
+<strong>
+15,000 د.ع
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('يلا لودو 5150 ماسة بـ15000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('يلا لودو 5150 ماسة بـ15000 د.ع')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">🎮</div>
+
 <h3>PlayStation</h3>
-<p>بطاقات وشحن PSN.</p>
-<strong>10$ : 14,000 د.ع</strong>
+
+<p>
+بطاقة 10$
+</p>
+
+<strong>
+14,000 د.ع
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('PlayStation 10 دولار بـ14000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('PlayStation 10$ بـ14000 د.ع')">
+اطلب الآن
+</a>
+
 </div>
 
 </div>
@@ -1630,55 +1881,137 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <section class="big-section" id="cards">
 
 <div class="section-head">
-<div class="section-title">💳 البطاقات الإلكترونية</div>
-<span>اسحب يدوياً</span>
+
+<div class="section-title">
+💳 البطاقات الإلكترونية
+</div>
+
+<span>
+اسحب يدوياً
+</span>
+
 </div>
 
 <div class="scroll">
 
 <div class="big-card">
+
 <div class="big-icon">🍎</div>
+
 <h3>Apple Gift Card</h3>
-<p>بطاقات Apple.</p>
-<strong>10$ : 15,000 د.ع</strong>
+
+<p>
+بطاقة 10$
+</p>
+
+<strong>
+15,000 د.ع
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('Apple Gift Card 10$ بـ15000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('Apple Gift Card 10$ بـ15000 د.ع')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">▶️</div>
+
 <h3>Google Play</h3>
-<p>بطاقات Google Play.</p>
-<strong>10$ : 11,000 د.ع</strong>
+
+<p>
+بطاقة 10$
+</p>
+
+<strong>
+11,000 د.ع
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('Google Play 10$ بـ11000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('Google Play 10$ بـ11000 د.ع')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">🔥</div>
+
 <h3>بطاقات الألعاب</h3>
-<p>شحن وبطاقات ألعاب حسب الطلب.</p>
-<strong>السعر حسب الفئة</strong>
+
+<p>
+بطاقات وشحن ألعاب حسب الطلب.
+</p>
+
+<strong>
+السعر عبر واتساب
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('بطاقات الألعاب')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('بطاقات الألعاب')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">🎵</div>
+
 <h3>Spotify</h3>
-<p>اشتراكات وبطاقات حسب المتوفر.</p>
-<strong>السعر عبر واتساب</strong>
+
+<p>
+اشتراكات وبطاقات حسب المتوفر.
+</p>
+
+<strong>
+السعر عبر واتساب
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('Spotify')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('Spotify')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">🎬</div>
+
 <h3>Netflix</h3>
-<p>بطاقات وخدمات رقمية.</p>
-<strong>الشهر: 8,000 د.ع</strong>
+
+<p>
+بطاقات وخدمات رقمية.
+</p>
+
+<strong>
+السعر عبر واتساب
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('Netflix الشهر بـ8000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('Netflix')">
+اطلب الآن
+</a>
+
 </div>
 
 </div>
@@ -1688,64 +2021,161 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <section class="big-section" id="social">
 
 <div class="section-head">
-<div class="section-title">📣 السوشيال ميديا</div>
-<span>اسحب يدوياً</span>
+
+<div class="section-title">
+📣 السوشيال ميديا
+</div>
+
+<span>
+اسحب يدوياً
+</span>
+
 </div>
 
 <div class="scroll">
 
 <div class="big-card">
+
 <div class="big-icon">📘</div>
+
 <h3>Facebook</h3>
-<p>خدمات فيسبوك.</p>
-<strong>1K : 5,000 د.ع</strong>
+
+<p>
+1K
+</p>
+
+<strong>
+5,000 د.ع
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('Facebook 1K بـ5000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('Facebook 1K بـ5000 د.ع')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">📸</div>
+
 <h3>Instagram</h3>
-<p>خدمات إنستغرام.</p>
-<strong>1K : 5,000 د.ع</strong>
+
+<p>
+1K
+</p>
+
+<strong>
+5,000 د.ع
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('Instagram 1K بـ5000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('Instagram 1K بـ5000 د.ع')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">🎵</div>
+
 <h3>TikTok</h3>
-<p>خدمات تيكتوك.</p>
-<strong>1K : 10,000 د.ع</strong>
+
+<p>
+1K
+</p>
+
+<strong>
+10,000 د.ع
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('TikTok 1K بـ10000 د.ع')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('TikTok 1K بـ10000 د.ع')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">✈️</div>
+
 <h3>Telegram</h3>
-<p>أعضاء، مشاهدات، تفاعل.</p>
-<strong>السعر عبر واتساب</strong>
+
+<p>
+أعضاء ومشاهدات وتفاعل.
+</p>
+
+<strong>
+السعر عبر واتساب
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('خدمات Telegram')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('خدمات Telegram')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">▶️</div>
+
 <h3>YouTube</h3>
-<p>مشتركين ومشاهدات وإعجابات.</p>
-<strong>السعر عبر واتساب</strong>
+
+<p>
+مشتركين ومشاهدات وإعجابات.
+</p>
+
+<strong>
+السعر عبر واتساب
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('خدمات YouTube')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('خدمات YouTube')">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="big-card">
+
 <div class="big-icon">👻</div>
+
 <h3>Snapchat</h3>
-<p>مشاهدات وتفاعل.</p>
-<strong>السعر عبر واتساب</strong>
+
+<p>
+مشاهدات وتفاعل.
+</p>
+
+<strong>
+السعر عبر واتساب
+</strong>
+
 <br><br>
-<a class="order-small" onclick="order('خدمات Snapchat')">اطلب الآن</a>
+
+<a
+class="order-small"
+onclick="order('خدمات Snapchat')">
+اطلب الآن
+</a>
+
 </div>
 
 </div>
@@ -1755,8 +2185,15 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <section class="section design-section" id="internet">
 
 <div class="section-head">
-<div class="section-title">🌐 الإنترنت</div>
-<div class="section-note">خدمات وشحن</div>
+
+<div class="section-title">
+🌐 الإنترنت
+</div>
+
+<div class="section-note">
+خدمات وشحن
+</div>
+
 </div>
 
 <div class="design-grid">
@@ -1831,8 +2268,15 @@ onclick="order('عرض Dream OTT سنة كاملة بـ15000 د.ع')">
 <section class="section design-section" id="financial">
 
 <div class="section-head">
-<div class="section-title">💸 الخدمات المالية</div>
-<div class="section-note">خدمات مالية</div>
+
+<div class="section-title">
+💸 الخدمات المالية
+</div>
+
+<div class="section-note">
+خدمات مالية
+</div>
+
 </div>
 
 <div class="design-grid">
@@ -1913,7 +2357,7 @@ target="_blank">
 
 </footer>
 
-<!-- FLOAT BUTTONS -->
+<!-- FLOATING BUTTONS -->
 <a
 class="float float-wa"
 href="https://wa.me/9647711608207"
@@ -1951,7 +2395,9 @@ IPTV
 AI
 </a>
 
-<a href="https://wa.me/9647711608207" target="_blank">
+<a
+href="https://wa.me/9647711608207"
+target="_blank">
 <span class="bottom-icon">💬</span>
 واتساب
 </a>
@@ -1962,13 +2408,14 @@ AI
 
 const PHONE="9647711608207";
 
+/* ORDER */
 function order(product){
 
 const message=
 "السلام عليكم 👋\n\n"+
 "أريد الطلب/الاستفسار من كارة ستور:\n"+
-"📦 "+product+
-"\n\nيرجى إرسال السعر والتفاصيل.";
+"📦 "+product+"\n\n"+
+"يرجى إرسال السعر والتفاصيل.";
 
 window.open(
 "https://wa.me/"+PHONE+"?text="+encodeURIComponent(message),
@@ -1977,21 +2424,58 @@ window.open(
 
 }
 
-/* VIDEO SOUND */
+/* COPY DOWNLOADER */
+function copyCode(code){
 
+if(navigator.clipboard){
+
+navigator.clipboard.writeText(code).then(function(){
+
+alert("✅ تم نسخ كود Downloader: "+code);
+
+});
+
+}else{
+
+const input=document.createElement("input");
+
+input.value=code;
+
+document.body.appendChild(input);
+
+input.select();
+
+document.execCommand("copy");
+
+input.remove();
+
+alert("✅ تم نسخ الكود: "+code);
+
+}
+
+}
+
+/* VIDEO SOUND */
 let soundOn=false;
 
 function toggleSound(){
 
 const iframe=document.getElementById('storeVideo');
+
 const button=document.getElementById('soundBtn');
 
 soundOn=!soundOn;
 
 iframe.src=
-"https://www.youtube.com/embed/LrhHPRJCJL4?autoplay=1&mute="+
-(soundOn?"0":"1")+
-"&loop=1&playlist=LrhHPRJCJL4&controls=0&playsinline=1&rel=0&modestbranding=1";
+"https://www.youtube.com/embed/LrhHPRJCJL4"+
+"?autoplay=1"+
+"&mute="+(soundOn?"0":"1")+
+"&loop=1"+
+"&playlist=LrhHPRJCJL4"+
+"&controls=0"+
+"&playsinline=1"+
+"&rel=0"+
+"&modestbranding=1";
 
 button.innerHTML=
 soundOn
@@ -2001,7 +2485,6 @@ soundOn
 }
 
 /* SEARCH */
-
 document
 .getElementById('searchInput')
 .addEventListener('input',function(){
@@ -2012,10 +2495,10 @@ document
 .querySelectorAll(
 '.offer-card,.iptv-card,.player-card,.ai-card,.ent-card,.design-card,.big-card,.item'
 )
-.forEach(x=>{
+.forEach(function(x){
 
 x.style.display=
-(!v||x.innerText.toLowerCase().includes(v))
+(!v || x.innerText.toLowerCase().includes(v))
 ?''
 :'none';
 
@@ -2024,16 +2507,15 @@ x.style.display=
 });
 
 /* SMOOTH LINKS */
-
 document
 .querySelectorAll('a[href^="#"]')
-.forEach(a=>{
+.forEach(function(a){
 
-a.addEventListener('click',e=>{
+a.addEventListener('click',function(e){
 
 const id=a.getAttribute('href');
 
-if(id&&id!=='#'){
+if(id && id!=='#'){
 
 const el=document.querySelector(id);
 
