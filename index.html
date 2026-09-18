@@ -4,9 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#060810">
-<title>كارة ستور | Kara Store - فاطمة 3</title>
+<title>كارة ستور | Kara Store</title>
+
 <style>
-:root{--bg:#060810;--card:#101522;--muted:#9aa6ba;--pink:#ff2d88;--purple:#9147ff;--green:#16c784;--gold:#ffb020;--cyan:#06b6d4}
+:root{
+--bg:#060810;--card:#101522;--muted:#9aa6ba;--pink:#ff2d88;
+--purple:#9147ff;--green:#16c784;--gold:#ffb020;--cyan:#06b6d4
+}
 *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
 html{scroll-behavior:smooth}
 body{background:radial-gradient(circle at top,#21133d,#080a12 42%,#05060b);color:#fff;max-width:520px;margin:auto;min-height:100vh;padding-bottom:90px;overflow-x:hidden}
@@ -21,53 +25,68 @@ button{font-family:inherit;cursor:pointer}
 .video-bg{position:absolute;inset:0;background:#000}
 .video-bg iframe{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-width:177.77vh;min-height:100%;transform:translate(-50%,-50%);border:0;pointer-events:none}
 .video-overlay{position:absolute;inset:0;background:linear-gradient(180deg,#05060b18,#05060b35 45%,#05060b80)}
-
 .hero-content{position:relative;z-index:5;width:100%;padding:30px 15px}
 .hero h2{font-size:31px;line-height:1.25;font-weight:1000;margin-bottom:12px;text-shadow:0 3px 12px #000}
 .hero h2 span{background:linear-gradient(90deg,#fff,#ff62a7,#a970ff);-webkit-background-clip:text;color:transparent}
-
 .hero-sub{font-size:12px;line-height:1.9;max-width:410px;margin:0 auto 20px;padding:8px 12px;border-radius:13px;background:#0005;backdrop-filter:blur(4px)}
 .trial-big{margin:18px auto;padding:15px;max-width:390px;border-radius:18px;background:#0c0a0f99;border:1px solid #ffb02088}
 .trial-big strong{display:block;font-size:20px;color:#ffd166}
 .trial-big span{font-size:10px}
-
 .hero-buttons{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
 .hero-btn{padding:12px 17px;border-radius:14px;font-size:11px;font-weight:1000;display:inline-block}
 .whatsapp{background:linear-gradient(135deg,#20d879,#0ca85a)}
 .secondary{background:#0007;border:1px solid #fff3}
 .sound-btn{position:absolute;z-index:20;bottom:18px;right:15px;border:1px solid #fff4;background:#0009;color:#fff;padding:11px 15px;border-radius:15px;font-size:11px;font-weight:1000}
 
+/* الأخبار */
+.news-ticker{height:43px;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,#160b29,#0b1220,#160b29);border-top:1px solid #ff2d8833;border-bottom:1px solid #ff2d8860;box-shadow:0 5px 20px #0007;position:relative;z-index:800}
+.news-label{height:100%;flex:0 0 auto;display:flex;align-items:center;padding:0 13px;background:linear-gradient(135deg,#9147ff,#ff2d88);font-size:10px;font-weight:1000;box-shadow:4px 0 15px #0005}
+.news-window{height:100%;flex:1;overflow:hidden;position:relative;display:flex;align-items:center}
+.news-text{position:absolute;white-space:nowrap;font-size:10px;font-weight:900;color:#fff;animation:newsMove 9s linear forwards}
+@keyframes newsMove{0%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+
+/* البحث والفلاتر */
 .search-wrap{padding:12px 15px 5px}
 .search-box{width:100%;padding:14px 17px;border-radius:16px;border:1px solid #ffffff1a;background:#101522;color:#fff;outline:none;font-size:12px}
-
 .filter-wrap{display:flex;gap:7px;overflow-x:auto;padding:10px 15px 5px;scrollbar-width:none}
 .filter-btn{flex:0 0 auto;border:1px solid #ffffff14;background:#101522;color:#aab5c7;border-radius:12px;padding:8px 12px;font-size:9px;font-weight:900}
 .filter-btn.active{background:linear-gradient(135deg,#9147ff,#ff2d88);color:#fff}
 
+/* الطلب السريع */
+.quick-order{margin:14px 15px;padding:17px;border-radius:22px;background:linear-gradient(135deg,#1b1035,#111827);border:1px solid #9147ff66;box-shadow:0 12px 30px #0006}
+.quick-order-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.quick-order-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:28px;background:linear-gradient(135deg,#9147ff,#ff2d88)}
+.quick-order h2{font-size:18px;font-weight:1000}
+.quick-order p{font-size:9px;color:#aab5c7;margin-top:3px}
+.quick-fields{display:flex;flex-direction:column;gap:8px}
+.quick-input,.quick-select{width:100%;padding:12px;border-radius:12px;border:1px solid #ffffff14;background:#080b12;color:#fff;outline:none;font-size:10px}
+.quick-btn{width:100%;border:0;padding:12px;border-radius:12px;background:linear-gradient(135deg,#20d879,#0ca85a);color:#fff;font-size:10px;font-weight:1000}
+
+/* الأقسام */
 .section{padding:18px 15px 8px}
 .section-head,.offer-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .section-title,.offer-head h2{font-size:19px;font-weight:1000}
 .section-note,.offer-head span{font-size:9px;color:var(--muted)}
-
-.features{display:flex;gap:10px;overflow-x:auto;padding:5px 15px 20px}
+.features{display:flex;gap:10px;overflow-x:auto;padding:5px 15px 20px;scrollbar-width:none}
 .feature{min-width:125px;height:105px;border-radius:18px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#171d2d,#0d111c);border:1px solid #ffffff12}
 .feature-icon{font-size:30px}
 .feature strong{font-size:11px}
 
+/* العروض */
 .offer-section{padding:18px 0 20px;background:linear-gradient(180deg,#ff2d881f,transparent)}
 .offer-head{padding:0 15px}
 .scroll,.player-scroll,.ai-grid,.ent-grid,.design-grid{display:flex;gap:12px;overflow-x:auto;padding:4px 15px 12px;scrollbar-width:none}
 .offer-card,.big-card{flex:0 0 285px;min-height:185px;border-radius:22px;padding:17px;position:relative;overflow:hidden;background:linear-gradient(135deg,#24104c,#15101f);border:1px solid #ffffff20;box-shadow:0 12px 35px #0006}
-
+.offer-card:nth-child(2){background:linear-gradient(135deg,#0d3948,#101827)}
+.offer-card:nth-child(3){background:linear-gradient(135deg,#3a2607,#17110a)}
 .offer-icon,.big-icon{width:72px;height:72px;border-radius:20px;display:grid;place-items:center;font-size:38px;background:#ffffff12;border:1px solid #ffffff18;margin-bottom:10px}
 .offer-card h3,.big-card h3{font-size:17px;font-weight:1000}
 .offer-card p,.big-card p{font-size:10px;color:#cbd5e1;margin-top:4px;line-height:1.7}
-
 .offer-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
 .offer-price{font-size:19px;font-weight:1000;color:#ffd166}
-
 .order-small{display:inline-flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(135deg,#10b981,#059669);padding:9px 12px;border-radius:10px;font-size:10px;font-weight:1000;border:0;white-space:nowrap}
 
+/* IPTV */
 .iptv-section{background:linear-gradient(180deg,#9147ff1f,transparent)}
 .iptv-grid{display:flex;flex-direction:column;gap:14px}
 .iptv-card{padding:16px;border-radius:23px;background:linear-gradient(135deg,#1c1430fa,#0a0d17fa);border:1px solid #9147ff66;box-shadow:0 15px 40px #0006}
@@ -75,50 +94,453 @@ button{font-family:inherit;cursor:pointer}
 .iptv-card.tiger{border-color:#f59e0b66}
 .iptv-card.tod{border-color:#06b6d466}
 .iptv-card.dream{border-color:#a855f766}
-
 .iptv-main{display:flex;align-items:center;gap:16px}
 .iptv-icon{flex:0 0 105px;width:105px;height:105px;border-radius:25px;display:grid;place-items:center;font-size:52px;background:linear-gradient(135deg,#9147ff,#ff2d88)}
 .iptv-info{flex:1}
 .iptv-card h3{font-size:23px}
 .description{font-size:10px;color:var(--muted);line-height:1.7;margin-top:6px}
-
+.device-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.device-tag{padding:5px 7px;border-radius:8px;background:#ffffff0b;border:1px solid #ffffff12;color:#cbd5e1;font-size:7px;font-weight:800}
 .price-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:15px}
 .price-box{min-height:53px;padding:7px 8px;border-radius:13px;background:#ffffff08;border:1px solid #ffffff10;display:flex;align-items:center;justify-content:space-between;gap:6px}
 .price-info{display:flex;flex-direction:column;gap:2px}
 .price-duration{font-size:9px;color:#aab5c7}
 .iptv-price{font-size:14px;font-weight:1000;color:#6ee7b7}
+.download-area{margin-top:14px;padding-top:12px;border-top:1px solid #ffffff10}
+.download-buttons{display:flex;gap:7px;flex-wrap:wrap}
+.download-btn{padding:9px 11px;border-radius:11px;background:linear-gradient(135deg,#9147ff,#6d28d9);font-size:9px;font-weight:1000}
+.code-box{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-top:8px;padding:8px 10px;border-radius:11px;background:#0005}
+.code-box span{font-size:9px;color:#aeb9ca}
+.code-box strong{font-size:14px;color:#ffd166;direction:ltr}
+.copy-btn{border:0;background:#ffffff12;color:#fff;border-radius:8px;padding:6px 8px;font-size:8px}
 
-.players{background:linear-gradient(180deg,#06b6d41a,transparent)}
+/* البطاقات */
 .player-card,.ai-card,.ent-card,.design-card{flex:0 0 190px;padding:15px;border-radius:20px;background:linear-gradient(145deg,#101c27,#0c1018);border:1px solid #ffffff12}
 .player-icon,.ai-icon,.ent-icon,.design-icon{width:82px;height:82px;margin-bottom:10px;border-radius:20px;display:grid;place-items:center;font-size:40px;background:#ffffff0b}
-
 .player-card h3,.ai-card h3,.ent-card h3,.design-card h3{font-size:15px}
 .player-card p,.ai-card p,.ent-card p,.design-card p{font-size:9px;color:var(--muted);margin:4px 0 10px}
 .player-price{font-size:16px;color:#22d3ee;font-weight:1000}
-
+.ai-price,.design-price{font-size:16px;font-weight:1000;color:#ffd166}
+.ent-price{font-size:16px;color:#6ee7b7;font-weight:1000}
+.ai-section{background:linear-gradient(180deg,#9147ff1f,transparent)}
+.players{background:linear-gradient(180deg,#06b6d41a,transparent)}
+.big-section{padding:18px 0 20px;background:linear-gradient(180deg,#ffffff05,transparent)}
+.big-card{flex-basis:245px;min-height:245px;background:linear-gradient(145deg,#171326,#0c1018)}
+.big-card .big-icon{width:105px;height:105px;font-size:48px}
+.steps,.reviews{display:flex;gap:10px;overflow-x:auto;padding:3px 15px 18px}
+.step,.review{min-width:210px;padding:15px;border-radius:19px;background:#101522;border:1px solid #ffffff12}
+.step b{font-size:20px}
+.step strong{display:block;font-size:11px;margin-top:7px}
+.step p,.review p{font-size:9px;color:#9aa6ba;margin-top:5px;line-height:1.7}
+.stars{color:#ffd166}
+.review p{font-size:10px;color:#cbd5e1}
+.review small{color:#8994a8}
 .footer{margin:20px 15px;padding:22px;text-align:center;border-radius:22px;background:#0e131f;border:1px solid #ffffff12}
 .footer h2{font-size:19px}
 .footer p{font-size:10px;color:var(--muted);line-height:1.8;margin-top:7px}
 .footer strong{display:block;margin-top:10px;font-size:12px;color:#c084fc}
 
+/* الأزرار العائمة */
 .bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;z-index:1200;display:flex;justify-content:space-around;padding:10px 0 14px;background:#0c101af2;backdrop-filter:blur(20px);border-top:1px solid #ffffff12}
 .bottom a{color:#9aa6ba;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:9px;font-weight:800}
 .bottom-icon{font-size:19px}
 .bottom .active{color:#c084fc}
-
 .float{position:fixed;z-index:1500;width:55px;height:55px;border-radius:50%;display:grid;place-items:center;font-size:25px;box-shadow:0 8px 30px #0007;border:2px solid #fff2}
 .float-wa{right:12px;bottom:100px;background:#12c76f}
-
+.float-group{left:12px;bottom:100px;background:#25d366}
 .cart-fab{position:fixed;right:78px;bottom:104px;z-index:1600;width:55px;height:55px;border-radius:50%;border:2px solid #fff2;background:linear-gradient(135deg,#9147ff,#ff2d88);color:#fff;font-size:23px}
 .cart-count{position:absolute;top:-5px;right:-5px;min-width:21px;height:21px;border-radius:20px;background:#ef4444;font-size:10px;font-weight:1000;display:grid;place-items:center}
+.consult-fab{position:fixed;left:78px;bottom:104px;z-index:1700;width:55px;height:55px;border-radius:50%;border:2px solid #fff2;background:linear-gradient(135deg,#06b6d4,#9147ff);color:#fff;font-size:24px;box-shadow:0 8px 30px #0007}
+#backTop{display:none;position:fixed;left:13px;bottom:170px;z-index:1550;width:43px;height:43px;border:1px solid #fff2;border-radius:50%;background:#101522;color:#fff;font-size:18px}
 
+/* =========================================================
+   الإضافات الجديدة
+   ========================================================= */
+
+/* شريط الأدوات الجديد */
+.extra-tools{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:9px;
+padding:5px 15px 15px;
+}
+.extra-tool{
+border:1px solid #ffffff12;
+background:linear-gradient(145deg,#151b2a,#0c1019);
+border-radius:16px;
+padding:13px 9px;
+color:#fff;
+font-size:10px;
+font-weight:1000;
+box-shadow:0 8px 20px #0004;
+}
+.extra-tool span{
+display:block;
+font-size:25px;
+margin-bottom:5px;
+}
+.extra-tool small{
+display:block;
+color:#8f9bad;
+font-size:8px;
+font-weight:600;
+margin-top:3px;
+}
+
+/* إشعار انتهاء */
+.expiry-alert{
+display:none;
+margin:8px 15px 14px;
+padding:13px;
+border-radius:17px;
+background:linear-gradient(135deg,#3a170f,#241016);
+border:1px solid #ff6b6b66;
+box-shadow:0 10px 25px #0005;
+}
+.expiry-alert.show{display:block}
+.expiry-alert-title{
+font-size:12px;
+font-weight:1000;
+margin-bottom:6px;
+}
+.expiry-alert p{
+font-size:9px;
+color:#d6dce7;
+line-height:1.8;
+}
+.expiry-alert button{
+margin-top:9px;
+border:0;
+padding:8px 11px;
+border-radius:10px;
+background:#ef4444;
+color:#fff;
+font-size:9px;
+font-weight:1000;
+}
+
+/* لوحة العميل */
+.dashboard-box{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+.dashboard-profile{
+padding:14px;
+border-radius:18px;
+background:linear-gradient(135deg,#21123b,#101827);
+border:1px solid #9147ff55;
+}
+.dashboard-profile-top{
+display:flex;
+align-items:center;
+gap:12px;
+}
+.dashboard-avatar{
+width:52px;
+height:52px;
+border-radius:16px;
+display:grid;
+place-items:center;
+font-size:27px;
+background:linear-gradient(135deg,#9147ff,#ff2d88);
+}
+.dashboard-name{
+font-size:14px;
+font-weight:1000;
+}
+.dashboard-phone{
+font-size:9px;
+color:#9aa6ba;
+margin-top:3px;
+direction:ltr;
+text-align:right;
+}
+.dashboard-stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:7px;
+margin-top:11px;
+}
+.dashboard-stat{
+padding:10px 5px;
+border-radius:12px;
+background:#ffffff08;
+border:1px solid #ffffff0d;
+text-align:center;
+}
+.dashboard-stat strong{
+display:block;
+font-size:16px;
+color:#ffd166;
+}
+.dashboard-stat span{
+display:block;
+font-size:7px;
+color:#9aa6ba;
+margin-top:2px;
+}
+.dashboard-next{
+margin-top:10px;
+padding:10px;
+border-radius:12px;
+background:#06b6d411;
+border:1px solid #06b6d433;
+font-size:9px;
+line-height:1.7;
+}
+.dashboard-actions{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:7px;
+}
+.dashboard-actions button{
+padding:10px;
+border:1px solid #ffffff12;
+border-radius:11px;
+background:#101522;
+color:#fff;
+font-size:9px;
+font-weight:900;
+}
+
+/* خزنة الاشتراكات */
+.vault-form{
+padding:14px;
+border-radius:18px;
+background:#ffffff05;
+border:1px solid #ffffff12;
+}
+.vault-fields{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+.vault-input,.vault-select{
+width:100%;
+padding:11px;
+border-radius:11px;
+background:#080b12;
+border:1px solid #ffffff12;
+color:#fff;
+outline:none;
+font-size:10px;
+}
+.vault-add{
+width:100%;
+margin-top:9px;
+padding:11px;
+border:0;
+border-radius:11px;
+background:linear-gradient(135deg,#9147ff,#ff2d88);
+color:#fff;
+font-size:10px;
+font-weight:1000;
+}
+.vault-list{
+display:flex;
+flex-direction:column;
+gap:8px;
+margin-top:12px;
+}
+.vault-empty{
+padding:25px 10px;
+text-align:center;
+font-size:10px;
+color:#8994a8;
+border-radius:15px;
+background:#ffffff04;
+border:1px dashed #ffffff15;
+}
+.vault-item{
+padding:12px;
+border-radius:15px;
+background:linear-gradient(145deg,#101827,#0c1018);
+border:1px solid #ffffff12;
+}
+.vault-item-top{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:8px;
+}
+.vault-item-name{
+font-size:12px;
+font-weight:1000;
+}
+.vault-status{
+padding:5px 7px;
+border-radius:8px;
+font-size:7px;
+font-weight:1000;
+}
+.vault-status.good{
+background:#16c78422;
+color:#6ee7b7;
+}
+.vault-status.warning{
+background:#ffb02022;
+color:#ffd166;
+}
+.vault-status.danger{
+background:#ef444422;
+color:#fca5a5;
+}
+.vault-item-info{
+margin-top:8px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:5px;
+}
+.vault-info-box{
+padding:7px;
+border-radius:9px;
+background:#ffffff06;
+font-size:8px;
+color:#9aa6ba;
+}
+.vault-info-box strong{
+display:block;
+color:#fff;
+font-size:9px;
+margin-top:2px;
+}
+.vault-delete{
+margin-top:8px;
+border:0;
+padding:7px 10px;
+border-radius:9px;
+background:#ef444422;
+color:#fca5a5;
+font-size:8px;
+font-weight:900;
+}
+
+/* اختبار الجهاز */
+.device-test-intro{
+padding:12px;
+border-radius:15px;
+background:#06b6d411;
+border:1px solid #06b6d433;
+font-size:9px;
+color:#cbd5e1;
+line-height:1.8;
+margin-bottom:11px;
+}
+.device-options{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+}
+.device-choice{
+padding:13px 8px;
+border-radius:13px;
+background:#101522;
+border:1px solid #ffffff12;
+color:#fff;
+font-size:10px;
+font-weight:900;
+}
+.device-choice.selected{
+border-color:#06b6d4;
+background:#06b6d416;
+}
+.compat-result{
+display:none;
+margin-top:13px;
+padding:13px;
+border-radius:16px;
+background:linear-gradient(135deg,#101d28,#0d111b);
+border:1px solid #06b6d455;
+}
+.compat-result.show{display:block}
+.compat-title{
+font-size:13px;
+font-weight:1000;
+margin-bottom:8px;
+}
+.compat-list{
+display:flex;
+flex-direction:column;
+gap:7px;
+}
+.compat-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:9px;
+border-radius:10px;
+background:#ffffff06;
+font-size:9px;
+}
+.compat-row b{
+color:#6ee7b7;
+}
+.compat-note{
+margin-top:9px;
+font-size:8px;
+color:#9aa6ba;
+line-height:1.7;
+}
+
+/* حالة الاشتراك */
+.expired-card{
+border-color:#ef444466!important;
+}
+.warning-card{
+border-color:#ffb02066!important;
+}
+
+/* النوافذ */
+.modal-overlay{position:fixed;inset:0;background:#000a;z-index:3500;display:none;align-items:flex-end;justify-content:center}
+.modal-overlay.show{display:flex}
+.modal{width:100%;max-width:520px;max-height:88vh;overflow:auto;background:linear-gradient(180deg,#141a28,#080b12);border:1px solid #ffffff18;border-radius:26px 26px 0 0;padding:18px 15px 25px}
+.modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.modal-title{display:flex;align-items:center;gap:10px}
+.modal-icon{width:45px;height:45px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#06b6d4,#9147ff);font-size:23px}
+.modal h2{font-size:19px}
+.modal small{color:#9aa6ba;font-size:8px}
+.close-modal{width:36px;height:36px;border:0;border-radius:10px;background:#ffffff12;color:#fff}
+
+/* المستشار */
+.consult-progress{height:7px;border-radius:20px;background:#ffffff0b;overflow:hidden;margin-bottom:15px}
+.consult-progress span{display:block;height:100%;background:linear-gradient(90deg,#06b6d4,#9147ff,#ff2d88);width:25%;transition:.3s}
+.question{font-size:15px;font-weight:1000;margin-bottom:12px}
+.question-note{font-size:9px;color:#9aa6ba;margin-bottom:12px}
+.option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.consult-option{padding:14px 8px;border-radius:14px;background:#101522;border:1px solid #ffffff12;color:#fff;font-size:10px;font-weight:900}
+.consult-option.selected{background:#9147ff22;border-color:#9147ff}
+.consult-nav{display:flex;gap:8px;margin-top:15px}
+.consult-nav button{flex:1;padding:11px;border:0;border-radius:12px;font-size:10px;font-weight:1000}
+.next-btn{background:linear-gradient(135deg,#9147ff,#ff2d88);color:#fff}
+.prev-btn{background:#ffffff0d;color:#fff}
+.recommend{display:none;padding:15px;border-radius:18px;background:linear-gradient(135deg,#21113d,#0d1720);border:1px solid #9147ff66}
+.recommend-icon{font-size:40px}
+.recommend h3{font-size:21px;margin:7px 0}
+.recommend p{font-size:10px;color:#cbd5e1;line-height:1.8}
+.recommend-price{font-size:20px;color:#ffd166;font-weight:1000;margin:10px 0}
+.recommend .order-small{width:100%}
+
+/* التجديد والدعم */
+.renew-box,.support-box{margin:5px 0 15px;padding:14px;border-radius:18px;background:#ffffff06;border:1px solid #ffffff12}
+.renew-grid,.support-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.renew-option,.support-option{padding:12px;border:1px solid #ffffff12;border-radius:12px;background:#101522;color:#fff;font-size:9px;font-weight:900}
+.renew-option.active{border-color:#9147ff;background:#9147ff22}
+.renew-durations{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
+.renew-duration{padding:11px;border-radius:11px;background:#101522;border:1px solid #ffffff12;color:#fff;font-size:9px}
+.renew-duration.active{border-color:#06b6d4;background:#06b6d422}
+.renew-send{width:100%;margin-top:10px;padding:12px;border:0;border-radius:12px;background:linear-gradient(135deg,#20d879,#0ca85a);color:#fff;font-weight:1000;font-size:10px}
+
+/* السلة */
 .cart-overlay{position:fixed;inset:0;background:#0009;z-index:3000;display:none;align-items:flex-end;justify-content:center}
 .cart-overlay.show{display:flex}
-.cart-modal{width:100%;max-width:520px;max-height:88vh;overflow:auto;background:linear-gradient(180deg,#141a28,#080b12);border:1px solid #ffffff18;border-radius:26px 26px 0 0;padding:18px 15px 25px}
+.cart-modal{width:100%;max-width:520px;max-height:92vh;overflow:auto;background:linear-gradient(180deg,#141a28,#080b12);border:1px solid #ffffff18;border-radius:26px 26px 0 0;padding:18px 15px 25px}
 .cart-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
 .cart-head h2{font-size:20px}
 .close-cart{border:0;background:#ffffff12;color:#fff;border-radius:10px;width:36px;height:36px}
-
+.customer-box{padding:13px;border-radius:16px;background:#9147ff10;border:1px solid #9147ff44;margin-bottom:12px}
+.customer-title{font-size:11px;font-weight:1000;margin-bottom:8px}
+.customer-input{width:100%;padding:11px;margin-bottom:7px;border-radius:11px;background:#080b12;border:1px solid #ffffff12;color:#fff;outline:none;font-size:10px}
 .cart-empty{text-align:center;padding:35px 10px;color:#9aa6ba;font-size:12px}
 .cart-list{display:flex;flex-direction:column;gap:9px}
 .cart-item{padding:11px;border-radius:15px;background:#ffffff08;border:1px solid #ffffff10}
@@ -129,31 +551,1794 @@ button{font-family:inherit;cursor:pointer}
 .qty{display:flex;align-items:center;gap:7px}
 .qty button{width:27px;height:27px;border:0;border-radius:8px;background:#ffffff12;color:#fff}
 .remove-item{border:0;background:#ef444422;color:#fca5a5;border-radius:8px;padding:6px 8px;font-size:9px}
+.cart-summary{margin-top:14px;padding:13px;border-radius:16px;background:#0004}
+.summary-row{display:flex;justify-content:space-between;font-size:11px;margin-bottom:8px}
+.summary-row.total{font-size:15px;font-weight:1000;color:#ffd166;border-top:1px solid #ffffff12;padding-top:10px;margin-bottom:0}
+.discount-box{display:flex;gap:7px;margin-top:10px}
+.discount-box input{flex:1;padding:10px;border-radius:10px;background:#080b12;border:1px solid #ffffff12;color:#fff;outline:none;font-size:9px}
+.discount-box button{border:0;padding:10px;border-radius:10px;background:#9147ff;color:#fff;font-size:9px;font-weight:900}
+.gift-note{font-size:8px;color:#9aa6ba;margin-top:6px}
+.payment-title{font-size:11px;font-weight:1000;margin:14px 0 8px}
+.payment-options{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.payment-option{padding:10px;border-radius:11px;background:#ffffff08;border:1px solid #ffffff12;color:#aab5c7;font-size:9px}
+.payment-option.active{border-color:#9147ff;background:#9147ff22;color:#fff}
+.cart-actions{display:flex;gap:8px;margin-top:12px}
+.cart-actions button{flex:1;padding:12px;border:0;border-radius:12px;font-size:10px;font-weight:1000}
+.send-cart{background:linear-gradient(135deg,#20d879,#0ca85a);color:#fff}
+.clear-cart{background:#ef444422;color:#fca5a5}
+.invoice{margin-top:13px;padding:13px;border-radius:16px;background:#ffffff05;border:1px solid #ffffff10}
+.invoice-title{font-size:12px;font-weight:1000;margin-bottom:9px}
+.invoice-line{display:flex;justify-content:space-between;gap:10px;font-size:9px;color:#cbd5e1;margin:5px 0}
+.invoice-total{border-top:1px solid #ffffff12;padding-top:8px;margin-top:8px;font-size:13px;color:#ffd166;font-weight:1000}
+.invoice-number{font-size:9px;color:#06b6d4}
+.copy-invoice{width:100%;margin-top:10px;padding:10px;border:0;border-radius:11px;background:#ffffff10;color:#fff;font-size:9px;font-weight:900}
+.payment-details{display:none;margin-top:10px;padding:12px;border-radius:13px;background:#ffffff08;border:1px solid #ffffff12}
+.payment-details-label{font-size:10px;color:#9aa6ba;margin-bottom:5px}
+.payment-number-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.payment-number{font-size:16px;color:#ffd166;direction:ltr}
 
+/* استجابة */
 @media(max-width:420px){
 .iptv-icon{flex-basis:82px;width:82px;height:82px}
 .iptv-card h3{font-size:20px}
 .price-list{gap:6px}
 .iptv-price{font-size:13px}
 }
-
 @media(max-width:360px){
 .hero{min-height:610px}
 .hero h2{font-size:27px}
 .big-card{flex-basis:230px}
 .iptv-icon{flex-basis:72px;width:72px;height:72px}
 .price-list{grid-template-columns:1fr}
-}
-
-.iptv-card-image{
-display:block;
-width:100%;
-height:auto;
-aspect-ratio:1536/691;
-object-fit:cover;
-border-radius:18px;
-margin-bottom:14px;
-border:1px solid #ffffff18;
-box-shadow:0 10px 28px #0005
+.news-label{padding:0 9px;font-size:9px}
+.news-text{font-size:9px}
+.extra-tools{grid-template-columns:1fr 1fr}
 }
 </style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="brand"><h1>كارة ستور</h1><p>كل خدماتك الإلكترونية بمكان واحد</p></div>
+<a class="hero-btn secondary" href="#offers">🔥 العروض</a>
+</header>
+
+<div class="news-ticker">
+<div class="news-label">🔔 آخر الأخبار</div>
+<div class="news-window"><div id="newsText" class="news-text">🛒 مرحباً بكم في كارة ستور</div></div>
+</div>
+
+<section class="hero">
+<div class="video-bg">
+<iframe id="storeVideo" src="https://www.youtube.com/embed/LrhHPRJCJL4?autoplay=1&mute=1&loop=1&playlist=LrhHPRJCJL4&controls=0&playsinline=1&rel=0&modestbranding=1" allow="autoplay;encrypted-media"></iframe>
+<div class="video-overlay"></div>
+<button id="soundBtn" class="sound-btn" onclick="toggleSound()">🔇 تشغيل الصوت</button>
+</div>
+<div class="hero-content">
+<h2>أهلاً بكم في <span>كارة ستور</span></h2>
+<p class="hero-sub">متجر رقمي متكامل للاشتراكات والخدمات الإلكترونية، شحن الألعاب، البطاقات، الإنترنت، السوشيال ميديا، الذكاء الاصطناعي، التصميم والمونتاج والمزيد.</p>
+<div class="trial-big"><strong>🎁 تجربة الخدمة بـ 1,000 د.ع</strong><span>جرّب الخدمة وتأكد من الجودة قبل الاشتراك</span></div>
+<div class="hero-buttons">
+<a class="hero-btn whatsapp" target="_blank" href="https://wa.me/9647711608207?text=السلام%20عليكم%20أريد%20تجربة%20الخدمة%20بـ1000">💬 أطلب التجربة</a>
+<a class="hero-btn secondary" href="#offers">🔥 مشاهدة العروض</a>
+</div>
+</div>
+</section>
+
+<div class="search-wrap">
+<input id="searchInput" class="search-box" type="search" placeholder="🔎 ابحث عن منتج أو خدمة داخل المتجر...">
+</div>
+
+<div class="filter-wrap">
+<button class="filter-btn active" data-filter="all">الكل</button>
+<button class="filter-btn" data-filter="iptv">📺 IPTV</button>
+<button class="filter-btn" data-filter="players">🎬 المشغلات</button>
+<button class="filter-btn" data-filter="games">🎮 الألعاب</button>
+<button class="filter-btn" data-filter="cards">💳 البطاقات</button>
+<button class="filter-btn" data-filter="social">📣 السوشيال</button>
+<button class="filter-btn" data-filter="ai">🤖 AI</button>
+</div>
+
+<!-- أدوات العميل الجديدة -->
+<div class="extra-tools">
+<button class="extra-tool" onclick="openDashboard()">
+<span>📊</span>
+لوحة العميل
+<small>بياناتك واشتراكاتك</small>
+</button>
+
+<button class="extra-tool" onclick="openVault()">
+<span>🔐</span>
+خزنة الاشتراكات
+<small>حفظ ومتابعة الاشتراكات</small>
+</button>
+
+<button class="extra-tool" onclick="openDeviceTest()">
+<span>🧩</span>
+اختبار الجهاز
+<small>اعرف الخدمات المناسبة لجهازك</small>
+</button>
+
+<button class="extra-tool" onclick="checkExpiryAlerts(true)">
+<span>⏰</span>
+حالة الاشتراكات
+<small>فحص مواعيد الانتهاء</small>
+</button>
+</div>
+
+<div id="expiryAlert" class="expiry-alert">
+<div class="expiry-alert-title">⏰ تنبيه الاشتراكات</div>
+<p id="expiryAlertText"></p>
+<button onclick="openVault()">🔐 فتح خزنة الاشتراكات</button>
+</div>
+
+<section class="quick-order">
+<div class="quick-order-head">
+<div class="quick-order-icon">⚡</div>
+<div><h2>الطلب السريع</h2><p>اطلب أي خدمة خلال ثوانٍ بدون البحث داخل المتجر</p></div>
+</div>
+<div class="quick-fields">
+<input id="quickProduct" class="quick-input" placeholder="✍️ اكتب اسم الخدمة أو المنتج الذي تريده">
+<select id="quickPayment" class="quick-select">
+<option value="">💳 طريقة الدفع (اختياري)</option>
+<option>ماستر الرافدين</option>
+<option>زين كاش</option>
+<option>رصيد آسيا</option>
+<option>آسيا بي</option>
+<option>فاست بي</option>
+<option>لم أحدد بعد</option>
+</select>
+<button class="quick-btn" onclick="quickOrder()">⚡ إرسال الطلب السريع عبر واتساب</button>
+</div>
+</section>
+
+<section class="section">
+<div class="section-head"><div class="section-title">✨ لماذا كارة ستور؟</div><div class="section-note">خدمة • سرعة • ثقة</div></div>
+</section>
+
+<div class="features">
+<div class="feature"><div class="feature-icon">⚡</div><strong>تسليم سريع</strong></div>
+<div class="feature"><div class="feature-icon">🛡️</div><strong>خدمة موثوقة</strong></div>
+<div class="feature"><div class="feature-icon">📱</div><strong>جميع الأجهزة</strong></div>
+<div class="feature"><div class="feature-icon">🎁</div><strong>تجربة قبل الاشتراك</strong></div>
+<div class="feature"><div class="feature-icon">💬</div><strong>دعم واتساب</strong></div>
+</div>
+
+<section class="offer-section" id="offers">
+<div class="offer-head"><h2>🔥 العروض الخاصة</h2><span>اسحب يدوياً</span></div>
+<div class="scroll">
+<div class="offer-card" data-category="offers"><div class="offer-icon">🎁</div><h3>عرض التجربة</h3><p>جرّب الخدمة قبل الاشتراك.</p><div class="offer-bottom"><strong class="offer-price">1,000 د.ع</strong><button class="order-small" onclick="addToCart('تجربة الخدمة',1000)">أضف للسلة</button></div></div>
+<div class="offer-card" data-category="games"><div class="offer-icon">🎲</div><h3>يلا لودو</h3><p>5150 ماسة بسعر خاص.</p><div class="offer-bottom"><strong class="offer-price">15,000 د.ع</strong><button class="order-small" onclick="addToCart('يلا لودو 5150 ماسة',15000)">أضف للسلة</button></div></div>
+<div class="offer-card" data-category="iptv"><div class="offer-icon">🌙</div><h3>عرض Dream OTT</h3><p>اشتراك Dream OTT سنة كاملة.</p><div class="offer-bottom"><strong class="offer-price">15,000 د.ع</strong><button class="order-small" onclick="addToCart('Dream OTT سنة كاملة',15000)">أضف للسلة</button></div></div>
+</div>
+</section>
+
+<!-- مركز التجديد -->
+<section class="section" id="renew">
+<div class="section-head"><div class="section-title">🔄 مركز التجديد</div><div class="section-note">للزبائن السابقين</div></div>
+<div class="renew-box">
+<div class="question">اختار اشتراكك السابق</div>
+<div class="renew-grid">
+<button class="renew-option" data-service="MAX TV" onclick="selectRenewService(this)">📺 MAX TV</button>
+<button class="renew-option" data-service="TIGER IPTV" onclick="selectRenewService(this)">🐯 TIGER</button>
+<button class="renew-option" data-service="BEST 4K" onclick="selectRenewService(this)">🔥 BEST 4K</button>
+<button class="renew-option" data-service="Dream OTT" onclick="selectRenewService(this)">🌙 Dream OTT</button>
+<button class="renew-option" data-service="TOD" onclick="selectRenewService(this)">⚽ TOD</button>
+</div>
+<div class="question" style="margin-top:14px">اختار مدة التجديد</div>
+<div class="renew-durations">
+<button class="renew-duration" data-duration="الشهر" onclick="selectRenewDuration(this)">شهر</button>
+<button class="renew-duration" data-duration="3 أشهر" onclick="selectRenewDuration(this)">3 أشهر</button>
+<button class="renew-duration" data-duration="6 أشهر" onclick="selectRenewDuration(this)">6 أشهر</button>
+<button class="renew-duration" data-duration="سنة" onclick="selectRenewDuration(this)">سنة</button>
+</div>
+<button class="renew-send" onclick="sendRenew()">🔄 إرسال طلب التجديد واتساب</button>
+</div>
+</section>
+
+<!-- مستشار الاشتراكات -->
+<section class="section">
+<div class="section-head"><div class="section-title">🧠 مستشار الاشتراكات</div><div class="section-note">اختيار ذكي</div></div>
+<div class="quick-order" style="margin:0">
+<div class="quick-order-head"><div class="quick-order-icon">🧠</div><div><h2>مو عارف تختار؟</h2><p>جاوب على 4 أسئلة ونقترح لك الأنسب</p></div></div>
+<button class="quick-btn" onclick="openConsultant()">ابدأ المستشار الآن</button>
+</div>
+</section>
+
+<section class="section iptv-section" id="iptv">
+<div class="section-head"><div class="section-title">📺 الاشتراكات الرئيسية</div><div class="section-note">بالدينار العراقي</div></div>
+<div class="iptv-grid">
+
+<div class="iptv-card" data-category="iptv">
+<div class="iptv-main"><div class="iptv-icon">📺</div><div class="iptv-info"><h3>MAX TV</h3><p class="description">قنوات رياضية وترفيهية وأفلام ومسلسلات بجودة عالية.</p><div class="device-tags"><span class="device-tag">📱 موبايل</span><span class="device-tag">📺 Smart TV</span><span class="device-tag">📦 Android Box</span><span class="device-tag">💻 كمبيوتر</span></div></div></div>
+<div class="price-list">
+<div class="price-box"><div class="price-info"><span class="price-duration">الشهر</span><strong class="iptv-price">5,000</strong></div><button class="order-small" onclick="addToCart('MAX TV الشهر',5000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">3 أشهر</span><strong class="iptv-price">10,000</strong></div><button class="order-small" onclick="addToCart('MAX TV 3 أشهر',10000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">6 أشهر</span><strong class="iptv-price">15,000</strong></div><button class="order-small" onclick="addToCart('MAX TV 6 أشهر',15000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">سنة</span><strong class="iptv-price">25,000</strong></div><button class="order-small" onclick="addToCart('MAX TV سنة',25000)">سلة</button></div>
+</div>
+<div class="download-area"><a class="download-btn" href="https://aftv.news/9750443" target="_blank">⬇️ تحميل MAX TV</a><div class="code-box"><span>🔑 Downloader</span><strong>9750443</strong><button class="copy-btn" onclick="copyCode('9750443')">نسخ</button></div></div>
+</div>
+
+<div class="iptv-card tiger" data-category="iptv">
+<div class="iptv-main"><div class="iptv-icon">🐯</div><div class="iptv-info"><h3>TIGER IPTV</h3><p class="description">قنوات وأفلام ومسلسلات ومحتوى متنوع.</p><div class="device-tags"><span class="device-tag">📱 موبايل</span><span class="device-tag">📺 Smart TV</span><span class="device-tag">📦 Android Box</span><span class="device-tag">💻 كمبيوتر</span></div></div></div>
+<div class="price-list">
+<div class="price-box"><div class="price-info"><span class="price-duration">الشهر</span><strong class="iptv-price">5,000</strong></div><button class="order-small" onclick="addToCart('TIGER الشهر',5000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">3 أشهر</span><strong class="iptv-price">10,000</strong></div><button class="order-small" onclick="addToCart('TIGER 3 أشهر',10000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">6 أشهر</span><strong class="iptv-price">15,000</strong></div><button class="order-small" onclick="addToCart('TIGER 6 أشهر',15000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">سنة</span><strong class="iptv-price">20,000</strong></div><button class="order-small" onclick="addToCart('TIGER سنة',20000)">سلة</button></div>
+</div>
+<div class="download-area"><a class="download-btn" href="http://bit.ly/tiger4v" target="_blank">⬇️ تحميل TIGER</a><div class="code-box"><span>🔑 Downloader</span><strong>5182869</strong><button class="copy-btn" onclick="copyCode('5182869')">نسخ</button></div></div>
+</div>
+
+<div class="iptv-card best" data-category="iptv">
+<div class="iptv-main"><div class="iptv-icon">🔥</div><div class="iptv-info"><h3>BEST 4K</h3><p class="description">مكتبة ضخمة وجودة 4K وقنوات متنوعة.</p><div class="device-tags"><span class="device-tag">📱 موبايل</span><span class="device-tag">📺 Smart TV</span><span class="device-tag">📦 Android Box</span><span class="device-tag">💻 كمبيوتر</span></div></div></div>
+<div class="price-list">
+<div class="price-box"><div class="price-info"><span class="price-duration">الشهر</span><strong class="iptv-price">5,000</strong></div><button class="order-small" onclick="addToCart('BEST 4K الشهر',5000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">3 أشهر</span><strong class="iptv-price">10,000</strong></div><button class="order-small" onclick="addToCart('BEST 4K 3 أشهر',10000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">6 أشهر</span><strong class="iptv-price">15,000</strong></div><button class="order-small" onclick="addToCart('BEST 4K 6 أشهر',15000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">سنة</span><strong class="iptv-price">20,000</strong></div><button class="order-small" onclick="addToCart('BEST 4K سنة',20000)">سلة</button></div>
+</div>
+<div class="download-area"><a class="download-btn" href="https://sh-apps.cyou/apk/BEST4K.apk" target="_blank">⬇️ تحميل BEST 4K</a><div class="code-box"><span>🔑 Downloader</span><strong>4056700</strong><button class="copy-btn" onclick="copyCode('4056700')">نسخ</button></div></div>
+</div>
+
+<div class="iptv-card tod" data-category="iptv">
+<div class="iptv-main"><div class="iptv-icon">⚽</div><div class="iptv-info"><h3>TOD</h3><p class="description">رياضة وبث مباشر ومحتوى رياضي.</p><div class="device-tags"><span class="device-tag">📱 موبايل</span><span class="device-tag">📺 Smart TV</span><span class="device-tag">📦 Android Box</span><span class="device-tag">💻 كمبيوتر</span></div></div></div>
+<div class="price-list">
+<div class="price-box"><div class="price-info"><span class="price-duration">موبايل</span><strong class="iptv-price">15,000</strong></div><button class="order-small" onclick="addToCart('TOD موبايل',15000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">شاشة</span><strong class="iptv-price">20,000</strong></div><button class="order-small" onclick="addToCart('TOD شاشة',20000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">موبايل + شاشة</span><strong class="iptv-price">25,000</strong></div><button class="order-small" onclick="addToCart('TOD موبايل + شاشة',25000)">سلة</button></div>
+</div>
+</div>
+
+<div class="iptv-card dream" data-category="iptv">
+<div class="iptv-main"><div class="iptv-icon">🌙</div><div class="iptv-info"><h3>Dream OTT</h3><p class="description">اشتراك تطبيق Dream OTT للأجهزة المدعومة.</p><div class="device-tags"><span class="device-tag">📱 موبايل</span><span class="device-tag">📺 Smart TV</span><span class="device-tag">📦 Android Box</span><span class="device-tag">💻 كمبيوتر</span></div></div></div>
+<div class="price-list">
+<div class="price-box"><div class="price-info"><span class="price-duration">الشهر</span><strong class="iptv-price">5,000</strong></div><button class="order-small" onclick="addToCart('Dream OTT الشهر',5000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">6 أشهر</span><strong class="iptv-price">15,000</strong></div><button class="order-small" onclick="addToCart('Dream OTT 6 أشهر',15000)">سلة</button></div>
+<div class="price-box"><div class="price-info"><span class="price-duration">سنة</span><strong class="iptv-price">20,000</strong></div><button class="order-small" onclick="addToCart('Dream OTT سنة',20000)">سلة</button></div>
+</div>
+<div class="download-area"><a class="download-btn" href="https://bit.ly/dreamott38" target="_blank">⬇️ تحميل Dream OTT</a><div class="code-box"><span>🔑 Downloader</span><strong>2792643</strong><button class="copy-btn" onclick="copyCode('2792643')">نسخ</button></div></div>
+</div>
+
+</div>
+</section>
+
+<section class="section players" id="players">
+<div class="section-head"><div class="section-title">🎬 قسم المشغلات</div><div class="section-note">تمرير يدوي</div></div>
+<div class="player-scroll">
+<div class="player-card" data-category="players"><div class="player-icon">📺</div><h3>IBO PLAYER</h3><p>تفعيل سنوي</p><div class="player-price">10,000 د.ع</div><br><button class="order-small" onclick="addToCart('IBO PLAYER سنوي',10000)">أضف</button></div>
+<div class="player-card" data-category="players"><div class="player-icon">▶️</div><h3>BOB PLAYER</h3><p>تفعيل سنوي</p><div class="player-price">10,000 د.ع</div><br><button class="order-small" onclick="addToCart('BOB PLAYER سنوي',10000)">أضف</button></div>
+<div class="player-card" data-category="players"><div class="player-icon">❌</div><h3>X PLAYER</h3><p>تفعيل سنوي</p><div class="player-price">10,000 د.ع</div><br><button class="order-small" onclick="addToCart('X PLAYER سنوي',10000)">أضف</button></div>
+<div class="player-card" data-category="players"><div class="player-icon">🔥</div><h3>Hot</h3><p>اشتراك سنوي</p><div class="player-price">10,000 د.ع</div><br><button class="order-small" onclick="addToCart('مشغل Hot اشتراك سنوي',10000)">أضف</button></div>
+</div>
+</section>
+
+<section class="section ai-section" id="ai">
+<div class="section-head"><div class="section-title">🤖 الذكاء الاصطناعي</div><div class="section-note">AI</div></div>
+<div class="ai-grid">
+<div class="ai-card" data-category="ai"><div class="ai-icon">✨</div><h3>Gemini</h3><p>اشتراك 18 شهر.</p><div class="ai-price">20,000 د.ع</div><br><button class="order-small" onclick="addToCart('Gemini 18 شهر',20000)">أضف</button></div>
+<div class="ai-card" data-category="ai"><div class="ai-icon">🤖</div><h3>ChatGPT</h3><p>اشتراك شهر.</p><div class="ai-price">15,000 د.ع</div><br><button class="order-small" onclick="addToCart('ChatGPT الشهر',15000)">أضف</button></div>
+</div>
+</section>
+
+<section class="section entertainment" id="entertainment">
+<div class="section-head"><div class="section-title">🍿 المسلسلات والأفلام</div><div class="section-note">تمرير يدوي</div></div>
+<div class="ent-grid">
+<div class="ent-card"><div class="ent-icon">🎬</div><h3>شاهد</h3><p>اشتراك شهر</p><div class="ent-price">10,000 د.ع</div><br><button class="order-small" onclick="addToCart('شاهد الشهر',10000)">أضف</button></div>
+<div class="ent-card"><div class="ent-icon">🎞️</div><h3>Netflix</h3><p>اشتراك شهر</p><div class="ent-price">8,000 د.ع</div><br><button class="order-small" onclick="addToCart('Netflix الشهر',8000)">أضف</button></div>
+<div class="ent-card"><div class="ent-icon">▶️</div><h3>YouTube Premium</h3><p>اشتراك شهر</p><div class="ent-price">8,000 د.ع</div><br><button class="order-small" onclick="addToCart('YouTube Premium الشهر',8000)">أضف</button></div>
+<div class="ent-card"><div class="ent-icon">📦</div><h3>Amazon Prime</h3><p>اشتراك شهر</p><div class="ent-price">8,000 د.ع</div><br><button class="order-small" onclick="addToCart('Amazon Prime الشهر',8000)">أضف</button></div>
+</div>
+</section>
+
+<section class="section design-section" id="design">
+<div class="section-head"><div class="section-title">🎨 التصميم والمونتاج</div><div class="section-note">اشتراكات</div></div>
+<div class="design-grid">
+<div class="design-card"><div class="design-icon">🎨</div><h3>Canva</h3><p>اشتراك سنوي</p><div class="design-price">15,000 د.ع</div><br><button class="order-small" onclick="addToCart('Canva سنوي',15000)">أضف</button></div>
+<div class="design-card"><div class="design-icon">✂️</div><h3>CapCut</h3><p>اشتراك شهر</p><div class="design-price">15,000 د.ع</div><br><button class="order-small" onclick="addToCart('CapCut الشهر',15000)">أضف</button></div>
+</div>
+</section>
+
+<section class="big-section" id="games">
+<div class="section-head"><div class="section-title">🎮 الألعاب</div><span>اسحب يميناً ويساراً</span></div>
+<div class="scroll">
+<div class="big-card" data-category="games"><div class="big-icon">⚽</div><h3>eFootball / PES</h3><p>شحن وطلبات اللعبة.</p><strong>السعر عبر واتساب</strong><br><br><button class="order-small" onclick="order('شحن eFootball PES')">اطلب الآن</button></div>
+<div class="big-card" data-category="games"><div class="big-icon">🎯</div><h3>PUBG Mobile</h3><p>12800 كوينز</p><strong>150,000 د.ع</strong><br><br><button class="order-small" onclick="addToCart('PUBG Mobile 12800 كوينز',150000)">أضف للسلة</button></div>
+<div class="big-card" data-category="games"><div class="big-icon">💎</div><h3>Free Fire</h3><p>1080 ماسة</p><strong>15,000 د.ع</strong><br><br><button class="order-small" onclick="addToCart('Free Fire 1080 ماسة',15000)">أضف للسلة</button></div>
+<div class="big-card" data-category="games"><div class="big-icon">🎲</div><h3>Yalla Ludo</h3><p>5150 ماسة</p><strong>15,000 د.ع</strong><br><br><button class="order-small" onclick="addToCart('يلا لودو 5150 ماسة',15000)">أضف للسلة</button></div>
+<div class="big-card" data-category="games"><div class="big-icon">🎮</div><h3>PlayStation</h3><p>بطاقة 10$</p><strong>14,000 د.ع</strong><br><br><button class="order-small" onclick="addToCart('PlayStation 10$',14000)">أضف للسلة</button></div>
+</div>
+</section>
+
+<section class="big-section" id="cards">
+<div class="section-head"><div class="section-title">💳 البطاقات الإلكترونية</div><span>اسحب يدوياً</span></div>
+<div class="scroll">
+<div class="big-card" data-category="cards"><div class="big-icon">🍎</div><h3>Apple Gift Card</h3><p>بطاقة 10$</p><strong>15,000 د.ع</strong><br><br><button class="order-small" onclick="addToCart('Apple Gift Card 10$',15000)">أضف للسلة</button></div>
+<div class="big-card" data-category="cards"><div class="big-icon">▶️</div><h3>Google Play</h3><p>بطاقة 10$</p><strong>11,000 د.ع</strong><br><br><button class="order-small" onclick="addToCart('Google Play 10$',11000)">أضف للسلة</button></div>
+<div class="big-card" data-category="cards"><div class="big-icon">🔥</div><h3>بطاقات الألعاب</h3><p>بطاقات وشحن ألعاب حسب الطلب.</p><strong>السعر عبر واتساب</strong><br><br><button class="order-small" onclick="order('بطاقات الألعاب')">اطلب الآن</button></div>
+<div class="big-card" data-category="cards"><div class="big-icon">🎵</div><h3>Spotify</h3><p>اشتراكات وبطاقات حسب المتوفر.</p><strong>السعر عبر واتساب</strong><br><br><button class="order-small" onclick="order('Spotify')">اطلب الآن</button></div>
+<div class="big-card" data-category="cards"><div class="big-icon">🎬</div><h3>Netflix</h3><p>بطاقات وخدمات رقمية.</p><strong>السعر عبر واتساب</strong><br><br><button class="order-small" onclick="order('Netflix')">اطلب الآن</button></div>
+</div>
+</section>
+
+<section class="big-section" id="social">
+<div class="section-head"><div class="section-title">📣 السوشيال ميديا</div><span>اسحب يميناً ويساراً</span></div>
+<div class="scroll">
+<div class="big-card" data-category="social"><div class="big-icon">📘</div><h3>Facebook</h3><p>1K</p><strong>5,000 د.ع</strong><br><br><button class="order-small" onclick="addToCart('Facebook 1K',5000)">أضف للسلة</button></div>
+<div class="big-card" data-category="social"><div class="big-icon">📸</div><h3>Instagram</h3><p>1K</p><strong>5,000 د.ع</strong><br><br><button class="order-small" onclick="addToCart('Instagram 1K',5000)">أضف للسلة</button></div>
+<div class="big-card" data-category="social"><div class="big-icon">🎵</div><h3>TikTok</h3><p>1K</p><strong>10,000 د.ع</strong><br><br><button class="order-small" onclick="addToCart('TikTok 1K',10000)">أضف للسلة</button></div>
+<div class="big-card" data-category="social"><div class="big-icon">✈️</div><h3>Telegram</h3><p>أعضاء ومشاهدات وتفاعل.</p><strong>السعر عبر واتساب</strong><br><br><button class="order-small" onclick="order('خدمات Telegram')">اطلب الآن</button></div>
+<div class="big-card" data-category="social"><div class="big-icon">▶️</div><h3>YouTube</h3><p>مشتركين ومشاهدات وإعجابات.</p><strong>السعر عبر واتساب</strong><br><br><button class="order-small" onclick="order('خدمات YouTube')">اطلب الآن</button></div>
+<div class="big-card" data-category="social"><div class="big-icon">👻</div><h3>Snapchat</h3><p>مشاهدات وتفاعل.</p><strong>السعر عبر واتساب</strong><br><br><button class="order-small" onclick="order('خدمات Snapchat')">اطلب الآن</button></div>
+</div>
+</section>
+
+<section class="section design-section" id="internet">
+<div class="section-head"><div class="section-title">🌐 الإنترنت</div><div class="section-note">خدمات وشحن</div></div>
+<div class="design-grid">
+<div class="design-card"><div class="design-icon">🌐</div><h3>الوطني FTTH</h3><p>تجديد الاشتراك</p><div class="design-price">حسب الفئة</div><br><button class="order-small" onclick="order('الوطني FTTH')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">⚡</div><h3>سوبر سيل</h3><p>تجديد الاشتراك</p><div class="design-price">حسب الفئة</div><br><button class="order-small" onclick="order('سوبر سيل')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">📡</div><h3>الجزيرة</h3><p>تجديد وشحن</p><div class="design-price">حسب الفئة</div><br><button class="order-small" onclick="order('الجزيرة')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">📶</div><h3>الرحمة</h3><p>تجديد الاشتراك</p><div class="design-price">حسب الفئة</div><br><button class="order-small" onclick="order('الرحمة')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">🚀</div><h3>هرنز</h3><p>تجديد سريع</p><div class="design-price">حسب الفئة</div><br><button class="order-small" onclick="order('هرنز')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">📱</div><h3>آسياسيل</h3><p>كروت وشحن</p><div class="design-price">حسب الفئة</div><br><button class="order-small" onclick="order('آسياسيل')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">📲</div><h3>زين</h3><p>كروت وشحن</p><div class="design-price">حسب الفئة</div><br><button class="order-small" onclick="order('زين')">أطلب</button></div>
+</div>
+</section>
+
+<section class="section design-section" id="financial">
+<div class="section-head"><div class="section-title">💸 الخدمات المالية</div><div class="section-note">خدمات مالية</div></div>
+<div class="design-grid">
+<div class="design-card"><div class="design-icon">💚</div><h3>زين كاش</h3><p>تحويل — إيداع — سحب — دفع</p><div class="design-price">استفسار</div><br><button class="order-small" onclick="order('زين كاش')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">💙</div><h3>آسيا حوالة</h3><p>تحويل وشحن وخدمات مالية</p><div class="design-price">استفسار</div><br><button class="order-small" onclick="order('آسيا حوالة')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">⚡</div><h3>فاست بي</h3><p>تحويل وشحن</p><div class="design-price">استفسار</div><br><button class="order-small" onclick="order('فاست بي')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">💳</div><h3>ماستر كارد</h3><p>خدمات وشحن البطاقات</p><div class="design-price">استفسار</div><br><button class="order-small" onclick="order('ماستر كارد')">أطلب</button></div>
+<div class="design-card"><div class="design-icon">🚕</div><h3>بلي</h3><p>خدمات تكسي بلي</p><div class="design-price">استفسار</div><br><button class="order-small" onclick="order('تكسي بلي')">أطلب</button></div>
+</div>
+</section>
+
+<!-- مركز الدعم -->
+<section class="section" id="support">
+<div class="section-head"><div class="section-title">🆘 مركز الدعم</div><div class="section-note">مساعدة سريعة</div></div>
+<div class="support-box">
+<div class="support-grid">
+<button class="support-option" onclick="support('🔑 مشكلة تفعيل')">🔑 مشكلة تفعيل</button>
+<button class="support-option" onclick="support('💳 مشكلة دفع')">💳 مشكلة دفع</button>
+<button class="support-option" onclick="support('🔄 تجديد اشتراك')">🔄 تجديد اشتراك</button>
+<button class="support-option" onclick="support('📺 مشكلة بالمشاهدة')">📺 مشكلة بالمشاهدة</button>
+<button class="support-option" onclick="support('📞 التواصل مع الدعم')">📞 التواصل مع الدعم</button>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-head"><div class="section-title">🛍️ كيف تطلب؟</div><div class="section-note">بخطوات بسيطة</div></div>
+<div class="steps">
+<div class="step"><b>1️⃣</b><strong>اختار الخدمة</strong><p>تصفح الأقسام أو استخدم المستشار وأضف المنتجات للسلة.</p></div>
+<div class="step"><b>2️⃣</b><strong>راجع السلة</strong><p>أدخل اسمك ورقمك واختر طريقة الدفع.</p></div>
+<div class="step"><b>3️⃣</b><strong>أرسل الطلب</strong><p>تظهر لك الفاتورة ويرسل الطلب مباشرة إلى واتساب.</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-head"><div class="section-title">⭐ آراء الزبائن</div><div class="section-note">ثقتكم تهمنا</div></div>
+<div class="reviews">
+<div class="review"><div class="stars">★★★★★</div><p>خدمة سريعة وتعامل ممتاز، والتفعيل كان مرتب.</p><small>زبون كارة ستور</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>المتجر مرتب وسهل، وكل الخدمات بمكان واحد.</p><small>زبون كارة ستور</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>سهولة بالطلب ودعم واتساب سريع.</p><small>زبون كارة ستور</small></div>
+</div>
+</section>
+
+<footer class="footer">
+<h2>📲 كارة ستور</h2>
+<p>جميع الخدمات الرقمية التي تحتاجها بمكان واحد.<br>للاستفسار عن الأسعار والتوفر اطلب مباشرة عبر واتساب.</p>
+<a class="hero-btn whatsapp" style="margin-top:12px" href="https://wa.me/9647711608207" target="_blank">💬 أطلب الآن عبر الواتساب</a>
+<strong>التطوير والتصميم: علي جمال</strong>
+<p>07711608207</p>
+</footer>
+
+<!-- الأزرار -->
+<button id="cartFab" class="cart-fab" onclick="openCart()">🛒<span id="cartCount" class="cart-count">0</span></button>
+<button class="consult-fab" onclick="openConsultant()">🧠</button>
+<button id="backTop" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+<a class="float float-wa" href="https://wa.me/9647711608207" target="_blank">💬</a>
+<a class="float float-group" href="https://chat.whatsapp.com/E6Os9QbQTrUJR9MGCCsr6K?s=cl&p=a&ilr=1" target="_blank">👥</a>
+
+<nav class="bottom">
+<a class="active" href="#"><span class="bottom-icon">🏠</span>الرئيسية</a>
+<a href="#iptv"><span class="bottom-icon">📺</span>IPTV</a>
+<a href="#players"><span class="bottom-icon">🎬</span>المشغلات</a>
+<a href="#renew"><span class="bottom-icon">🔄</span>تجديد</a>
+<a href="https://wa.me/9647711608207" target="_blank"><span class="bottom-icon">💬</span>واتساب</a>
+</nav>
+
+<!-- مستشار الاشتراكات -->
+<div id="consultOverlay" class="modal-overlay" onclick="if(event.target===this)closeConsultant()">
+<div class="modal">
+<div class="modal-head">
+<div class="modal-title"><div class="modal-icon">🧠</div><div><h2>مستشار الاشتراكات</h2><small>نساعدك تختار الأنسب إلك</small></div></div>
+<button class="close-modal" onclick="closeConsultant()">✕</button>
+</div>
+
+<div id="consultQuestions">
+<div class="consult-progress"><span id="consultProgress"></span></div>
+<div id="questionTitle" class="question"></div>
+<div id="questionNote" class="question-note"></div>
+<div id="consultOptions" class="option-grid"></div>
+<div class="consult-nav">
+<button class="prev-btn" onclick="consultPrev()">⬅ السابق</button>
+<button class="next-btn" onclick="consultNext()">التالي ➜</button>
+</div>
+</div>
+
+<div id="recommendBox" class="recommend">
+<div class="recommend-icon" id="recommendIcon"></div>
+<h3 id="recommendName"></h3>
+<p id="recommendText"></p>
+<div class="recommend-price" id="recommendPrice"></div>
+<button class="order-small" id="recommendAdd">🛒 أضف للسلة</button>
+<button class="copy-invoice" style="margin-top:8px" onclick="resetConsultant()">🔄 إعادة الاستشارة</button>
+</div>
+</div>
+</div>
+
+<!-- لوحة العميل -->
+<div id="dashboardOverlay" class="modal-overlay" onclick="if(event.target===this)closeDashboard()">
+<div class="modal">
+<div class="modal-head">
+<div class="modal-title">
+<div class="modal-icon">📊</div>
+<div><h2>لوحة العميل</h2><small>ملخص حسابك داخل هذا الجهاز</small></div>
+</div>
+<button class="close-modal" onclick="closeDashboard()">✕</button>
+</div>
+
+<div class="dashboard-box">
+<div class="dashboard-profile">
+<div class="dashboard-profile-top">
+<div class="dashboard-avatar">👤</div>
+<div>
+<div id="dashboardName" class="dashboard-name">زبون كارة ستور</div>
+<div id="dashboardPhone" class="dashboard-phone">لم يتم إدخال رقم</div>
+</div>
+</div>
+
+<div class="dashboard-stats">
+<div class="dashboard-stat">
+<strong id="dashCartCount">0</strong>
+<span>السلة</span>
+</div>
+<div class="dashboard-stat">
+<strong id="dashVaultCount">0</strong>
+<span>اشتراكات</span>
+</div>
+<div class="dashboard-stat">
+<strong id="dashDays">—</strong>
+<span>أقرب انتهاء</span>
+</div>
+</div>
+
+<div id="dashboardNext" class="dashboard-next">
+لا توجد اشتراكات محفوظة حالياً.
+</div>
+</div>
+
+<div class="dashboard-actions">
+<button onclick="closeDashboard();openVault()">🔐 خزنة الاشتراكات</button>
+<button onclick="closeDashboard();openDeviceTest()">🧩 اختبار الجهاز</button>
+<button onclick="closeDashboard();openCart()">🛒 فتح السلة</button>
+<button onclick="closeDashboard();document.getElementById('renew').scrollIntoView({behavior:'smooth'})">🔄 مركز التجديد</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- خزنة الاشتراكات -->
+<div id="vaultOverlay" class="modal-overlay" onclick="if(event.target===this)closeVault()">
+<div class="modal">
+<div class="modal-head">
+<div class="modal-title">
+<div class="modal-icon">🔐</div>
+<div><h2>خزنة الاشتراكات</h2><small>تابع اشتراكاتك ومواعيد انتهائها</small></div>
+</div>
+<button class="close-modal" onclick="closeVault()">✕</button>
+</div>
+
+<div class="vault-form">
+<div class="question">➕ إضافة اشتراك</div>
+<div class="vault-fields">
+<input id="vaultName" class="vault-input" placeholder="مثلاً: MAX TV">
+<select id="vaultDuration" class="vault-select">
+<option value="">⏱️ اختر مدة الاشتراك</option>
+<option value="1">شهر</option>
+<option value="3">3 أشهر</option>
+<option value="6">6 أشهر</option>
+<option value="12">سنة</option>
+<option value="18">18 شهر</option>
+<option value="custom">تاريخ انتهاء مخصص</option>
+</select>
+<input id="vaultStartDate" class="vault-input" type="date">
+<input id="vaultExpiryDate" class="vault-input" type="date" style="display:none">
+<input id="vaultNote" class="vault-input" placeholder="📝 ملاحظة اختيارية">
+</div>
+<button class="vault-add" onclick="addSubscription()">🔐 حفظ الاشتراك</button>
+</div>
+
+<div id="vaultList" class="vault-list"></div>
+</div>
+</div>
+
+<!-- اختبار الجهاز -->
+<div id="deviceOverlay" class="modal-overlay" onclick="if(event.target===this)closeDeviceTest()">
+<div class="modal">
+<div class="modal-head">
+<div class="modal-title">
+<div class="modal-icon">🧩</div>
+<div><h2>اختبار توافق الجهاز</h2><small>اختار جهازك وشوف الخدمات المناسبة</small></div>
+</div>
+<button class="close-modal" onclick="closeDeviceTest()">✕</button>
+</div>
+
+<div class="device-test-intro">
+اختار نوع الجهاز الذي تريد استخدامه. الاختبار يعتمد على الأجهزة المذكورة في خدمات كارة ستور.
+</div>
+
+<div class="device-options">
+<button class="device-choice" data-device="mobile" onclick="testDevice('mobile',this)">📱 موبايل</button>
+<button class="device-choice" data-device="smart" onclick="testDevice('smart',this)">📺 Smart TV</button>
+<button class="device-choice" data-device="box" onclick="testDevice('box',this)">📦 Android Box</button>
+<button class="device-choice" data-device="pc" onclick="testDevice('pc',this)">💻 كمبيوتر</button>
+</div>
+
+<div id="compatResult" class="compat-result">
+<div class="compat-title" id="compatTitle"></div>
+<div id="compatList" class="compat-list"></div>
+<div class="compat-note">
+💡 ظهور الخدمة هنا يعني أن المتجر يذكر الجهاز ضمن الأجهزة المدعومة. عند وجود مشكلة بالتشغيل يمكنك التواصل مع الدعم.
+</div>
+</div>
+</div>
+</div>
+
+<!-- السلة والفاتورة -->
+<div id="cartOverlay" class="cart-overlay" onclick="if(event.target===this)closeCart()">
+<div class="cart-modal">
+<div class="cart-head"><h2>🛒 سلة المشتريات</h2><button class="close-cart" onclick="closeCart()">✕</button></div>
+
+<div class="customer-box">
+<div class="customer-title">👤 بيانات الزبون</div>
+<input id="customerName" class="customer-input" placeholder="اكتب اسم الزبون">
+<input id="customerPhone" class="customer-input" type="tel" placeholder="رقم موبايل الزبون">
+</div>
+
+<div id="cartContent"></div>
+<div id="cartFooter" style="display:none">
+
+<div class="cart-summary">
+<div class="summary-row"><span>عدد المنتجات</span><strong id="cartItemsCount">0</strong></div>
+<div class="summary-row"><span>الخصم</span><strong id="cartDiscount">0 د.ع</strong></div>
+<div class="summary-row total"><span>المجموع</span><strong id="cartTotal">0 د.ع</strong></div>
+</div>
+
+<div class="discount-box">
+<input id="discountCode" placeholder="🎁 كود خصم / هدية">
+<button onclick="applyDiscount()">تطبيق</button>
+</div>
+
+<div class="gift-note">يمكنك ترك الحقل فارغاً إذا لا يوجد كود خصم.</div>
+
+<div class="payment-title">💳 اختر طريقة الدفع</div>
+<div class="payment-options">
+<button class="payment-option active" data-payment="لم أحدد بعد" data-number="">❓ لم أحدد</button>
+<button class="payment-option" data-payment="ماستر الرافدين" data-number="9769867020">💳 ماستر الرافدين</button>
+<button class="payment-option" data-payment="زين كاش" data-number="07711608207">💚 زين كاش</button>
+<button class="payment-option" data-payment="رصيد آسيا" data-number="07711608207">📱 رصيد آسيا</button>
+<button class="payment-option" data-payment="آسيا بي" data-number="07711608207">💙 آسيا بي</button>
+<button class="payment-option" data-payment="فاست بي" data-number="07711608207">⚡ فاست بي</button>
+</div>
+
+<div id="paymentDetails" class="payment-details">
+<div class="payment-details-label">رقم الدفع</div>
+<div class="payment-number-row">
+<strong id="paymentNumber" class="payment-number"></strong>
+<button type="button" onclick="copyPaymentNumber()" class="copy-btn">📋 نسخ</button>
+</div>
+</div>
+
+<div id="invoiceBox" class="invoice">
+<div class="invoice-title">🧾 الفاتورة الإلكترونية</div>
+<div class="invoice-line"><span>رقم الطلب</span><strong id="invoiceOrderNo" class="invoice-number"></strong></div>
+<div class="invoice-line"><span>الزبون</span><strong id="invoiceCustomer"></strong></div>
+<div class="invoice-line"><span>الموبايل</span><strong id="invoicePhone"></strong></div>
+<div id="invoiceProducts"></div>
+<div class="invoice-line"><span>طريقة الدفع</span><strong id="invoicePayment"></strong></div>
+<div class="invoice-line invoice-total"><span>المجموع النهائي</span><strong id="invoiceTotal"></strong></div>
+<button class="copy-invoice" onclick="copyInvoice()">📋 نسخ الفاتورة والملخص</button>
+</div>
+
+<div class="cart-actions">
+<button class="clear-cart" onclick="clearCart()">مسح السلة</button>
+<button class="send-cart" onclick="sendCart()">📲 إرسال الطلب واتساب</button>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+const PHONE="9647711608207";
+
+let cart=JSON.parse(localStorage.getItem("kara_store_cart")||"[]");
+let payment=localStorage.getItem("kara_store_payment")||"لم أحدد بعد";
+let customerName=localStorage.getItem("kara_customer_name")||"";
+let customerPhone=localStorage.getItem("kara_customer_phone")||"";
+let discount=Number(localStorage.getItem("kara_discount")||0);
+let orderNumber=localStorage.getItem("kara_order_number")||"";
+
+/* =========================================================
+   البيانات الجديدة
+   ========================================================= */
+
+let subscriptions=JSON.parse(localStorage.getItem("kara_subscriptions")||"[]");
+
+const money=n=>Number(n).toLocaleString("en-US")+" د.ع";
+
+function saveSubscriptions(){
+localStorage.setItem("kara_subscriptions",JSON.stringify(subscriptions));
+renderVault();
+updateDashboard();
+checkExpiryAlerts(false);
+}
+
+/* =========================================================
+   السلة الأصلية
+   ========================================================= */
+
+function generateOrderNumber(){
+return "KS-"+Date.now().toString().slice(-8);
+}
+
+function saveCustomer(){
+const nameEl=document.getElementById("customerName");
+const phoneEl=document.getElementById("customerPhone");
+
+if(nameEl)customerName=nameEl.value.trim();
+if(phoneEl)customerPhone=phoneEl.value.trim();
+
+localStorage.setItem("kara_customer_name",customerName);
+localStorage.setItem("kara_customer_phone",customerPhone);
+
+updateDashboard();
+}
+
+function saveCart(){
+localStorage.setItem("kara_store_cart",JSON.stringify(cart));
+updateCartUI();
+updateDashboard();
+}
+
+function addToCart(name,price){
+let x=cart.find(i=>i.name===name&&i.price===price);
+x?x.qty++:cart.push({name,price,qty:1});
+
+if(!orderNumber)orderNumber=generateOrderNumber();
+
+localStorage.setItem("kara_order_number",orderNumber);
+saveCart();
+
+alert("🛒 تمت إضافة "+name+" إلى السلة");
+}
+
+function updateCartUI(){
+let count=cart.reduce((s,x)=>s+x.qty,0);
+let subtotal=cart.reduce((s,x)=>s+x.price*x.qty,0);
+let total=Math.max(0,subtotal-discount);
+
+const ids={
+count:"cartCount",
+items:"cartItemsCount",
+discount:"cartDiscount",
+total:"cartTotal"
+};
+
+if(document.getElementById(ids.count))document.getElementById(ids.count).textContent=count;
+if(document.getElementById(ids.items))document.getElementById(ids.items).textContent=count;
+if(document.getElementById(ids.discount))document.getElementById(ids.discount).textContent=money(discount);
+if(document.getElementById(ids.total))document.getElementById(ids.total).textContent=money(total);
+
+const nameEl=document.getElementById("customerName");
+const phoneEl=document.getElementById("customerPhone");
+
+if(nameEl)nameEl.value=customerName;
+if(phoneEl)phoneEl.value=customerPhone;
+
+let c=document.getElementById("cartContent");
+let f=document.getElementById("cartFooter");
+
+if(!c||!f)return;
+
+if(!cart.length){
+c.innerHTML='<div class="cart-empty">🛒 السلة فارغة حالياً<br>أضف المنتجات التي تريدها من المتجر.</div>';
+f.style.display="none";
+return;
+}
+
+f.style.display="block";
+
+c.innerHTML='<div class="cart-list">'+cart.map((x,i)=>
+'<div class="cart-item">'+
+'<div class="cart-item-top"><span class="cart-item-name">'+esc(x.name)+'</span><span class="cart-item-price">'+money(x.price*x.qty)+'</span></div>'+
+'<div class="cart-item-bottom"><div class="qty"><button onclick="changeQty('+i+',-1)">−</button><span>'+x.qty+'</span><button onclick="changeQty('+i+',1)">+</button></div><button class="remove-item" onclick="removeItem('+i+')">🗑 حذف</button></div>'+
+'</div>'
+).join("")+'</div>';
+
+document.querySelectorAll(".payment-option").forEach(b=>b.classList.toggle("active",b.dataset.payment===payment));
+
+const selected=[...document.querySelectorAll(".payment-option")].find(b=>b.dataset.payment===payment);
+const details=document.getElementById("paymentDetails");
+
+if(selected&&selected.dataset.number){
+document.getElementById("paymentNumber").textContent=selected.dataset.number;
+details.style.display="block";
+}else{
+document.getElementById("paymentNumber").textContent="";
+details.style.display="none";
+}
+
+buildInvoice();
+}
+
+function esc(s){
+return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+}
+
+function changeQty(i,d){
+cart[i].qty+=d;
+if(cart[i].qty<=0)cart.splice(i,1);
+saveCart();
+}
+
+function removeItem(i){
+cart.splice(i,1);
+saveCart();
+}
+
+function clearCart(){
+if(confirm("هل تريد مسح السلة بالكامل؟")){
+cart=[];
+discount=0;
+orderNumber="";
+localStorage.removeItem("kara_order_number");
+localStorage.removeItem("kara_discount");
+saveCart();
+}
+}
+
+function openCart(){
+updateCartUI();
+document.getElementById("cartOverlay").classList.add("show");
+document.body.style.overflow="hidden";
+}
+
+function closeCart(){
+document.getElementById("cartOverlay").classList.remove("show");
+document.body.style.overflow="";
+}
+
+function applyDiscount(){
+let code=document.getElementById("discountCode").value.trim().toUpperCase();
+
+if(!code){
+alert("🎁 اكتب كود الخصم أولاً");
+return;
+}
+
+const codes={"KARA1000":1000,"KARA500":500};
+
+if(codes[code]){
+let subtotal=cart.reduce((s,x)=>s+x.price*x.qty,0);
+discount=Math.min(codes[code],subtotal);
+localStorage.setItem("kara_discount",discount);
+alert("🎁 تم تطبيق خصم "+money(discount));
+updateCartUI();
+}else{
+discount=0;
+localStorage.removeItem("kara_discount");
+alert("❌ الكود غير صالح أو غير متوفر");
+updateCartUI();
+}
+}
+
+function buildInvoice(){
+if(!cart.length)return;
+
+if(!orderNumber){
+orderNumber=generateOrderNumber();
+localStorage.setItem("kara_order_number",orderNumber);
+}
+
+let subtotal=cart.reduce((s,x)=>s+x.price*x.qty,0);
+let total=Math.max(0,subtotal-discount);
+
+document.getElementById("invoiceOrderNo").textContent=orderNumber;
+document.getElementById("invoiceCustomer").textContent=customerName||"لم يحدد";
+document.getElementById("invoicePhone").textContent=customerPhone||"لم يحدد";
+document.getElementById("invoicePayment").textContent=payment;
+document.getElementById("invoiceTotal").textContent=money(total);
+
+document.getElementById("invoiceProducts").innerHTML=cart.map(x=>
+'<div class="invoice-line"><span>'+esc(x.name)+' × '+x.qty+'</span><strong>'+money(x.price*x.qty)+'</strong></div>'
+).join("");
+}
+
+function invoiceText(){
+let subtotal=cart.reduce((s,x)=>s+x.price*x.qty,0);
+let total=Math.max(0,subtotal-discount);
+
+let msg=
+"🧾 فاتورة كارة ستور\n"+
+"━━━━━━━━━━━━━━\n"+
+"🧾 رقم الطلب: "+orderNumber+"\n"+
+"👤 اسم الزبون: "+(customerName||"لم يحدد")+"\n"+
+"📱 رقم الموبايل: "+(customerPhone||"لم يحدد")+"\n\n"+
+"🛍️ المنتجات:\n";
+
+cart.forEach((x,i)=>{
+msg+=(i+1)+"️⃣ "+x.name+" × "+x.qty+" = "+money(x.price*x.qty)+"\n";
+});
+
+msg+="\n💰 الإجمالي: "+money(subtotal);
+
+if(discount)msg+="\n🎁 الخصم: -"+money(discount);
+
+msg+="\n💵 المجموع النهائي: "+money(total)+"\n💳 طريقة الدفع: "+payment;
+
+const selected=[...document.querySelectorAll(".payment-option")].find(b=>b.dataset.payment===payment);
+
+if(selected&&selected.dataset.number)
+msg+="\n📱 رقم الدفع: "+selected.dataset.number;
+
+msg+="\n━━━━━━━━━━━━━━";
+
+return msg;
+}
+
+function copyInvoice(){
+saveCustomer();
+let text=invoiceText();
+
+if(navigator.clipboard){
+navigator.clipboard.writeText(text).then(()=>alert("✅ تم نسخ الفاتورة والملخص"));
+}else alert(text);
+}
+
+function sendCart(){
+if(!cart.length)return alert("السلة فارغة");
+
+saveCustomer();
+
+if(!customerName){
+alert("👤 اكتب اسم الزبون أولاً");
+document.getElementById("customerName").focus();
+return;
+}
+
+if(!customerPhone){
+alert("📱 اكتب رقم موبايل الزبون أولاً");
+document.getElementById("customerPhone").focus();
+return;
+}
+
+let msg=
+"السلام عليكم 👋\n\n"+
+"🛍️ طلب جديد من كارة ستور\n\n"+
+invoiceText()+
+"\n\nيرجى تأكيد الطلب والتفاصيل. شكراً لكم 🌹";
+
+window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg),"_blank");
+}
+
+document.getElementById("customerName").addEventListener("input",saveCustomer);
+document.getElementById("customerPhone").addEventListener("input",saveCustomer);
+
+document.querySelectorAll(".payment-option").forEach(b=>{
+b.onclick=()=>{
+payment=b.dataset.payment;
+localStorage.setItem("kara_store_payment",payment);
+document.querySelectorAll(".payment-option").forEach(x=>x.classList.remove("active"));
+b.classList.add("active");
+updateCartUI();
+};
+});
+
+function copyPaymentNumber(){
+const number=document.getElementById("paymentNumber").textContent;
+
+if(!number)return;
+
+if(navigator.clipboard)
+navigator.clipboard.writeText(number).then(()=>alert("✅ تم نسخ رقم الدفع: "+number));
+else alert("رقم الدفع: "+number);
+}
+
+function order(product){
+let msg=
+"السلام عليكم 👋\n\n"+
+"أريد الطلب/الاستفسار من كارة ستور:\n📦 "+product+
+"\n\nيرجى إرسال السعر والتفاصيل.";
+
+window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg),"_blank");
+}
+
+function quickOrder(){
+const product=document.getElementById("quickProduct").value.trim();
+const pay=document.getElementById("quickPayment").value;
+
+if(!product){
+alert("⚡ اكتب اسم الخدمة أو المنتج أولاً");
+document.getElementById("quickProduct").focus();
+return;
+}
+
+let msg=
+"السلام عليكم 👋\n\n"+
+"⚡ طلب سريع من كارة ستور\n\n"+
+"📦 الخدمة / المنتج: "+product;
+
+if(pay)msg+="\n💳 طريقة الدفع: "+pay;
+
+msg+="\n\nيرجى إرسال السعر والتفاصيل وتأكيد الطلب. شكراً 🌹";
+
+window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg),"_blank");
+}
+
+/* =========================================================
+   مركز التجديد
+   ========================================================= */
+
+let renewService="",renewDuration="";
+
+function selectRenewService(btn){
+document.querySelectorAll(".renew-option").forEach(x=>x.classList.remove("active"));
+btn.classList.add("active");
+renewService=btn.dataset.service;
+}
+
+function selectRenewDuration(btn){
+document.querySelectorAll(".renew-duration").forEach(x=>x.classList.remove("active"));
+btn.classList.add("active");
+renewDuration=btn.dataset.duration;
+}
+
+function sendRenew(){
+if(!renewService){
+alert("🔄 اختار الخدمة أولاً");
+return;
+}
+
+if(!renewDuration){
+alert("⏱️ اختار مدة التجديد أولاً");
+return;
+}
+
+let msg=
+"السلام عليكم 👋\n\n"+
+"🔄 طلب تجديد من كارة ستور\n\n"+
+"📺 الاشتراك: "+renewService+
+"\n⏱️ المدة: "+renewDuration+
+"\n\nأريد تجديد اشتراكي السابق، يرجى إرسال السعر والتفاصيل.";
+
+window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg),"_blank");
+}
+
+/* =========================================================
+   مستشار الاشتراكات
+   ========================================================= */
+
+const consultQuestions=[
+{
+title:"📱📺 شنو نوع جهازك؟",
+note:"اختار الجهاز الذي تريد تشغيل الاشتراك عليه",
+options:[
+["mobile","📱 موبايل"],
+["smart","📺 Smart TV"],
+["box","📦 Android Box"],
+["pc","💻 كمبيوتر"]
+]
+},
+{
+title:"🎬 شنو تحب تشاهد؟",
+note:"اختار المحتوى الأكثر أهمية بالنسبة لك",
+options:[
+["sports","⚽ رياضة"],
+["movies","🎬 أفلام ومسلسلات"],
+["channels","📺 قنوات"],
+["all","🔥 رياضة + ترفيه"]
+]
+},
+{
+title:"⏱️ شكد تريد مدة الاشتراك؟",
+note:"اختار المدة المناسبة",
+options:[
+["month","شهر"],
+["3","3 أشهر"],
+["6","6 أشهر"],
+["year","سنة"]
+]
+},
+{
+title:"💰 شكد ميزانيتك تقريباً؟",
+note:"راح نستخدمها لاختيار أقرب عرض مناسب",
+options:[
+["low","حتى 5,000"],
+["mid","حتى 10,000"],
+["high","حتى 20,000"],
+["max","25,000 وأكثر"]
+]
+}
+];
+
+let consultStep=0;
+let consultAnswers={};
+
+function openConsultant(){
+consultStep=0;
+consultAnswers={};
+document.getElementById("consultOverlay").classList.add("show");
+document.body.style.overflow="hidden";
+renderConsultQuestion();
+}
+
+function closeConsultant(){
+document.getElementById("consultOverlay").classList.remove("show");
+document.body.style.overflow="";
+}
+
+function renderConsultQuestion(){
+const q=consultQuestions[consultStep];
+
+document.getElementById("questionTitle").textContent=q.title;
+document.getElementById("questionNote").textContent=q.note;
+document.getElementById("consultProgress").style.width=((consultStep+1)/consultQuestions.length*100)+"%";
+
+document.getElementById("consultOptions").innerHTML=q.options.map(o=>
+'<button class="consult-option '+(consultAnswers[consultStep]===o[0]?"selected":"")+'" onclick="chooseConsult('+consultStep+',\''+o[0]+'\')">'+o[1]+'</button>'
+).join("");
+
+document.querySelector(".prev-btn").style.visibility=consultStep===0?"hidden":"visible";
+
+document.querySelector(".next-btn").textContent=
+consultStep===consultQuestions.length-1?"✨ عرض الاقتراح":"التالي ➜";
+}
+
+function chooseConsult(step,value){
+consultAnswers[step]=value;
+renderConsultQuestion();
+}
+
+function consultPrev(){
+if(consultStep>0){
+consultStep--;
+renderConsultQuestion();
+}
+}
+
+function consultNext(){
+if(!consultAnswers[consultStep]){
+alert("👆 اختار إجابة أولاً");
+return;
+}
+
+if(consultStep<consultQuestions.length-1){
+consultStep++;
+renderConsultQuestion();
+}else{
+showRecommendation();
+}
+}
+
+function showRecommendation(){
+document.getElementById("consultQuestions").style.display="none";
+document.getElementById("recommendBox").style.display="block";
+
+let device=consultAnswers[0];
+let content=consultAnswers[1];
+let duration=consultAnswers[2];
+let budget=consultAnswers[3];
+
+let product="MAX TV",price=25000,icon="📺",reason="";
+
+if(content==="sports"){
+product="TOD";
+icon="⚽";
+
+if(duration==="month"){
+price=device==="smart"?20000:15000;
+}else if(duration==="year"){
+price=25000;
+}else{
+price=25000;
+}
+
+reason="لأنك مهتم بالرياضة والبث المباشر، TOD هو الاختيار الأقرب لاحتياجك.";
+}
+else if(content==="movies"){
+product="Dream OTT";
+icon="🌙";
+
+if(duration==="month")price=5000;
+else if(duration==="6")price=15000;
+else price=20000;
+
+reason="لأن تركيزك على الأفلام والمسلسلات، Dream OTT خيار مناسب للترفيه.";
+}
+else if(content==="channels"){
+product="TIGER IPTV";
+icon="🐯";
+
+if(duration==="month")price=5000;
+else if(duration==="3")price=10000;
+else if(duration==="6")price=15000;
+else price=20000;
+
+reason="لأنك تريد القنوات ومحتوى متنوع، TIGER IPTV خيار مناسب.";
+}
+else{
+product="MAX TV";
+icon="📺";
+
+if(duration==="month")price=5000;
+else if(duration==="3")price=10000;
+else if(duration==="6")price=15000;
+else price=25000;
+
+reason="لأنك تريد رياضة وترفيه وقنوات متنوعة، MAX TV يعطيك حزمة متوازنة.";
+}
+
+if(budget==="low"){
+if(product==="MAX TV"){product="MAX TV";price=5000}
+else if(product==="TIGER IPTV"){price=5000}
+else if(product==="Dream OTT"){price=5000}
+}
+
+if(budget==="mid"&&duration==="3"){
+if(product==="MAX TV"||product==="TIGER IPTV")price=10000;
+}
+
+if(device==="pc")reason+=" مناسب للاستخدام على الكمبيوتر.";
+if(device==="smart")reason+=" اخترنا لك خدمة مناسبة للشاشات الذكية.";
+if(device==="box")reason+=" مناسبة للاستخدام على Android Box.";
+if(device==="mobile")reason+=" مناسبة للاستخدام على الموبايل.";
+
+document.getElementById("recommendIcon").textContent=icon;
+document.getElementById("recommendName").textContent=product;
+document.getElementById("recommendText").textContent=reason;
+document.getElementById("recommendPrice").textContent=money(price);
+
+document.getElementById("recommendAdd").onclick=()=>{
+addToCart(product+" — توصية المستشار",price);
+closeConsultant();
+openCart();
+};
+}
+
+function resetConsultant(){
+document.getElementById("recommendBox").style.display="none";
+document.getElementById("consultQuestions").style.display="block";
+consultStep=0;
+consultAnswers={};
+renderConsultQuestion();
+}
+
+/* =========================================================
+   الدعم
+   ========================================================= */
+
+function support(type){
+let msg=
+"السلام عليكم 👋\n\n"+
+"🆘 أحتاج مساعدة من كارة ستور\n"+
+"📌 نوع المشكلة: "+type+
+"\n\nيرجى مساعدتي وحل المشكلة. شكراً 🌹";
+
+window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg),"_blank");
+}
+
+/* نسخ الأكواد */
+function copyCode(code){
+if(navigator.clipboard)
+navigator.clipboard.writeText(code).then(()=>alert("✅ تم نسخ كود Downloader: "+code));
+else alert("الكود: "+code);
+}
+
+/* الفيديو */
+let soundOn=false;
+
+function toggleSound(){
+let i=document.getElementById("storeVideo");
+let b=document.getElementById("soundBtn");
+
+soundOn=!soundOn;
+
+i.src=
+"https://www.youtube.com/embed/LrhHPRJCJL4?autoplay=1&mute="+
+(soundOn?"0":"1")+
+"&loop=1&playlist=LrhHPRJCJL4&controls=0&playsinline=1&rel=0&modestbranding=1";
+
+b.innerHTML=soundOn?"🔊 الصوت يعمل":"🔇 تشغيل الصوت";
+}
+
+/* =========================================================
+   البحث والفلاتر
+   ========================================================= */
+
+let cards=[
+...document.querySelectorAll(
+".offer-card,.iptv-card,.player-card,.ai-card,.ent-card,.design-card,.big-card"
+)
+];
+
+let activeFilter="all";
+
+function applyFilters(){
+let v=document.getElementById("searchInput").value.trim().toLowerCase();
+
+cards.forEach(x=>{
+let ok=activeFilter==="all"||x.dataset.category===activeFilter;
+
+x.style.display=
+ok&&(!v||x.innerText.toLowerCase().includes(v))
+?"":"none";
+});
+}
+
+document.getElementById("searchInput").oninput=applyFilters;
+
+document.querySelectorAll(".filter-btn").forEach(b=>{
+b.onclick=()=>{
+document.querySelectorAll(".filter-btn").forEach(x=>x.classList.remove("active"));
+b.classList.add("active");
+activeFilter=b.dataset.filter;
+applyFilters();
+};
+});
+
+/* التنقل */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.onclick=e=>{
+let id=a.getAttribute("href");
+let el=id&&id!=="#"&&document.querySelector(id);
+
+if(el){
+e.preventDefault();
+el.scrollIntoView({behavior:"smooth",block:"start"});
+}
+};
+});
+
+addEventListener("scroll",()=>{
+document.getElementById("backTop").style.display=scrollY>500?"grid":"none";
+});
+
+/* =========================================================
+   خزنة الاشتراكات
+   ========================================================= */
+
+function localDateISO(date){
+const d=new Date(date);
+const y=d.getFullYear();
+const m=String(d.getMonth()+1).padStart(2,"0");
+const day=String(d.getDate()).padStart(2,"0");
+return y+"-"+m+"-"+day;
+}
+
+function addMonthsToDate(date,months){
+const d=new Date(date);
+const originalDay=d.getDate();
+
+d.setMonth(d.getMonth()+Number(months));
+
+if(d.getDate()!==originalDay){
+d.setDate(0);
+}
+
+return d;
+}
+
+document.getElementById("vaultStartDate").value=localDateISO(new Date());
+
+document.getElementById("vaultDuration").addEventListener("change",function(){
+const custom=this.value==="custom";
+document.getElementById("vaultExpiryDate").style.display=custom?"block":"none";
+
+if(!custom){
+const startValue=document.getElementById("vaultStartDate").value;
+const months=Number(this.value);
+
+if(startValue&&months){
+const end=addMonthsToDate(new Date(startValue+"T00:00:00"),months);
+document.getElementById("vaultExpiryDate").value=localDateISO(end);
+}
+}
+});
+
+document.getElementById("vaultStartDate").addEventListener("change",function(){
+const duration=document.getElementById("vaultDuration").value;
+
+if(duration&&duration!=="custom"){
+const end=addMonthsToDate(new Date(this.value+"T00:00:00"),Number(duration));
+document.getElementById("vaultExpiryDate").value=localDateISO(end);
+}
+});
+
+function addSubscription(){
+const name=document.getElementById("vaultName").value.trim();
+const duration=document.getElementById("vaultDuration").value;
+const start=document.getElementById("vaultStartDate").value;
+let expiry=document.getElementById("vaultExpiryDate").value;
+const note=document.getElementById("vaultNote").value.trim();
+
+if(!name){
+alert("🔐 اكتب اسم الاشتراك أولاً");
+document.getElementById("vaultName").focus();
+return;
+}
+
+if(!duration){
+alert("⏱️ اختر مدة الاشتراك");
+return;
+}
+
+if(!start){
+alert("📅 اختر تاريخ بداية الاشتراك");
+return;
+}
+
+if(duration==="custom"){
+if(!expiry){
+alert("📅 اختر تاريخ انتهاء الاشتراك");
+return;
+}
+}else{
+expiry=localDateISO(
+addMonthsToDate(new Date(start+"T00:00:00"),Number(duration))
+);
+}
+
+const today=new Date();
+today.setHours(0,0,0,0);
+
+const expiryDate=new Date(expiry+"T00:00:00");
+
+if(expiryDate<today){
+if(!confirm("⚠️ تاريخ الانتهاء في الماضي. هل تريد حفظ الاشتراك رغم ذلك؟"))return;
+}
+
+subscriptions.push({
+id:Date.now().toString(),
+name:name,
+start:start,
+expiry:expiry,
+note:note,
+createdAt:new Date().toISOString()
+});
+
+saveSubscriptions();
+
+document.getElementById("vaultName").value="";
+document.getElementById("vaultDuration").value="";
+document.getElementById("vaultStartDate").value=localDateISO(new Date());
+document.getElementById("vaultExpiryDate").value="";
+document.getElementById("vaultExpiryDate").style.display="none";
+document.getElementById("vaultNote").value="";
+
+alert("🔐 تم حفظ الاشتراك في الخزنة");
+}
+
+function getDaysRemaining(expiry){
+const today=new Date();
+today.setHours(0,0,0,0);
+
+const end=new Date(expiry+"T00:00:00");
+end.setHours(0,0,0,0);
+
+return Math.ceil((end-today)/(1000*60*60*24));
+}
+
+function subscriptionStatus(days){
+if(days<0){
+return {
+text:"منتهي",
+className:"danger"
+};
+}
+
+if(days===0){
+return {
+text:"ينتهي اليوم",
+className:"danger"
+};
+}
+
+if(days<=3){
+return {
+text:"ينتهي قريباً",
+className:"danger"
+};
+}
+
+if(days<=7){
+return {
+text:"قريب الانتهاء",
+className:"warning"
+};
+}
+
+return {
+text:"فعال",
+className:"good"
+};
+}
+
+function formatDate(dateString){
+if(!dateString)return "—";
+
+const d=new Date(dateString+"T00:00:00");
+
+return d.toLocaleDateString("ar-IQ",{
+year:"numeric",
+month:"2-digit",
+day:"2-digit"
+});
+}
+
+function renderVault(){
+const box=document.getElementById("vaultList");
+
+if(!box)return;
+
+if(!subscriptions.length){
+box.innerHTML=
+'<div class="vault-empty">'+
+'🔐 لا توجد اشتراكات محفوظة حالياً<br>'+
+'أضف اشتراكك حتى تتابع تاريخ انتهائه بسهولة.'+
+'</div>';
+return;
+}
+
+box.innerHTML=subscriptions.map(s=>{
+const days=getDaysRemaining(s.expiry);
+const status=subscriptionStatus(days);
+
+let remaining;
+
+if(days<0){
+remaining="منتهي منذ "+Math.abs(days)+" يوم";
+}else if(days===0){
+remaining="ينتهي اليوم";
+}else{
+remaining="متبقي "+days+" يوم";
+}
+
+return `
+<div class="vault-item ${days<0?"expired-card":days<=7?"warning-card":""}">
+<div class="vault-item-top">
+<div class="vault-item-name">🔐 ${esc(s.name)}</div>
+<div class="vault-status ${status.className}">${status.text}</div>
+</div>
+
+<div class="vault-item-info">
+<div class="vault-info-box">
+تاريخ البداية
+<strong>${formatDate(s.start)}</strong>
+</div>
+
+<div class="vault-info-box">
+تاريخ الانتهاء
+<strong>${formatDate(s.expiry)}</strong>
+</div>
+
+<div class="vault-info-box">
+الحالة
+<strong>${remaining}</strong>
+</div>
+
+<div class="vault-info-box">
+ملاحظة
+<strong>${esc(s.note||"لا توجد")}</strong>
+</div>
+</div>
+
+<button class="vault-delete" onclick="deleteSubscription('${s.id}')">🗑 حذف الاشتراك</button>
+</div>
+`;
+}).join("");
+}
+
+function deleteSubscription(id){
+const item=subscriptions.find(x=>x.id===id);
+
+if(!item)return;
+
+if(confirm("هل تريد حذف اشتراك "+item.name+" من الخزنة؟")){
+subscriptions=subscriptions.filter(x=>x.id!==id);
+saveSubscriptions();
+}
+}
+
+function openVault(){
+renderVault();
+document.getElementById("vaultOverlay").classList.add("show");
+document.body.style.overflow="hidden";
+}
+
+function closeVault(){
+document.getElementById("vaultOverlay").classList.remove("show");
+document.body.style.overflow="";
+}
+
+/* =========================================================
+   تنبيهات انتهاء الاشتراك
+   ========================================================= */
+
+function checkExpiryAlerts(showAlert){
+const box=document.getElementById("expiryAlert");
+const text=document.getElementById("expiryAlertText");
+
+if(!box||!text)return;
+
+if(!subscriptions.length){
+box.classList.remove("show");
+
+if(showAlert)alert("⏰ لا توجد اشتراكات محفوظة في الخزنة.");
+return;
+}
+
+const critical=subscriptions.filter(s=>getDaysRemaining(s.expiry)<=7);
+
+if(!critical.length){
+box.classList.remove("show");
+
+if(showAlert)alert("✅ لا توجد اشتراكات قريبة من الانتهاء خلال 7 أيام.");
+return;
+}
+
+const messages=critical.map(s=>{
+const d=getDaysRemaining(s.expiry);
+
+if(d<0){
+return "🔴 "+s.name+" منتهي منذ "+Math.abs(d)+" يوم";
+}
+
+if(d===0){
+return "🔴 "+s.name+" ينتهي اليوم";
+}
+
+return (d<=3?"🔴 ":"🟡 ")+s.name+" — متبقي "+d+" يوم";
+});
+
+text.innerHTML=messages.map(x=>esc(x)).join("<br>");
+
+box.classList.add("show");
+
+if(showAlert){
+alert(
+"⏰ توجد اشتراكات تحتاج انتباه:\n\n"+
+messages.join("\n")
+);
+}
+}
+
+/* =========================================================
+   لوحة العميل
+   ========================================================= */
+
+function updateDashboard(){
+const nameEl=document.getElementById("dashboardName");
+const phoneEl=document.getElementById("dashboardPhone");
+
+if(nameEl){
+nameEl.textContent=customerName||"زبون كارة ستور";
+}
+
+if(phoneEl){
+phoneEl.textContent=customerPhone||"لم يتم إدخال رقم";
+}
+
+const count=cart.reduce((s,x)=>s+x.qty,0);
+
+const cartEl=document.getElementById("dashCartCount");
+const vaultEl=document.getElementById("dashVaultCount");
+const daysEl=document.getElementById("dashDays");
+const nextEl=document.getElementById("dashboardNext");
+
+if(cartEl)cartEl.textContent=count;
+if(vaultEl)vaultEl.textContent=subscriptions.length;
+
+if(!subscriptions.length){
+if(daysEl)daysEl.textContent="—";
+
+if(nextEl){
+nextEl.innerHTML=
+"🔐 لا توجد اشتراكات محفوظة.<br>"+
+"أضف اشتراكاً إلى الخزنة حتى يظهر لك موعد الانتهاء هنا.";
+}
+
+return;
+}
+
+const sorted=[...subscriptions].sort(
+(a,b)=>new Date(a.expiry)-new Date(b.expiry)
+);
+
+const next=sorted[0];
+const days=getDaysRemaining(next.expiry);
+
+if(daysEl){
+daysEl.textContent=days<0?"منتهي":days+" يوم";
+}
+
+if(nextEl){
+let text;
+
+if(days<0){
+text=
+"🔴 أقرب اشتراك: <strong>"+esc(next.name)+
+"</strong><br>انتهى بتاريخ "+formatDate(next.expiry)+
+" — يمكنك استخدام مركز التجديد.";
+}else if(days===0){
+text=
+"🔴 أقرب اشتراك: <strong>"+esc(next.name)+
+"</strong><br>ينتهي اليوم.";
+}else{
+text=
+"⏰ أقرب اشتراك: <strong>"+esc(next.name)+
+"</strong><br>متبقي "+days+" يوم — تاريخ الانتهاء "+formatDate(next.expiry)+".";
+}
+
+nextEl.innerHTML=text;
+}
+}
+
+function openDashboard(){
+updateDashboard();
+document.getElementById("dashboardOverlay").classList.add("show");
+document.body.style.overflow="hidden";
+}
+
+function closeDashboard(){
+document.getElementById("dashboardOverlay").classList.remove("show");
+document.body.style.overflow="";
+}
+
+/* =========================================================
+   اختبار توافق الجهاز
+   ========================================================= */
+
+const deviceServices={
+mobile:[
+["MAX TV","📺"],
+["TIGER IPTV","🐯"],
+["BEST 4K","🔥"],
+["TOD","⚽"],
+["Dream OTT","🌙"]
+],
+smart:[
+["MAX TV","📺"],
+["TIGER IPTV","🐯"],
+["BEST 4K","🔥"],
+["TOD","⚽"],
+["Dream OTT","🌙"]
+],
+box:[
+["MAX TV","📺"],
+["TIGER IPTV","🐯"],
+["BEST 4K","🔥"],
+["TOD","⚽"],
+["Dream OTT","🌙"]
+],
+pc:[
+["MAX TV","📺"],
+["TIGER IPTV","🐯"],
+["BEST 4K","🔥"],
+["TOD","⚽"],
+["Dream OTT","🌙"]
+]
+};
+
+const deviceNames={
+mobile:"📱 الموبايل",
+smart:"📺 Smart TV",
+box:"📦 Android Box",
+pc:"💻 الكمبيوتر"
+};
+
+function openDeviceTest(){
+document.getElementById("deviceOverlay").classList.add("show");
+document.body.style.overflow="hidden";
+}
+
+function closeDeviceTest(){
+document.getElementById("deviceOverlay").classList.remove("show");
+document.body.style.overflow="";
+}
+
+function testDevice(device,button){
+document.querySelectorAll(".device-choice").forEach(x=>x.classList.remove("selected"));
+button.classList.add("selected");
+
+const result=document.getElementById("compatResult");
+const title=document.getElementById("compatTitle");
+const list=document.getElementById("compatList");
+
+title.textContent="✅ الخدمات المذكورة لجهازك: "+deviceNames[device];
+
+list.innerHTML=deviceServices[device].map(item=>
+'<div class="compat-row">'+
+'<span>'+item[1]+' '+esc(item[0])+'</span>'+
+'<b>متوافق</b>'+
+'</div>'
+).join("");
+
+result.classList.add("show");
+}
+
+/* =========================================================
+   الأخبار
+   ========================================================= */
+
+const storeNews=[
+"🛒 مرحباً بكم في كارة ستور",
+"⚡ الطلب السريع متوفر الآن",
+"🧠 استخدم مستشار الاشتراكات لاختيار الخدمة المناسبة",
+"🔄 مركز التجديد متوفر للزبائن السابقين",
+"📺 خدمات IPTV متوفرة لعدة أجهزة",
+"🎁 عرض التجربة متوفر الآن بـ 1,000 د.ع",
+"💬 دعم واتساب متوفر لاستقبال الطلبات والاستفسارات",
+"🧾 يمكنك مراجعة الفاتورة قبل إرسال الطلب",
+"📋 يمكنك نسخ الفاتورة وإرسالها بسهولة",
+"🔐 خزنة الاشتراكات تساعدك على متابعة مواعيد الانتهاء",
+"⏰ تنبيهات الاشتراكات القريبة من الانتهاء متوفرة",
+"🧩 يمكنك فحص توافق جهازك قبل اختيار الخدمة",
+"📊 لوحة العميل تعرض ملخص السلة والاشتراكات",
+"🌟 شكراً لثقتكم ودعمكم المستمر لكارة ستور"
+];
+
+let newsIndex=0;
+
+function showNextNews(){
+const news=document.getElementById("newsText");
+
+if(!news)return;
+
+news.style.animation="none";
+void news.offsetWidth;
+
+news.textContent=storeNews[newsIndex];
+news.style.animation="newsMove 9s linear forwards";
+
+newsIndex++;
+
+if(newsIndex>=storeNews.length)newsIndex=0;
+}
+
+showNextNews();
+setInterval(showNextNews,9000);
+
+/* =========================================================
+   التشغيل الأولي
+   ========================================================= */
+
+renderVault();
+updateDashboard();
+updateCartUI();
+
+setTimeout(()=>{
+checkExpiryAlerts(false);
+},500);
+
+</script>
+
+</body>
+  </html>
